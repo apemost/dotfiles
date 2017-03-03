@@ -21,7 +21,7 @@ Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 
-" Enable file type detection
+" Enable filetype plugins
 filetype plugin indent on
 
 "=====================================================================
