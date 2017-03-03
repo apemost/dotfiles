@@ -1,9 +1,28 @@
 "=====================================================================
-" General
+" Plugins
 "=====================================================================
 
 " Make Vim more useful
 set nocompatible
+
+" Disable file type detection
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+"=====================================================================
+" General
+"=====================================================================
 
 " Optimize for fast terminal connections
 set ttyfast
@@ -51,7 +70,6 @@ let mapleader=","
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
 	filetype on
 
 	" Enable filetype plugins
@@ -164,8 +182,4 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-"=====================================================================
-" Plugins
-"=====================================================================
 
