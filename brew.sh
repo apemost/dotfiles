@@ -39,7 +39,7 @@ brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
-# Setting up development environment
+# Install development tools
 brew install gnupg2
 brew install python
 brew install python3
