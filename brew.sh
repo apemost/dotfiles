@@ -38,7 +38,12 @@ brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
+
+# Setting up development environment
+brew install gnupg2
+brew install python
+brew install python3
+brew install node
 
 # Install font tools
 brew tap bramstein/webfonttools
@@ -75,7 +80,6 @@ brew install xz
 # Install other useful binaries
 brew install ack
 brew install dark-mode
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
