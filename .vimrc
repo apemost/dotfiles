@@ -10,14 +10,18 @@ filetype off
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+call vundle#begin()
+
+" Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
+" EditorConfig plugin for Vim. http://editorconfig.org
+Plugin 'editorconfig/editorconfig-vim'
+
 call vundle#end()
+
+" Enable file type detection
 filetype plugin indent on
 
 "=====================================================================
