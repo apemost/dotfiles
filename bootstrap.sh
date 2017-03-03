@@ -7,7 +7,6 @@ git pull origin master
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
-		--exclude ".gitmodules" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
@@ -20,9 +19,11 @@ if [ "$1" == "--force" -o "$1" == "-f" ]; then
 else
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
 	echo ""
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
+	if [[ ${REPLY} =~ ^[Yy]$ ]]; then
 		doIt
 	fi
 fi
 unset doIt
+
+[ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
