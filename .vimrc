@@ -1,32 +1,9 @@
-"=====================================================================
-" Plugins
-"=====================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Make Vim more useful
 set nocompatible
-
-" Disable file type detection
-filetype off
-
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" EditorConfig plugin for Vim. http://editorconfig.org
-Plugin 'editorconfig/editorconfig-vim'
-
-call vundle#end()
-
-" Enable filetype plugins
-filetype plugin indent on
-
-"=====================================================================
-" General
-"=====================================================================
 
 " Optimize for fast terminal connections
 set ttyfast
@@ -72,21 +49,6 @@ set ffs=unix,dos,mac
 " Change mapleader
 let mapleader=","
 
-" Automatic commands
-if has("autocmd")
-	filetype on
-
-	" Enable filetype plugins
-	filetype plugin on
-	filetype indent on
-
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-
-	" Treat .md files as Markdown
-	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-endif
-
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -97,17 +59,14 @@ endif
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
-"=====================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
-"=====================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
-
-" Enable syntax highlighting
-syntax on
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
@@ -164,9 +123,9 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-"=====================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymap
-"=====================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -187,3 +146,20 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin()
+
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
+Plug 'luochen1990/rainbow'
+Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+call plug#end()
