@@ -1,4 +1,3 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -59,14 +58,25 @@ endif
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use the Solarized Dark theme
+if !has('gui_running')
+	" Compatibility for Terminal
+	let g:solarized_termtrans=1
+
+	if (&t_Co >= 256 || $TERM == 'xterm-256color')
+		let g:solarized_termcolors=256
+	else
+		" Make Solarized use 16 colors for Terminal support
+		let g:solarized_termcolors=16
+	endif
+endif
+syntax enable
 set background=dark
 colorscheme solarized
-let g:solarized_termtrans=1
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
@@ -123,7 +133,7 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Keymap
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -146,7 +156,7 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
