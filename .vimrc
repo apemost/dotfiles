@@ -102,9 +102,6 @@ set noerrorbells
 " Don’t reset cursor to start of line when moving around
 set nostartofline
 
-" Highlight current line
-set cursorline
-
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
