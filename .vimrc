@@ -134,6 +134,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Smart way to move between buffers
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -153,14 +157,19 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 call plug#begin()
 
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
+Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'w0rp/ale'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'w0rp/ale'
 
 call plug#end()
+
+" Use solarized dark for airline
+let g:airline_theme='solarized'
