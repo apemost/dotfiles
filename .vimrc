@@ -128,16 +128,6 @@ set scrolloff=3
 " Keymap
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Smart way to move between buffers
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
-
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -158,22 +148,33 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'w0rp/ale'
 
 call plug#end()
 
-" vim-airline
-let g:airline_theme='solarized'
-let g:airline#extensions#tabline#enabled = 1
+" ctrlpvim/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|pyc)$'
 
-" nerdtree
+" scrooloose/nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Valloric/YouCompleteMe
+let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
+let g:ycm_auto_trigger = 1
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" vim-airline/vim-airline
+let g:airline_theme='solarized'
