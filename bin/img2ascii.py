@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+img2ascii.py
+"""
+
 from __future__ import print_function
 
 import sys
@@ -34,9 +38,9 @@ def to_ascii(img):
     print(txt)
 
 def main():
-    parser = ArgumentParser(usage = USAGE, description = DESCRIPTION)
-    parser.add_argument('path', type = str,
-                        help = 'path to image')
+    parser = ArgumentParser(usage=USAGE, description=DESCRIPTION)
+    parser.add_argument('path', type=str,
+                        help='path to image')
 
     args = parser.parse_args()
 
@@ -50,4 +54,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Extract kindle deals from amazon.cn
+"""
+
 import sys
 import traceback
 import requests
@@ -72,15 +76,15 @@ def print_deals(category, deals):
 
 def main():
     usage = '%(prog)s [<args>]'
-    description = 'Extract kindle deals from amazon.cn.'
-    parser = ArgumentParser(usage = usage, description = description)
+    description = 'Extract kindle deals from amazon.cn'
+    parser = ArgumentParser(usage=usage, description=description)
 
-    parser.add_argument('-d', '--daily', action = 'store_true',
-                        help = 'extract kindle daily deals')
-    parser.add_argument('-w', '--weekly', action = 'store_true',
-                        help = 'extract kindle weekly deals')
-    parser.add_argument('-m', '--monthly', action = 'store_true',
-                        help = 'extract kindle monthly deals')
+    parser.add_argument('-d', '--daily', action='store_true',
+                        help='extract kindle daily deals')
+    parser.add_argument('-w', '--weekly', action='store_true',
+                        help='extract kindle weekly deals')
+    parser.add_argument('-m', '--monthly', action='store_true',
+                        help='extract kindle monthly deals')
 
     args = parser.parse_args()
 
@@ -90,4 +94,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
