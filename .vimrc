@@ -45,6 +45,10 @@ set encoding=utf-8 nobomb
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
+
 " Change mapleader
 let mapleader=","
 
