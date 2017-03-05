@@ -162,6 +162,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -174,3 +175,6 @@ call plug#end()
 " vim-airline
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
+
+" nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
