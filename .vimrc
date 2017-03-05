@@ -171,5 +171,6 @@ Plug 'w0rp/ale'
 
 call plug#end()
 
-" Use solarized dark for airline
+" vim-airline
 let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
