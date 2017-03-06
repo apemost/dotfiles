@@ -38,4 +38,3 @@ source bootstrap.sh
 [MIT](LICENSE)
 
 [Mathias Bynens]: https://mathiasbynens.be/
-

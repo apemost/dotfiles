@@ -182,3 +182,4 @@ nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " vim-airline/vim-airline
 let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
