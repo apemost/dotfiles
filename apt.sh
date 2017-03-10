@@ -17,3 +17,6 @@ sudo apt-get install python3
 
 # Install other useful binaries
 sudo apt-get install tmux
+
+# Erase old downloaded archive files
+sudo apt-get autoclean
