@@ -40,10 +40,13 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 # Install development tools
+brew install git
+brew install git-lfs
 brew install gnupg2
+brew install lua
+brew install node
 brew install python
 brew install python3
-brew install node
 
 # Install font tools
 brew tap bramstein/webfonttools
@@ -80,10 +83,7 @@ brew install xz
 # Install other useful binaries
 brew install ack
 brew install dark-mode
-brew install git
-brew install git-lfs
 brew install imagemagick --with-webp
-brew install lua
 brew install lynx
 brew install p7zip
 brew install pigz
@@ -93,8 +93,8 @@ brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install testssl
-brew install tree
 brew install tmux
+brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
