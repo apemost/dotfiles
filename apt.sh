@@ -11,7 +11,6 @@ sudo apt-get install wget
 # Install development tools
 sudo apt-get install git
 sudo apt-get install gnupg2
-sudo apt-get install lua
 sudo apt-get install python
 sudo apt-get install python3
 
