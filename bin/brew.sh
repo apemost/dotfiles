@@ -95,6 +95,7 @@ brew install ssh-copy-id
 brew install testssl
 brew install tmux
 brew install tree
+brew install unrar
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
