@@ -82,6 +82,7 @@ brew install xz
 
 # Install other useful binaries
 brew install ack
+brew install cmus
 brew install dark-mode
 brew install imagemagick --with-webp
 brew install lynx
