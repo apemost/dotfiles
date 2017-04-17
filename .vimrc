@@ -49,9 +49,6 @@ set ffs=unix,dos,mac
 set binary
 set noeol
 
-" Change mapleader
-let mapleader=","
-
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -132,15 +129,8 @@ set scrolloff=3
 " Keymap
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Strip trailing whitespace (,ss)
-function! StripWhitespace()
-  let save_cursor = getpos(".")
-  let old_query = getreg('/')
-  :%s/\s\+$//e
-  call setpos('.', save_cursor)
-  call setreg('/', old_query)
-endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
+" Change mapleader
+let mapleader=","
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
@@ -154,6 +144,7 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elzr/vim-json'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
@@ -173,6 +164,9 @@ call plug#end()
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|pyc)$'
+
+" elzr/vim-json
+let g:vim_json_syntax_conceal = 0
 
 " mxw/vim-jsx
 let g:jsx_ext_required = 0
