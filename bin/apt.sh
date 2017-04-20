@@ -34,7 +34,10 @@ sudo apt-get install ucspi-tcp # `tcpserver` etc.
 sudo apt-get install xpdf
 
 # Install other useful binaries
+sudo apt-get install ack-grep
 sudo apt-get install cmus
+sudo apt-get install lynx
+sudo apt-get install pv
 sudo apt-get install tmux
 
 # Erase old downloaded archive files
