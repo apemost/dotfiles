@@ -54,4 +54,6 @@ _pip_completion()
                    COMP_CWORD=$COMP_CWORD \
                    PIP_AUTO_COMPLETE=1 $1 ) )
 }
-complete -o default -F _pip_completion pip
+which pip &> /dev/null && complete -o default -F _pip_completion pip
+which pip2 &> /dev/null && complete -o default -F _pip_completion pip2
+which pip3 &> /dev/null && complete -o default -F _pip_completion pip3
