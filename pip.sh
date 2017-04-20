@@ -11,6 +11,7 @@ function pip_install() {
   sudo -H pip install requests
   sudo -H pip install setuptools
   sudo -H pip install speedtest-cli
+  sudo -H pip install virtualenv
 }
 
 function pip3_install() {

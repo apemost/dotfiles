@@ -14,6 +14,13 @@ sudo apt-get install gnupg2
 sudo apt-get install python
 sudo apt-get install python3
 
+if ! which node &> /dev/null; then
+  curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+fi
+
+sudo apt-get install build-essential
+
 # Install some CTF tools; see https://github.com/ctfs
 sudo apt-get install aircrack-ng
 sudo apt-get install binutils
