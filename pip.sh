@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 function pip_install() {
+  sudo -H pip install --upgrade pip
   sudo -H pip list --outdated --format=freeze \
     | grep -v '^\-e' \
     | cut -d = -f 1  \
@@ -15,6 +16,7 @@ function pip_install() {
 }
 
 function pip3_install() {
+  sudo -H pip3 install --upgrade pip
   sudo -H pip3 list --outdated --format=freeze \
     | grep -v '^\-e' \
     | cut -d = -f 1  \
