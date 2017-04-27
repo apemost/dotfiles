@@ -4,29 +4,58 @@ cd "$(dirname "$BASH_SOURCE")"
 
 git pull origin master
 
-function doIt() {
+function rsync_linux() {
   rsync --exclude ".git/" \
     --exclude ".DS_Store" \
+    --exclude ".macos" \
+    --exclude "brew.sh" \
     --exclude "bootstrap.sh" \
     --exclude "README.md" \
     --exclude "LICENSE" \
     -avh --no-perms . ~
+}
+
+function rsync_darwin() {
+  rsync --exclude ".git/" \
+    --exclude ".DS_Store" \
+    --exclude "apt.sh" \
+    --exclude "bootstrap.sh" \
+    --exclude "README.md" \
+    --exclude "LICENSE" \
+    -avh --no-perms . ~
+}
+
+function bootstrap() {
+  local platform="$(uname -s)"
+
+  if [ "$platform" == "Linux" ]; then
+    rsync_linux
+  elif [ "$platform" == "Darwin"]; then
+    rsync_darwin
+  else
+    echo "My dotfiles are not supported yet on this platform ($platform)."
+    exit 1
+  fi
+
   source ~/.bash_profile
+
+  # Install plug.vim
+  if ! [ -f ~/.vim/autoload/plug.vim ]; then
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  fi
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-  doIt
+  bootstrap
 else
   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
   echo ""
   if [[ $REPLY =~ ^[Yy]$ ]]; then
-    doIt
+    bootstrap
   fi
 fi
-unset doIt
 
-# Install plug.vim
-if ! [ -f ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
+unset rsync_linux
+unset rsync_darwin
+unset bootstrap

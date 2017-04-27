@@ -48,11 +48,10 @@ complete -W "NSGlobalDomain" defaults
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
 # Add tab completion for pip
-_pip_completion()
-{
-    COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
-                   COMP_CWORD=$COMP_CWORD \
-                   PIP_AUTO_COMPLETE=1 $1 ) )
+_pip_completion() {
+  COMPREPLY=($(COMP_WORDS="${COMP_WORDS[*]}" \
+               COMP_CWORD=$COMP_CWORD \
+               PIP_AUTO_COMPLETE=1 $1))
 }
 which pip &> /dev/null && complete -o default -F _pip_completion pip
 which pip2 &> /dev/null && complete -o default -F _pip_completion pip2
