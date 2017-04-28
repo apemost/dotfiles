@@ -46,6 +46,7 @@ brew install lua
 brew install node
 brew install python
 brew install python3
+brew install shellcheck
 
 # Install font tools
 brew tap bramstein/webfonttools
