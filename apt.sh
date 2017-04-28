@@ -5,47 +5,47 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 
-sudo apt-get install curl
-sudo apt-get install wget
+sudo apt-get install -y curl
+sudo apt-get install -y wget
 
 # Install development tools
-sudo apt-get install git
-sudo apt-get install gnupg2
-sudo apt-get install python
-sudo apt-get install python3
+sudo apt-get install -y git
+sudo apt-get install -y gnupg2
+sudo apt-get install -y python
+sudo apt-get install -y python3
 
 if ! which node &> /dev/null; then
   curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
   sudo apt-get install -y nodejs
 fi
 
-sudo apt-get install build-essential
+sudo apt-get install -y build-essential
 
 # Install some CTF tools; see https://github.com/ctfs
-sudo apt-get install aircrack-ng
-sudo apt-get install binutils
-sudo apt-get install binwalk
-sudo apt-get install dns2tcp
-sudo apt-get install fcrackzip
-sudo apt-get install foremost
-sudo apt-get install hydra
-sudo apt-get install john
-sudo apt-get install netpbm
-sudo apt-get install nmap
-sudo apt-get install pngcheck
-sudo apt-get install socat
-sudo apt-get install tcpflow
-sudo apt-get install tcpreplay
-sudo apt-get install tcptrace
-sudo apt-get install ucspi-tcp # `tcpserver` etc.
-sudo apt-get install xpdf
+sudo apt-get install -y aircrack-ng
+sudo apt-get install -y binutils
+sudo apt-get install -y binwalk
+sudo apt-get install -y dns2tcp
+sudo apt-get install -y fcrackzip
+sudo apt-get install -y foremost
+sudo apt-get install -y hydra
+sudo apt-get install -y john
+sudo apt-get install -y netpbm
+sudo apt-get install -y nmap
+sudo apt-get install -y pngcheck
+sudo apt-get install -y socat
+sudo apt-get install -y tcpflow
+sudo apt-get install -y tcpreplay
+sudo apt-get install -y tcptrace
+sudo apt-get install -y ucspi-tcp # `tcpserver` etc.
+sudo apt-get install -y xpdf
 
 # Install other useful binaries
-sudo apt-get install ack-grep
-sudo apt-get install cmus
-sudo apt-get install lynx
-sudo apt-get install pv
-sudo apt-get install tmux
+sudo apt-get install -y ack-grep
+sudo apt-get install -y cmus
+sudo apt-get install -y lynx
+sudo apt-get install -y pv
+sudo apt-get install -y tmux
 
 # Erase old downloaded archive files
 sudo apt-get autoclean
