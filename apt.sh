@@ -44,6 +44,7 @@ sudo apt-get install -y xpdf
 # Install other useful binaries
 sudo apt-get install -y ack-grep
 sudo apt-get install -y cmus
+sudo apt-get install -y htop
 sudo apt-get install -y lynx
 sudo apt-get install -y pv
 sudo apt-get install -y tmux
