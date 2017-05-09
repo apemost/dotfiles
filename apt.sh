@@ -48,6 +48,7 @@ sudo apt-get install -y htop
 sudo apt-get install -y lynx
 sudo apt-get install -y pv
 sudo apt-get install -y tmux
+sudo apt-get install -y wireshark
 
 # Erase old downloaded archive files
 sudo apt-get autoclean
