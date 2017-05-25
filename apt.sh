@@ -15,6 +15,7 @@ sudo apt-get install -y git
 sudo apt-get install -y gnupg2
 sudo apt-get install -y python
 sudo apt-get install -y python3
+sudo apt-get install -y python3-pip
 sudo apt-get install -y shellcheck
 
 if ! which node &> /dev/null; then
