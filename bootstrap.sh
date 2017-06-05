@@ -7,6 +7,7 @@ git pull origin master
 function rsync_linux() {
   rsync --exclude ".git/" \
     --exclude ".DS_Store" \
+    --exclude ".mac" \
     --exclude ".macos" \
     --exclude "brew.sh" \
     --exclude "bootstrap.sh" \
