@@ -1,9 +1,9 @@
 {
-  "extends": "airbnb",
+  "root": true,
+  "extends": ['eslint:recommended', 'google'],
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
-    "mocha": true
+    "es6": true
   }
 }
