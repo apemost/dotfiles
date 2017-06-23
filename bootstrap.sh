@@ -31,7 +31,7 @@ function bootstrap() {
 
   if [ "$platform" == "Linux" ]; then
     rsync_linux
-  elif [ "$platform" == "Darwin"]; then
+  elif [ "$platform" == "Darwin" ]; then
     rsync_darwin
   else
     echo "My dotfiles are not supported yet on this platform ($platform)."
