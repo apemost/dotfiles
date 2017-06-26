@@ -11,12 +11,13 @@ sudo apt-get install -y wget
 # Install development tools
 sudo apt-get install -y git
 sudo apt-get install -y gnupg2
+sudo apt-get install -y htop
+sudo apt-get install -y httpie
 sudo apt-get install -y shellcheck
+sudo apt-get install -y tmux
 
 # Install other useful binaries
 sudo apt-get install -y cmus
-sudo apt-get install -y htop
-sudo apt-get install -y tmux
 sudo apt-get install -y unrar
 
 # Erase old downloaded archive files

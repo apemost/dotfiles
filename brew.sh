@@ -43,12 +43,13 @@ brew install homebrew/dupes/screen
 # Install development tools
 brew install git
 brew install gnupg2
+brew install htop
+brew install httpie
 brew install shellcheck
+brew install tmux
 
 # Install other useful binaries
 brew install cmus
-brew install htop
-brew install tmux
 brew install unrar
 
 # Remove outdated versions from the cellar
