@@ -41,6 +41,7 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 # Install development tools
+brew install cmake
 brew install git
 brew install gnupg2
 brew install htop

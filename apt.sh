@@ -9,6 +9,8 @@ sudo apt-get install -y curl
 sudo apt-get install -y wget
 
 # Install development tools
+sudo apt-get install -y build-essential
+sudo apt-get install -y cmake
 sudo apt-get install -y git
 sudo apt-get install -y gnupg2
 sudo apt-get install -y htop
