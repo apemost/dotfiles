@@ -43,6 +43,7 @@ brew install homebrew/dupes/screen
 # Install development tools
 brew install cmake
 brew install git
+brew install git-extras
 brew install gnupg2
 brew install htop
 brew install httpie

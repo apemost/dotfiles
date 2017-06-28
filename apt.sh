@@ -12,6 +12,7 @@ sudo apt-get install -y wget
 sudo apt-get install -y build-essential
 sudo apt-get install -y cmake
 sudo apt-get install -y git
+sudo apt-get install -y git-extras
 sudo apt-get install -y gnupg2
 sudo apt-get install -y htop
 sudo apt-get install -y httpie
