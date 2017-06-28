@@ -51,6 +51,7 @@ brew install tmux
 
 # Install other useful binaries
 brew install cmus
+brew install tree
 brew install unrar
 
 # Remove outdated versions from the cellar
