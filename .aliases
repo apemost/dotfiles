@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Shortcuts
-alias d="cd ~/Documents"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-
 # Detect which `ls` flavor is in use
 if ls --color &> /dev/null; then # GNU `ls`
   colorflag="--color"
@@ -41,9 +35,6 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # IP addresses
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# View HTTP traffic
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
