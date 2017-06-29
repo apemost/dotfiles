@@ -105,7 +105,7 @@ fi
 PS1="\[\033]0;\W\007\]" # working directory base name
 PS1+="\[$bold\]\[$userStyle\]\u"
 PS1+="\[$reset\]@\[$bold\]\[$hostStyle\]\h"
-PS1+="\[$reset\] \[$bold\]\[$green\]\w"
+PS1+="\[$reset\]: \[$bold\]\[$green\]\w"
 PS1+="\$(prompt_git \"\[$violet\] \" \"\[$blue\]\")" # Git repository details
 PS1+="\[$reset\]\n\[$bold\]"
 PS1+="\[$white\]\$ \[$reset\]" # `$` (and reset color)
