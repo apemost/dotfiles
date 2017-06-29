@@ -146,10 +146,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -159,11 +160,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
 call plug#end()
-
-" ctrlpvim/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|pyc)$'
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
