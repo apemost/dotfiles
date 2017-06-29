@@ -21,6 +21,7 @@ sudo apt-get install -y tmux
 
 # Install other useful binaries
 sudo apt-get install -y cmus
+sudo apt-get install -y tree
 sudo apt-get install -y unrar
 
 # Erase old downloaded archive files
