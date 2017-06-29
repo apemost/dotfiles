@@ -38,3 +38,6 @@ export PROXYCHAINS_CONF_FILE="$HOME/.proxychains.conf"
 # Avoid issues with `gpg` as installed via Homebrew
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty)
+
+# Set ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
