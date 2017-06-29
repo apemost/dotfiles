@@ -164,6 +164,9 @@ call plug#end()
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
 
+" junegunn/fzf
+map <C-p> :FZF<CR>
+
 " mxw/vim-jsx
 let g:jsx_ext_required = 0
 
@@ -171,6 +174,7 @@ let g:jsx_ext_required = 0
 let g:javascript_plugin_jsdoc = 1
 
 " scrooloose/nerdtree
+map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Valloric/YouCompleteMe
