@@ -52,6 +52,7 @@ brew install tmux
 
 # Install other useful binaries
 brew install cmus
+brew install the_silver_searcher
 brew install tree
 brew install unrar
 
