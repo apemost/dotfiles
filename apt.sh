@@ -11,6 +11,7 @@ sudo apt-get install -y wget
 # Install development tools
 sudo apt-get install -y build-essential
 sudo apt-get install -y cmake
+sudo apt-get install -y exuberant-ctags
 sudo apt-get install -y git
 sudo apt-get install -y git-extras
 sudo apt-get install -y gnupg2
