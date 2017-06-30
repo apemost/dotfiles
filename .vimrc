@@ -132,8 +132,8 @@ set scrolloff=3
 " Change mapleader
 let mapleader=","
 
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" Save a file as root
+noremap <leader>w :w !sudo tee % > /dev/null<CR>
 
 
 " Plugins
@@ -147,10 +147,12 @@ Plug 'elzr/vim-json'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
@@ -166,12 +168,18 @@ let g:vim_json_syntax_conceal = 0
 " junegunn/fzf
 map <C-p> :FZF<CR>
 
+" majutsushi/tagbar
+nnoremap <leader>t :TagbarToggle<CR>
+
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
 " scrooloose/nerdtree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" tpope/vim-fugitive
+nnoremap <leader>g :Ggrep<space>
 
 " Valloric/YouCompleteMe
 let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
