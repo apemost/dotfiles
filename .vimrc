@@ -148,7 +148,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
@@ -167,9 +166,6 @@ let g:vim_json_syntax_conceal = 0
 " junegunn/fzf
 map <C-p> :FZF<CR>
 
-" mxw/vim-jsx
-let g:jsx_ext_required = 0
-
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
@@ -187,3 +183,10 @@ nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" w0rp/ale
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\  'python': ['pylint'],
+\  'html': ['htmlhint'],
+\}
