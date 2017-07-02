@@ -17,6 +17,7 @@ sudo apt-get install -y git-extras
 sudo apt-get install -y gnupg2
 sudo apt-get install -y htop
 sudo apt-get install -y httpie
+sudo apt-get install -y jq
 sudo apt-get install -y shellcheck
 sudo apt-get install -y tmux
 

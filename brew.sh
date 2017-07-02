@@ -48,6 +48,7 @@ brew install git-extras
 brew install gnupg2
 brew install htop
 brew install httpie
+brew install jq
 brew install shellcheck
 brew install tmux
 
