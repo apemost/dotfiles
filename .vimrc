@@ -134,7 +134,7 @@ set scrolloff=3
 let mapleader=","
 
 " Save a file as root
-noremap <leader>w :w !sudo tee % > /dev/null<CR>
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 "*********************************************************************
 " Plugins
@@ -143,28 +143,67 @@ noremap <leader>w :w !sudo tee % > /dev/null<CR>
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
 call plug#end()
 
+" easymotion/vim-easymotion
+nmap t <Plug>(easymotion-t2)
+nmap s <Plug>(easymotion-overwin-f2)
+
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
+
+" haya14busa/incsearch.vim
+function! s:incsearch_config(...) abort
+  return incsearch#util#deepextend(deepcopy({
+\   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+\   'keymap': {
+\     "\<CR>": '<Over>(easymotion)'
+\   },
+\   'is_expr': 0
+\ }), get(a:, 1, {}))
+endfunction
+
+noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
+
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
+
+function! s:config_easyfuzzymotion(...) abort
+  return extend(copy({
+\   'converters': [incsearch#config#fuzzyword#converter()],
+\   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+\   'keymap': {"\<CR>": '<Over>(easymotion)'},
+\   'is_expr': 0,
+\   'is_stay': 1
+\ }), get(a:, 1, {}))
+endfunction
+
+noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 " junegunn/fzf
 map <C-p> :FZF<CR>
@@ -195,7 +234,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " w0rp/ale
 let g:ale_linters = {
-\  'javascript': ['eslint'],
-\  'python': ['pylint'],
-\  'html': ['htmlhint'],
+\ 'javascript': ['eslint'],
+\ 'python': ['pylint'],
+\ 'html': ['htmlhint'],
 \}
