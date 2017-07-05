@@ -8,34 +8,6 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{c,cc,cpp,h}]
-indent_style = space
-indent_size = 2
-
-[*.py]
-indent_style = space
-indent_size = 4
-
-[*.js]
-indent_style = space
-indent_size = 2
-
-[*.java]
-indent_style = space
-indent_size = 4
-
-[*.gradle]
-indent_style = space
-indent_size = 4
-
-[*.cs]
-indent_style = space
-indent_size = 4
-
-[*.{cake,ps1,psm1}]
-indent_style = space
-indent_size = 4
-
 [.gitconfig]
 indent_style = tab
 
