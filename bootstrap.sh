@@ -19,7 +19,6 @@ function rsync_linux() {
 function rsync_darwin() {
   rsync --exclude ".git/" \
     --exclude ".DS_Store" \
-    --exclude "apt.sh" \
     --exclude "bootstrap.sh" \
     --exclude "README.md" \
     --exclude "LICENSE" \

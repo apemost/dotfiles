@@ -14,8 +14,10 @@ brew install coreutils
 
 # Install some other useful utilities like `sponge`
 brew install moreutils
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew install findutils
+
 # Install GNU `sed`, overwriting the built-in `sed`
 brew install gnu-sed --with-default-names
 
@@ -40,11 +42,17 @@ brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
-# Install development tools
-brew install cmake
-brew install ctags
+# Install development environment
 brew install git
 brew install git-extras
+brew install python
+brew install python3
+brew install cmake
+brew install llvm
+brew install node
+
+# Install some development tools
+brew install ctags
 brew install gnupg2
 brew install htop
 brew install httpie
@@ -53,6 +61,7 @@ brew install shellcheck
 brew install tmux
 
 # Install other useful binaries
+brew install binutils
 brew install cmus
 brew install the_silver_searcher
 brew install tree
