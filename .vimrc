@@ -206,6 +206,7 @@ noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 " junegunn/fzf
 map <C-p> :FZF<CR>
 nnoremap <leader>f :GFiles<space>
+nnoremap <leader>s :GFiles?<CR>
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])
