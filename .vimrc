@@ -157,6 +157,7 @@ Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer'}
@@ -204,6 +205,7 @@ noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 " junegunn/fzf
 map <C-p> :FZF<CR>
+nnoremap <leader>f :GFiles<space>
 
 " Command for git grep
 " - fzf#vim#grep(command, with_column, [options], [fullscreen])
