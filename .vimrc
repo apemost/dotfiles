@@ -130,6 +130,9 @@ set scrolloff=3
 " Keymap
 "*********************************************************************
 
+map <C-p> :bp<CR>
+map <C-n> :bn<CR>
+
 " Change mapleader
 let mapleader=","
 
@@ -204,7 +207,7 @@ endfunction
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 " junegunn/fzf
-map <C-p> :FZF<CR>
+" map <C-p> :FZF<CR>
 nnoremap <leader>f :GFiles<space>
 nnoremap <leader>s :GFiles?<CR>
 
@@ -221,7 +224,7 @@ nnoremap <leader>t :TagbarToggle<CR>
 let g:javascript_plugin_jsdoc = 1
 
 " scrooloose/nerdtree
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
