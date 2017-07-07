@@ -157,7 +157,6 @@ Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer'}
@@ -177,12 +176,10 @@ let g:vim_json_syntax_conceal = 0
 " haya14busa/incsearch.vim
 function! s:incsearch_config(...) abort
   return incsearch#util#deepextend(deepcopy({
-\   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-\   'keymap': {
-\     "\<CR>": '<Over>(easymotion)'
-\   },
-\   'is_expr': 0
-\ }), get(a:, 1, {}))
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+  \   'is_expr': 0
+  \ }), get(a:, 1, {}))
 endfunction
 
 noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
@@ -195,18 +192,24 @@ map zg/ <Plug>(incsearch-fuzzy-stay)
 
 function! s:config_easyfuzzymotion(...) abort
   return extend(copy({
-\   'converters': [incsearch#config#fuzzyword#converter()],
-\   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-\   'keymap': {"\<CR>": '<Over>(easymotion)'},
-\   'is_expr': 0,
-\   'is_stay': 1
-\ }), get(a:, 1, {}))
+  \   'converters': [incsearch#config#fuzzyword#converter()],
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+  \   'is_expr': 0,
+  \   'is_stay': 1
+  \ }), get(a:, 1, {}))
 endfunction
 
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 " junegunn/fzf
 map <C-p> :FZF<CR>
+
+" Command for git grep
+" - fzf#vim#grep(command, with_column, [options], [fullscreen])
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
+nnoremap <leader>g :GGrep<space>
 
 " majutsushi/tagbar
 nnoremap <leader>t :TagbarToggle<CR>
@@ -218,8 +221,6 @@ let g:javascript_plugin_jsdoc = 1
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" tpope/vim-fugitive
-nnoremap <leader>g :Ggrep<space>
 
 " Valloric/YouCompleteMe
 let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
@@ -234,7 +235,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " w0rp/ale
 let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ 'python': ['pylint'],
-\ 'html': ['htmlhint'],
-\}
+\   'javascript': ['eslint'],
+\   'python': ['pylint'],
+\   'html': ['htmlhint'],
+\ }
