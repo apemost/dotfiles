@@ -60,6 +60,9 @@ endif
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
+" Change mapleader
+let mapleader=" "
+
 "*********************************************************************
 " Appearance
 "*********************************************************************
@@ -127,30 +130,15 @@ endif
 set scrolloff=3
 
 "*********************************************************************
-" Keymap
-"*********************************************************************
-
-map <C-p> :bp<CR>
-map <C-n> :bn<CR>
-
-" Change mapleader
-let mapleader=","
-
-" Save a file as root
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-"*********************************************************************
 " Plugins
 "*********************************************************************
 
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
-Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
@@ -158,7 +146,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -170,69 +157,26 @@ Plug 'w0rp/ale'
 
 call plug#end()
 
-" easymotion/vim-easymotion
-nmap t <Plug>(easymotion-t2)
-nmap s <Plug>(easymotion-overwin-f2)
-
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
 
 " haya14busa/incsearch.vim
-function! s:incsearch_config(...) abort
-  return incsearch#util#deepextend(deepcopy({
-  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
-  \   'is_expr': 0
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
-noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
-noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
-
-map z/ <Plug>(incsearch-fuzzy-/)
-map z? <Plug>(incsearch-fuzzy-?)
-map zg/ <Plug>(incsearch-fuzzy-stay)
-
-function! s:config_easyfuzzymotion(...) abort
-  return extend(copy({
-  \   'converters': [incsearch#config#fuzzyword#converter()],
-  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
-  \   'is_expr': 0,
-  \   'is_stay': 1
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
+let g:incsearch#auto_nohlsearch = 1
 
 " junegunn/fzf
-" map <C-p> :FZF<CR>
-nnoremap <leader>f :GFiles<space>
-nnoremap <leader>s :GFiles?<CR>
-
-" Command for git grep
-" - fzf#vim#grep(command, with_column, [options], [fullscreen])
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
-nnoremap <leader>g :GGrep<space>
-
-" majutsushi/tagbar
-nnoremap <leader>t :TagbarToggle<CR>
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
 " scrooloose/nerdtree
-nnoremap <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 " Valloric/YouCompleteMe
 let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
 let g:ycm_auto_trigger = 1
-nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " vim-airline/vim-airline
 let g:airline_theme='solarized'
@@ -245,3 +189,38 @@ let g:ale_linters = {
 \   'python': ['pylint'],
 \   'html': ['htmlhint'],
 \ }
+
+"*********************************************************************
+" Keymap
+"*********************************************************************
+
+map /   <Plug>(incsearch-forward)
+map ?   <Plug>(incsearch-backward)
+map g/  <Plug>(incsearch-stay)
+map z/  <Plug>(incsearch-fuzzy-/)
+map z?  <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
+map n   <Plug>(incsearch-nohl-n)
+map N   <Plug>(incsearch-nohl-N)
+map *   <Plug>(incsearch-nohl-*)
+map #   <Plug>(incsearch-nohl-#)
+map g*  <Plug>(incsearch-nohl-g*)
+map g#  <Plug>(incsearch-nohl-g#)
+
+map <C-p> :bp<CR>
+map <C-n> :bn<CR>
+
+" Save a file as root
+nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>c :Commits<CR>
+nnoremap <leader>d :Gdiff<CR>
+nnoremap <leader>f :FZF<space>
+nnoremap <leader>g :GGrep<space>
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>k :GFiles<CR>
+nnoremap <leader>n :ALENext<CR>
+nnoremap <leader>p :ALEPrevious<CR>
+nnoremap <leader>s :GFiles?<CR>
+nnoremap <leader>t :TagbarToggle<CR>
