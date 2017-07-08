@@ -207,8 +207,10 @@ map #   <Plug>(incsearch-nohl-#)
 map g*  <Plug>(incsearch-nohl-g*)
 map g#  <Plug>(incsearch-nohl-g#)
 
-map <C-p> :bp<CR>
-map <C-n> :bn<CR>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <C-p> :bp<CR>
+nmap <C-n> :bn<CR>
 
 " Save a file as root
 nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
@@ -220,7 +222,13 @@ nnoremap <leader>f :FZF<space>
 nnoremap <leader>g :GGrep<space>
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>k :GFiles<CR>
-nnoremap <leader>n :ALENext<CR>
-nnoremap <leader>p :ALEPrevious<CR>
 nnoremap <leader>s :GFiles?<CR>
 nnoremap <leader>t :TagbarToggle<CR>
+
+"*********************************************************************
+" Overrides
+"*********************************************************************
+
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
