@@ -6,4 +6,3 @@ npm install -g eslint eslint-config-google
 npm install -g htmlhint
 npm install -g jsonlint
 npm install -g stylelint
-npm install -g prettier
