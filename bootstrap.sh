@@ -39,12 +39,6 @@ function bootstrap() {
   fi
 
   source ~/.bash_profile
-
-  # Install plug.vim
-  if ! [ -f ~/.vim/autoload/plug.vim ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  fi
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

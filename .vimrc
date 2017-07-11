@@ -133,6 +133,14 @@ set scrolloff=3
 " Plugins
 "*********************************************************************
 
+let vim_plug_path = expand('~/.vim/autoload/plug.vim')
+if !filereadable(vim_plug_path)
+    echo "Installing vim-plug..."
+    silent !mkdir -p ~/.vim/autoload
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    :execute 'source '.fnameescape(vim_plug_path)
+endif
+
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
