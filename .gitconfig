@@ -65,8 +65,3 @@
 
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
-
-[merge]
-
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
