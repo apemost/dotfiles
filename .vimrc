@@ -175,18 +175,25 @@ let g:vim_json_syntax_conceal = 0
 let g:incsearch#auto_nohlsearch = 1
 
 " junegunn/fzf
-command! -bang -nargs=* GGrep
-  \ call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
+command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
 " scrooloose/nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeMapJumpNextSibling = '<C-n>'
+let NERDTreeMapJumpPrevSibling = '<C-p>'
+
+" SirVer/ultisnips
+let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
 " Valloric/YouCompleteMe
-let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<S-TAB>', '<c-p>', '<Up>']
+let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-p>', '<Up>']
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
@@ -222,19 +229,24 @@ map g#  <Plug>(incsearch-nohl-g#)
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nmap <C-p> :bp<CR>
-nmap <C-n> :bn<CR>
+nmap <silent> <C-n> :bn<CR>
+nmap <silent> <C-p> :bp<CR>
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
 " Save a file as root
 nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>c :Commits<CR>
+nnoremap <leader>c :BCommits<CR>
 nnoremap <leader>d :Gdiff<CR>
-nnoremap <leader>f :FZF<space>
+nnoremap <leader>f :Files<space>
 nnoremap <leader>g :GGrep<space>
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>k :GFiles<CR>
+nnoremap <leader>l :Lines<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>s :GFiles?<CR>
 nnoremap <leader>t :TagbarToggle<CR>
