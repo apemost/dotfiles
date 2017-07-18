@@ -239,6 +239,7 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " Save a file as root
 nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+nnoremap <leader>a :Gblame<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>c :BCommits<CR>
 nnoremap <leader>d :Gdiff<CR>
