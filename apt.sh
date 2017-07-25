@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Install command-line tools using apt
 
 sudo apt-get update
@@ -7,7 +5,14 @@ sudo apt-get upgrade -y
 
 sudo apt-get install -y curl
 sudo apt-get install -y wget
-sudo apt-get install -y vim
+
+sudo apt-get install -y zsh
+
+chsh -s /usr/bin/zsh
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
 # Install development environment
 sudo apt-get install -y git
@@ -29,9 +34,9 @@ sudo apt-get install -y jq
 sudo apt-get install -y mycli
 sudo apt-get install -y shellcheck
 sudo apt-get install -y tmux
+sudo apt-get install -y vim
 
 # Install other useful binaries
-sudo apt-get install -y cmus
 sudo apt-get install -y silversearcher-ag
 sudo apt-get install -y tree
 sudo apt-get install -y unrar

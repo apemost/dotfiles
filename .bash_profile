@@ -1,14 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
-
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`
-# * ~/.extra can be used for other settings you don’t want to commit
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -32,22 +21,14 @@ elif [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
 fi
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh
+if [ "$(uname -s)" = "Darwin" ]; then
+  # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+  [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh
 
-# Add tab completion for `defaults read|write NSGlobalDomain`
-# You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults
+  # Add tab completion for `defaults read|write NSGlobalDomain`
+  # You could just use `-g` instead, but I like being explicit
+  complete -W "NSGlobalDomain" defaults
 
-# Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
-
-# Add tab completion for pip
-_pip_completion() {
-  COMPREPLY=($(COMP_WORDS="${COMP_WORDS[*]}" \
-               COMP_CWORD=$COMP_CWORD \
-               PIP_AUTO_COMPLETE=1 $1))
-}
-which pip &> /dev/null && complete -o default -F _pip_completion pip
-which pip2 &> /dev/null && complete -o default -F _pip_completion pip2
-which pip3 &> /dev/null && complete -o default -F _pip_completion pip3
+  # Add `killall` tab completion for common apps
+  complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
+fi

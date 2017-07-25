@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Detect which `ls` flavor is in use
 if ls --color &> /dev/null; then # GNU `ls`
   colorflag="--color"
