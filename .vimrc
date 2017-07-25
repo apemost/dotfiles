@@ -142,7 +142,6 @@ if !filereadable(vim_plug_path)
 endif
 
 call plug#begin()
-
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
@@ -165,7 +164,6 @@ Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-com
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-
 call plug#end()
 
 " elzr/vim-json
@@ -247,7 +245,6 @@ nnoremap <leader>f :Files<space>
 nnoremap <leader>g :GGrep<space>
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>k :GFiles<CR>
-nnoremap <leader>l :Lines<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>s :GFiles?<CR>
 nnoremap <leader>t :TagbarToggle<CR>
