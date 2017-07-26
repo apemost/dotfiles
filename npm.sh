@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 npm install -g npm
 
 npm install -g eslint eslint-config-google
