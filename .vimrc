@@ -151,6 +151,7 @@ Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
+Plug 'houtsnip/vim-emacscommandline'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
