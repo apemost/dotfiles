@@ -62,7 +62,6 @@ brew install gnupg2
 brew install htop
 brew install httpie
 brew install jq
-brew install mycli
 brew install shellcheck
 brew install tmux
 brew install vim --with-override-system-vi
