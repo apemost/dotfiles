@@ -18,7 +18,6 @@ fi
 
 # Install development environment
 sudo apt-get install -y git
-sudo apt-get install -y git-extras
 sudo apt-get install -y python
 sudo apt-get install -y python3
 sudo apt-get install -y cmake
