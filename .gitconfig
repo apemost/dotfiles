@@ -65,3 +65,12 @@
 
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
+
+[push]
+
+	# Since Git 2.0, Git defaults to the more conservative 'simple'
+	# behavior, which only pushes the current branch to the corresponding
+	# remote branch that 'git pull' uses to update the current branch.
+	default = simple
+	# Make `git push` push relevant annotated tags when pushing branches out
+	followTags = true
