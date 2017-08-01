@@ -146,8 +146,6 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
@@ -170,9 +168,6 @@ call plug#end()
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
-
-" haya14busa/incsearch.vim
-let g:incsearch#auto_nohlsearch = 1
 
 " junegunn/fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
@@ -213,19 +208,6 @@ let g:ale_linters = {
 "*********************************************************************
 " Keymap
 "*********************************************************************
-
-map /   <Plug>(incsearch-forward)
-map ?   <Plug>(incsearch-backward)
-map g/  <Plug>(incsearch-stay)
-map z/  <Plug>(incsearch-fuzzy-/)
-map z?  <Plug>(incsearch-fuzzy-?)
-map zg/ <Plug>(incsearch-fuzzy-stay)
-map n   <Plug>(incsearch-nohl-n)
-map N   <Plug>(incsearch-nohl-N)
-map *   <Plug>(incsearch-nohl-*)
-map #   <Plug>(incsearch-nohl-#)
-map g*  <Plug>(incsearch-nohl-g*)
-map g#  <Plug>(incsearch-nohl-g#)
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
