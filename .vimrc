@@ -220,6 +220,15 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
+" Emacs line editing in insert mode only
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-k> <Esc>lDa
+inoremap <C-u> <Esc>d0xi
+inoremap <C-y> <Esc>Pa
+
 " Save a file as root
 nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
 
