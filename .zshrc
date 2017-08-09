@@ -7,9 +7,6 @@ ZSH_THEME='tjkirch'
 # `_` and `-` will be interchangeable
 HYPHEN_INSENSITIVE="true"
 
-# Enable command auto-correction
-ENABLE_CORRECTION="true"
-
 # Display red dots whilst waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
