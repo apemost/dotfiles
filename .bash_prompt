@@ -87,24 +87,10 @@ else
   yellow="\e[1;33m"
 fi
 
-# Highlight the user name when logged in as root
-if [[ "$USER" == "root" ]]; then
-  userStyle="$red"
-else
-  userStyle="$purple"
-fi
-
-# Highlight the hostname when connected via SSH
-if [[ "$SSH_TTY" ]]; then
-  hostStyle="$red"
-else
-  hostStyle="$yellow"
-fi
-
 # Set the terminal title and prompt
 PS1="\[\033]0;\W\007\]\n" # working directory base name
-PS1+="\[$userStyle\]\u\[$reset\]"
-PS1+="@\[$hostStyle\]\h\[$reset\]"
+PS1+="\[$purple\]\u\[$reset\]"
+PS1+="@\[$yellow\]\h\[$reset\]"
 PS1+=": \[$bold\]\w\[$reset\]"
 PS1+="\$(prompt_git \"\[$green\] \" \"\[$red\]\")\[$reset\]\n" # Git repository details
 PS1+="\$ \[$reset\]" # `$` (and reset color)
