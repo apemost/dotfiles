@@ -152,9 +152,9 @@ Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
-Plug 'houtsnip/vim-emacscommandline'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'maxbrunsfeld/vim-emacs-bindings'
 Plug 'pangloss/vim-javascript'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
@@ -213,13 +213,8 @@ let g:ale_linters = {
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nmap <silent> <C-n> :bn<CR>
-nmap <silent> <C-p> :bp<CR>
-
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
+nmap <silent> <C-n> :bnext<CR>
+nmap <silent> <C-p> :bprevious<CR>
 
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
