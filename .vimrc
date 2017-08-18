@@ -173,6 +173,7 @@ call plug#end()
 let g:vim_json_syntax_conceal = 0
 
 " JamshedVesuna/vim-markdown-preview
+let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
 
