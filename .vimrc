@@ -150,6 +150,7 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'honza/vim-snippets'
 Plug 'houtsnip/vim-emacscommandline'
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
@@ -170,6 +171,10 @@ call plug#end()
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
+
+" JamshedVesuna/vim-markdown-preview
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Google Chrome'
 
 " junegunn/fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
