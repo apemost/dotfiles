@@ -55,6 +55,7 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
   set undodir=~/.vim/undo
+  set undofile
 endif
 
 " Don’t create backups when editing files in certain directories
@@ -156,6 +157,7 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'mbbill/undotree'
 Plug 'pangloss/vim-javascript'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
@@ -268,6 +270,7 @@ nnoremap <leader>k :GFiles<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>s :GFiles?<CR>
 nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
 "*********************************************************************
 " Overrides
