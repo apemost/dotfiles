@@ -1,8 +1,11 @@
 [ -n "$PS1" ] && source ~/.shellrc
 
 # Set name of the theme to load
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME='tjkirch'
+if [[ $ZSH_THEME != 'spaceship' ]]; then
+  curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
+fi
+
+ZSH_THEME='spaceship'
 
 # `_` and `-` will be interchangeable
 HYPHEN_INSENSITIVE="true"
@@ -20,3 +23,7 @@ plugins=(autojump git pip tmux virtualenv)
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
+
+if [[ $ZSH_THEME == 'spaceship' ]]; then
+  source $ZSH_CUSTOM/themes/spaceship.zsh-theme
+fi
