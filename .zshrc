@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Load plugins
-plugins=(autojump git pip tmux virtualenv)
+plugins=(autojump git pip tmux virtualenv colored-man-pages)
 
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
