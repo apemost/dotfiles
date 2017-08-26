@@ -43,5 +43,8 @@ sudo apt-get install -y silversearcher-ag
 sudo apt-get install -y tree
 sudo apt-get install -y unrar
 
+# Install fonts
+sudo apt-get install -y fonts-hack-ttf
+
 # Erase old downloaded archive files
 sudo apt-get autoclean
