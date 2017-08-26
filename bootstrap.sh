@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 git pull origin master
 
 if [ "$(uname -s)" = 'Darwin' ]; then
@@ -13,7 +15,6 @@ else
   rsync \
     --exclude '.git/' \
     --exclude '.DS_Store' \
-    --exclude '.mac' \
     --exclude '.macos' \
     --exclude 'brew.sh' \
     --exclude 'bootstrap.sh' \
