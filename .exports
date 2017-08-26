@@ -42,8 +42,11 @@ export GPG_TTY=$(tty)
 # Set ag as the default source for fzf
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
-# Path to your oh-my-zsh installation
+# Path to oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
 # How often to auto-update (in days)
 export UPDATE_ZSH_DAYS=13
+
+# Path to zplug installation
+export ZPLUG_HOME=$HOME/.zplug

@@ -12,14 +12,6 @@ if [ "$SHELL" != '/usr/bin/zsh' ]; then
   chsh -s /usr/bin/zsh
 fi
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  if [ ! "$ZSH_THEME" = 'spaceship' ]; then
-    curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
-  fi
-fi
-
 # Install development environment
 sudo apt-get install -y git
 sudo apt-get install -y python

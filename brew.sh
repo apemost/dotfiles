@@ -36,14 +36,6 @@ if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
   chsh -s /usr/local/bin/zsh
 fi
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  if [ ! "$ZSH_THEME" = 'spaceship' ]; then
-    curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
-  fi
-fi
-
 # Install `wget` with IRI support
 brew install wget --with-iri
 
