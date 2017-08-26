@@ -20,6 +20,9 @@ export HISTCONTROL='ignoreboth'
 # Don’t clear the screen after quitting a manual page
 export MANPAGER='less -X'
 
+# Set LESS environment variable
+export LESS='FRX'
+
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr
 export PYTHONIOENCODING='UTF-8'
 
