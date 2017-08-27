@@ -141,6 +141,7 @@ endif
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'chiel92/vim-autoformat'
 Plug 'crusoexia/vim-javascript-lib'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
@@ -269,6 +270,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>s :GFiles?<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>= :Autoformat<CR>
 
 "*********************************************************************
 " Overrides
