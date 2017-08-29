@@ -179,6 +179,8 @@ let vim_markdown_preview_browser='Google Chrome'
 
 " junegunn/fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
+let g:fzf_buffers_jump = 1
+let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
