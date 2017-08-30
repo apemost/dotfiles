@@ -184,6 +184,9 @@ let vim_markdown_preview_browser='Google Chrome'
 " jceb/vim-orgmode
 let g:org_agenda_files = ['~/org/agenda.org']
 
+" jiangmiao/auto-pairs
+let g:AutoPairsMapSpace = 0
+
 " junegunn/fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 let g:fzf_buffers_jump = 1
