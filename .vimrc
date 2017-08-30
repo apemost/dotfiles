@@ -63,6 +63,7 @@ set backupskip=/tmp/*,/private/tmp/*
 
 " Change mapleader
 let mapleader=" "
+let maplocalleader="\\"
 
 "*********************************************************************
 " Appearance
@@ -179,6 +180,9 @@ let g:vim_json_syntax_conceal = 0
 let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
+
+" jceb/vim-orgmode
+let g:org_agenda_files = ['~/org/agenda.org']
 
 " junegunn/fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
