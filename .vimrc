@@ -166,6 +166,7 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 call plug#end()
 
@@ -211,6 +212,16 @@ let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
+
+" vimwiki/vimwiki
+let g:vimwiki_listsyms = ' ○◐●✓'
+let g:vimwiki_list = [{
+\   'path': '~/wiki/',
+\   'syntax': 'markdown',
+\   'ext': '.md',
+\   'path_html': '~/wiki/docs/',
+\   'diary_index': 'index',
+\ }]
 
 " w0rp/ale
 let g:ale_linters = {
