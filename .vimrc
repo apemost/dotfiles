@@ -143,7 +143,6 @@ endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
-Plug 'crusoexia/vim-javascript-lib'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'gorodinskiy/vim-coloresque'
