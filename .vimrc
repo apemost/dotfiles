@@ -182,7 +182,7 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
 
 " jceb/vim-orgmode
-let g:org_agenda_files = ['~/org/agenda.org']
+let g:org_agenda_files = ['~/org/agenda.org', '~/org/**/todo.org']
 
 " jiangmiao/auto-pairs
 let g:AutoPairsMapSpace = 0
