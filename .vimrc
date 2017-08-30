@@ -63,7 +63,6 @@ set backupskip=/tmp/*,/private/tmp/*
 
 " Change mapleader
 let mapleader=" "
-let maplocalleader="\\"
 
 "*********************************************************************
 " Appearance
@@ -172,6 +171,11 @@ call plug#end()
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
+
+" heavenshell/vim-jsdoc
+let g:jsdoc_tags = {
+\   'returns': 'return',
+\ }
 
 " JamshedVesuna/vim-markdown-preview
 let vim_markdown_preview_github=1
