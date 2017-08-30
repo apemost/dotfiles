@@ -151,21 +151,17 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'honza/vim-snippets'
 Plug 'houtsnip/vim-emacscommandline'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'jceb/vim-orgmode'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
-Plug 'mattn/calendar-vim'
 Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
 Plug 'pangloss/vim-javascript'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer'}
 Plug 'vim-airline/vim-airline'
@@ -181,16 +177,13 @@ let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
 
-" jceb/vim-orgmode
-let g:org_agenda_files = ['~/org/agenda.org', '~/org/**/todo.org']
-
 " jiangmiao/auto-pairs
 let g:AutoPairsMapSpace = 0
 
 " junegunn/fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 let g:fzf_buffers_jump = 1
-let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -235,30 +228,12 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-n> :bnext<CR>
 nmap <silent> <C-p> :bprevious<CR>
 
-function! s:kill_line()
-  let [text_before_cursor, text_after_cursor] = s:split_line_text_at_cursor()
-  if len(text_after_cursor) == 0
-    normal! J
-  else
-    call setline(line('.'), text_before_cursor)
-  endif
-  return ''
-endfunction
-
-function! s:split_line_text_at_cursor()
-  let line_text = getline(line('.'))
-  let text_after_cursor  = line_text[col('.')-1 :]
-  let text_before_cursor = (col('.') > 1) ? line_text[: col('.')-2] : ''
-  return [text_before_cursor, text_after_cursor]
-endfunction
-
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 inoremap <C-h> <BS>
-inoremap <C-k> <C-r>=<SID>kill_line()<CR>
 
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
