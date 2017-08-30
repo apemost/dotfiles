@@ -156,6 +156,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
+Plug 'mattn/calendar-vim'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'pangloss/vim-javascript'
