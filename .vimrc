@@ -263,19 +263,20 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " Save a file as root
 nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
 
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>= :Autoformat<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>f :Files<space>
+nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :BCommits<CR>
 nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>f :Files<space>
-nnoremap <leader>gg :GGrep<space>
-nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gf :GFiles<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>gg :GGrep<space>
+nnoremap <leader>gl :Commits<CR>
 nnoremap <leader>gs :GFiles?<CR>
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader>= :Autoformat<CR>
 
 "*********************************************************************
 " Overrides
