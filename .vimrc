@@ -255,23 +255,23 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-" Save a file as root
-nnoremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-nnoremap <leader>= :Autoformat<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>f :Files<space>
-nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gc :BCommits<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gf :GFiles<CR>
-nnoremap <leader>gg :GGrep<space>
-nnoremap <leader>gl :Commits<CR>
-nnoremap <leader>gs :GFiles?<CR>
-nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>t :TagbarToggle<CR>
-nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>=    :Autoformat<CR>
+nnoremap <leader>W    :w !sudo tee % > /dev/null<CR>
+nnoremap <leader>b    :Buffers<CR>
+nnoremap <leader>ct   <Plug>VimwikiToggleListItem
+vnoremap <leader>ct   <Plug>VimwikiToggleListItem
+nnoremap <leader>ff   :Files<space>
+nnoremap <leader>f.   :Files<CR>
+nnoremap <leader>gb   :Gblame<CR>
+nnoremap <leader>gc   :BCommits<CR>
+nnoremap <leader>gd   :Gdiff<CR>
+nnoremap <leader>gf   :GFiles<CR>
+nnoremap <leader>gg   :GGrep<space>
+nnoremap <leader>gl   :Commits<CR>
+nnoremap <leader>gs   :GFiles?<CR>
+nnoremap <leader>j    :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>n    :NERDTreeToggle<CR>
+nnoremap <leader>t    :TagbarToggle<CR>
 
 "*********************************************************************
 " Overrides
