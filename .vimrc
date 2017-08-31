@@ -216,7 +216,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 
 " vimwiki/vimwiki
-let g:vimwiki_listsyms = ' ○◐●✓'
 let g:vimwiki_list = [{
 \   'path': '~/wiki/',
 \   'syntax': 'markdown',
@@ -255,11 +254,12 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
+nmap <leader>ct   <Plug>VimwikiToggleListItem
+vmap <leader>ct   <Plug>VimwikiToggleListItem
+
 nnoremap <leader>=    :Autoformat<CR>
 nnoremap <leader>W    :w !sudo tee % > /dev/null<CR>
 nnoremap <leader>b    :Buffers<CR>
-nnoremap <leader>ct   <Plug>VimwikiToggleListItem
-vnoremap <leader>ct   <Plug>VimwikiToggleListItem
 nnoremap <leader>ff   :Files<space>
 nnoremap <leader>f.   :Files<CR>
 nnoremap <leader>gb   :Gblame<CR>
