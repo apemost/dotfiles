@@ -149,6 +149,7 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'honza/vim-snippets'
 Plug 'houtsnip/vim-emacscommandline'
+Plug 'jamessan/vim-gnupg'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
@@ -176,6 +177,9 @@ let g:vim_json_syntax_conceal = 0
 let g:jsdoc_tags = {
 \   'returns': 'return',
 \ }
+
+" jamessan/vim-gnupg
+let g:GPGExecutable = 'gpg2'
 
 " JamshedVesuna/vim-markdown-preview
 let vim_markdown_preview_github=1
