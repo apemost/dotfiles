@@ -150,7 +150,6 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'honza/vim-snippets'
 Plug 'houtsnip/vim-emacscommandline'
 Plug 'jamessan/vim-gnupg'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
@@ -180,11 +179,6 @@ let g:jsdoc_tags = {
 
 " jamessan/vim-gnupg
 let g:GPGExecutable = 'gpg2'
-
-" JamshedVesuna/vim-markdown-preview
-let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Google Chrome'
 
 " jiangmiao/auto-pairs
 let g:AutoPairsMapSpace = 0
