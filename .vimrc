@@ -177,9 +177,6 @@ let g:jsdoc_tags = {
 \   'returns': 'return',
 \ }
 
-" jamessan/vim-gnupg
-let g:GPGExecutable = 'gpg2'
-
 " jiangmiao/auto-pairs
 let g:AutoPairsMapSpace = 0
 
