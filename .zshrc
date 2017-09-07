@@ -13,6 +13,9 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
+# Disable oh-my-zsh auto update
+DISABLE_AUTO_UPDATE="true"
+
 # Load plugins
 plugins=(autojump git pip tmux virtualenv colored-man-pages)
 
