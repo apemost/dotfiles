@@ -65,6 +65,7 @@ brew install vim --with-override-system-vi
 # Install other useful binaries
 brew install autojump
 brew install binutils
+brew install ffmpeg
 brew install markdown
 brew install the_silver_searcher
 brew install tree

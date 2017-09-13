@@ -34,6 +34,7 @@ sudo apt-get install -y vim
 
 # Install other useful binaries
 sudo apt-get install -y autojump
+sudo apt-get install -y ffmpeg
 sudo apt-get install -y markdown
 sudo apt-get install -y silversearcher-ag
 sudo apt-get install -y tree
