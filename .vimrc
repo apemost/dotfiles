@@ -258,7 +258,7 @@ nnoremap <leader>=    :Autoformat<CR>
 nnoremap <leader>W    :w !sudo tee % > /dev/null<CR>
 nnoremap <leader>b    :Buffers<CR>
 nnoremap <leader>ff   :Files<space>
-nnoremap <leader>f.   :Files<CR>
+nnoremap <leader>fc   :Files<CR>
 nnoremap <leader>gb   :Gblame<CR>
 nnoremap <leader>gc   :BCommits<CR>
 nnoremap <leader>gd   :Gdiff<CR>
@@ -268,6 +268,7 @@ nnoremap <leader>gl   :Commits<CR>
 nnoremap <leader>gs   :GFiles?<CR>
 nnoremap <leader>j    :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>n    :NERDTreeToggle<CR>
+nnoremap <leader>sh   :shell<CR>
 nnoremap <leader>t    :TagbarToggle<CR>
 
 "*********************************************************************
