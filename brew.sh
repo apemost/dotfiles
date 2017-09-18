@@ -58,6 +58,7 @@ brew install gnupg2
 brew install htop
 brew install httpie
 brew install jq
+brew install nvm
 brew install pyenv
 brew install shellcheck
 brew install tmux

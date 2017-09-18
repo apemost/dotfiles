@@ -54,8 +54,17 @@ export UPDATE_ZSH_DAYS=13
 # Path to zplug installation
 export ZPLUG_HOME=$HOME/.zplug
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  export PYENV_ROOT="$HOME/.pyenv"
+# Path to pyenv root
+export PYENV_ROOT="$HOME/.pyenv"
+
+# Path ro nvm directory
+export NVM_DIR="$HOME/.nvm"
+
+if command -v pyenv &> /dev/null; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
+fi
+
+if brew --prefix nvm &> /dev/null; then
+  source "$(brew --prefix nvm)/nvm.sh"
 fi
