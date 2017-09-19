@@ -1,4 +1,4 @@
-pip3 install cpplint
-pip3 install mycli
-pip3 install virtualenv
-pip3 install yapf
+pip install cpplint
+pip install mycli
+pip install virtualenv
+pip install yapf
