@@ -1,5 +1,8 @@
 {
   "extends": ["eslint:recommended", "google"],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
   "env": {
     "browser": true,
     "es6": true,
@@ -9,5 +12,8 @@
     "console": true,
     "module": true,
     "require": true
+  },
+  "rules": {
+    "arrow-parens": ["error", "as-needed"]
   }
 }
