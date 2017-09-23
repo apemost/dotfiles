@@ -68,12 +68,17 @@ let mapleader=" "
 " Appearance
 "*********************************************************************
 
+if !has('gui_running')
+  " Compatibility for Terminal
+  let g:solarized_termtrans=1
+endif
+
 set background=dark
 syntax enable
+set t_Co=256
 
-let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
+" Use the Solarized Dark theme
+colorscheme solarized
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
@@ -209,7 +214,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd
 let g:ycm_python_binary_path = 'python'
 
 " vim-airline/vim-airline
-let g:airline_theme='molokai'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
