@@ -16,6 +16,8 @@ else
     --exclude '.DS_Store' \
     --exclude '.macos' \
     --exclude 'brew.sh' \
+    --exclude 'npm.sh' \
+    --exclude 'pip.sh' \
     --exclude 'bootstrap.sh' \
     --exclude 'README.md' \
     --exclude 'LICENSE' \
