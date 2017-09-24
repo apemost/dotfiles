@@ -6,7 +6,6 @@ if [ "$(uname -s)" = 'Darwin' ]; then
   rsync \
     --exclude '.git/' \
     --exclude '.DS_Store' \
-    --exclude 'apt.sh' \
     --exclude 'bootstrap.sh' \
     --exclude 'README.md' \
     --exclude 'LICENSE' \
