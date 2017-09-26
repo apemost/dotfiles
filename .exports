@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Add `~/bin` to the `$PATH`
-export PATH=$HOME/bin:$PATH
-
 # Make vim the default editor
 export EDITOR='vim'
 
@@ -12,7 +9,7 @@ export LC_ALL='en_US.UTF-8'
 
 # Increase Bash history size. Allow 32³ entries; the default is 50
 export HISTSIZE='32768'
-export HISTFILESIZE="$HISTSIZE"
+export HISTFILESIZE=$HISTSIZE
 
 # Omit duplicates and commands that begin with a space from history
 export HISTCONTROL='ignoreboth'
@@ -36,7 +33,7 @@ export NODE_REPL_HISTORY_SIZE='32768'
 export NODE_REPL_MODE='sloppy'
 
 # Use ~/.proxychains.conf by default
-export PROXYCHAINS_CONF_FILE="$HOME/.proxychains.conf"
+export PROXYCHAINS_CONF_FILE=$HOME/.proxychains.conf
 
 # Avoid issues with `gpg` as installed via Homebrew
 # https://stackoverflow.com/a/42265848/96656
@@ -55,7 +52,19 @@ export UPDATE_ZSH_DAYS=13
 export ZPLUG_HOME=$HOME/.zplug
 
 # Path to pyenv root
-export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT=$HOME/.pyenv
 
-# Path ro nvm directory
-export NVM_DIR="$HOME/.nvm"
+# Path to nvm directory
+export NVM_DIR=$HOME/.nvm
+
+# Path to go
+export GOPATH=$HOME/.go
+
+if which brew &> /dev/null; then
+  export GOROOT="$(brew --prefix)/opt/go/libexec"
+else
+  export GOROOT=/usr/local/go
+fi
+
+# Export PATH
+export PATH=$HOME/bin:$PATH:$GOROOT/bin:$GOPATH/bin
