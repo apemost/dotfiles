@@ -55,7 +55,6 @@ brew install node
 # Install some development tools
 brew install ctags
 brew install gnupg2
-brew install go
 brew install htop
 brew install httpie
 brew install jq

@@ -191,6 +191,9 @@ command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shelle
 let g:fzf_buffers_jump = 1
 let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
 
+" mattn/vim-sqlfmt
+let g:sqlfmt_program = 'sqlformat -r -k lower -o %s -'
+
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
 

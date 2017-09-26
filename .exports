@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Add `~/bin` to the `$PATH`
+export PATH=$HOME/bin:$PATH
+
 # Make vim the default editor
 export EDITOR='vim'
 
@@ -56,15 +59,3 @@ export PYENV_ROOT=$HOME/.pyenv
 
 # Path to nvm directory
 export NVM_DIR=$HOME/.nvm
-
-# Path to go
-export GOPATH=$HOME/.go
-
-if which brew &> /dev/null; then
-  export GOROOT="$(brew --prefix)/opt/go/libexec"
-else
-  export GOROOT=/usr/local/go
-fi
-
-# Export PATH
-export PATH=$HOME/bin:$PATH:$GOROOT/bin:$GOPATH/bin
