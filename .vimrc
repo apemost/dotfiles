@@ -161,7 +161,6 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
-Plug 'mattn/vim-sqlfmt'
 Plug 'pangloss/vim-javascript'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
@@ -190,9 +189,6 @@ let g:AutoPairsMapSpace = 0
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 let g:fzf_buffers_jump = 1
 let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
-
-" mattn/vim-sqlfmt
-let g:sqlfmt_program = 'sqlformat -r -k lower -o %s -'
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
