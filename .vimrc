@@ -248,22 +248,23 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-nnoremap <leader>=    :Autoformat<CR>
-nnoremap <leader>W    :w !sudo tee % > /dev/null<CR>
-nnoremap <leader>b    :Buffers<CR>
-nnoremap <leader>ff   :Files<space>
-nnoremap <leader>fc   :Files<CR>
-nnoremap <leader>gb   :Gblame<CR>
-nnoremap <leader>gc   :BCommits<CR>
-nnoremap <leader>gd   :Gdiff<CR>
-nnoremap <leader>gf   :GFiles<CR>
-nnoremap <leader>gg   :GGrep<space>
-nnoremap <leader>gl   :Commits<CR>
-nnoremap <leader>gs   :GFiles?<CR>
-nnoremap <leader>j    :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>n    :NERDTreeToggle<CR>
-nnoremap <leader>sh   :shell<CR>
-nnoremap <leader>t    :TagbarToggle<CR>
+nnoremap <leader>=              :Autoformat<CR>
+nnoremap <leader>W              :w !sudo tee % > /dev/null<CR>
+nnoremap <leader>b              :Buffers<CR>
+nnoremap <leader>f<space>       :Files<space>
+nnoremap <leader>ff             :Files<CR>
+nnoremap <leader>g<space>       :GGrep<space>
+nnoremap <leader>gb             :Gblame<CR>
+nnoremap <leader>gc             :BCommits<CR>
+nnoremap <leader>gd             :Gdiff<CR>
+nnoremap <leader>gf             :GFiles<CR>
+nnoremap <leader>gg             :GGrep<space><C-r><C-w><CR>
+nnoremap <leader>gl             :Commits<CR>
+nnoremap <leader>gs             :GFiles?<CR>
+nnoremap <leader>j              :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>n              :NERDTreeToggle<CR>
+nnoremap <leader>sh             :shell<CR>
+nnoremap <leader>t              :TagbarToggle<CR>
 
 "*********************************************************************
 " Overrides
