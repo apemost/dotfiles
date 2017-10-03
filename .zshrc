@@ -33,6 +33,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_KUBECONTEXT_SHOW=false
 
 source ~/.zplug/init.zsh
 zplug 'denysdovhan/spaceship-zsh-theme', use:spaceship.zsh, from:github, as:theme
