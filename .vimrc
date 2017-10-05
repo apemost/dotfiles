@@ -195,7 +195,7 @@ let g:javascript_plugin_jsdoc = 1
 
 " scrooloose/nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', 'node_modules']
 let NERDTreeMapJumpNextSibling = '<C-n>'
 let NERDTreeMapJumpPrevSibling = '<C-p>'
 
