@@ -11,7 +11,7 @@ module.exports = {
     node: true
   },
   extends: 'standard',
-  'rules': {
+  rules: {
     'arrow-parens': 0,
     'generator-star-spacing': 0
   }
