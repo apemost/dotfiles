@@ -7,6 +7,4 @@ npm install -g eslint \
                eslint-plugin-promise \
                eslint-plugin-standard
 
-npm install -g htmlhint
 npm install -g jsonlint
-npm install -g stylelint
