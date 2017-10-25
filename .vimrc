@@ -260,6 +260,12 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
 
