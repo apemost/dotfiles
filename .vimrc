@@ -144,6 +144,7 @@ if !filereadable(vim_plug_path)
 endif
 
 call plug#begin()
+
 Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
 Plug 'digitaltoad/vim-pug'
@@ -181,10 +182,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-" Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --tern-completer'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+
 call plug#end()
 
 " elzr/vim-json
@@ -223,14 +224,6 @@ let g:vimshell_prompt = '$ '
 let g:UltiSnipsExpandTrigger = "<C-j>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
-
-" Valloric/YouCompleteMe
-" let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-p>', '<Up>']
-" let g:ycm_auto_trigger = 1
-" let g:ycm_autoclose_preview_window_after_insertion = 1
-" let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-" let g:ycm_python_binary_path = 'python'
 
 " vim-airline/vim-airline
 let g:airline_theme='molokai'
@@ -279,7 +272,6 @@ nnoremap <leader>gf             :GFiles<CR>
 nnoremap <leader>gg             :GGrep<space><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
-nnoremap <leader>j              :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
 nnoremap <leader>sh             :VimShell<CR>
 nnoremap <leader>t              :TagbarToggle<CR>
@@ -288,6 +280,6 @@ nnoremap <leader>t              :TagbarToggle<CR>
 " Overrides
 "*********************************************************************
 
-if filereadable(glob("~/.vimrc.local"))
+if filereadable(glob('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
