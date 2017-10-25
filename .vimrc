@@ -125,7 +125,7 @@ set mouse=a
 " Use relative line numbers
 if exists("&relativenumber")
   set relativenumber
-  au BufReadPost * set relativenumber
+  autocmd BufReadPost * set relativenumber
 endif
 
 " Start scrolling three lines before the horizontal window border
@@ -137,7 +137,7 @@ set scrolloff=3
 
 let vim_plug_path = expand('~/.vim/autoload/plug.vim')
 if !filereadable(vim_plug_path)
-  echo "Installing vim-plug..."
+  echo 'Installing vim-plug...'
   silent !mkdir -p ~/.vim/autoload
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   :execute 'source '.fnameescape(vim_plug_path)
@@ -237,11 +237,6 @@ let g:neosnippet#enable_completed_snippet = 1
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt = '$ '
 
-" SirVer/ultisnips
-let g:UltiSnipsExpandTrigger = "<C-j>"
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
-
 " vim-airline/vim-airline
 let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled = 1
@@ -282,21 +277,21 @@ endfunction"}}}
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
 
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+nmap <leader><TAB> <plug>(fzf-maps-n)
+xmap <leader><TAB> <plug>(fzf-maps-x)
+omap <leader><TAB> <plug>(fzf-maps-o)
 
 nnoremap <leader>=              :Autoformat<CR>
 nnoremap <leader>W              :w !sudo tee % > /dev/null<CR>
 nnoremap <leader>b              :Buffers<CR>
-nnoremap <leader>f<space>       :Files<space>
+nnoremap <leader>f<SPACE>       :Files<SPACE>
 nnoremap <leader>ff             :Files<CR>
-nnoremap <leader>g<space>       :GGrep<space>
+nnoremap <leader>g<SPACE>       :GGrep<SPACE>
 nnoremap <leader>gb             :Gblame<CR>
 nnoremap <leader>gc             :BCommits<CR>
 nnoremap <leader>gd             :Gdiff<CR>
 nnoremap <leader>gf             :GFiles<CR>
-nnoremap <leader>gg             :GGrep<space><C-r><C-w><CR>
+nnoremap <leader>gg             :GGrep<SPACE><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
