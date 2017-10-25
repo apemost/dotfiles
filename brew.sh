@@ -49,7 +49,7 @@ brew install git
 brew install python
 brew install python3
 brew install cmake
-brew install llvm
+brew install llvm --with-clang
 brew install node
 
 # Install some development tools
@@ -62,7 +62,7 @@ brew install nvm
 brew install pyenv
 brew install shellcheck
 brew install tmux
-brew install vim --with-override-system-vi
+brew install vim --with-override-system-vi --with-python3
 
 # Install other useful binaries
 brew install autojump
