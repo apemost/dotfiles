@@ -187,9 +187,11 @@ if has_features
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
 
+  Plug 'fszymanski/deoplete-emoji'
+  Plug 'Shougo/neco-vim'
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
-  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+  Plug 'Shougo/vimproc.vim', {'do': 'make'}
   Plug 'Shougo/vimshell.vim'
   Plug 'w0rp/ale'
   Plug 'wokalski/autocomplete-flow'
