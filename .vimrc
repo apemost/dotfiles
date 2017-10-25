@@ -143,6 +143,14 @@ if !filereadable(vim_plug_path)
   :execute 'source '.fnameescape(vim_plug_path)
 endif
 
+if has('nvim')
+    let has_features = has('timers')
+else
+    " Check if Job and Channel functions are available, instead of the
+    " features. This works better on old MacVim versions.
+    let has_features = has('timers') && exists('*job_start') && exists('*ch_close_in')
+endif
+
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
@@ -163,15 +171,6 @@ Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdtree'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -182,10 +181,21 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
-Plug 'wokalski/autocomplete-flow'
-Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-jedi'
+
+if has_features
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+
+  Plug 'w0rp/ale'
+  Plug 'wokalski/autocomplete-flow'
+  Plug 'zchee/deoplete-clang'
+  Plug 'zchee/deoplete-jedi'
+endif
 
 call plug#end()
 
