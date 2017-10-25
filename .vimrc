@@ -153,7 +153,6 @@ Plug 'elzr/vim-json'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
-Plug 'honza/vim-snippets'
 Plug 'houtsnip/vim-emacscommandline'
 Plug 'jamessan/vim-gnupg'
 Plug 'jiangmiao/auto-pairs'
@@ -177,7 +176,6 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
-Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -251,6 +249,10 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-n> :bnext<CR>
 nmap <silent> <C-p> :bprevious<CR>
+
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
