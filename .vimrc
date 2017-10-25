@@ -171,10 +171,6 @@ Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdtree'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -191,6 +187,10 @@ if has_features
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
 
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
+  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+  Plug 'Shougo/vimshell.vim'
   Plug 'w0rp/ale'
   Plug 'wokalski/autocomplete-flow'
   Plug 'zchee/deoplete-clang'
