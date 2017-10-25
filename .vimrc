@@ -173,8 +173,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-jedi'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
 Plug 'SirVer/ultisnips'
@@ -185,6 +185,9 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug 'wokalski/autocomplete-flow'
+Plug 'zchee/deoplete-clang'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -215,6 +218,9 @@ let NERDTreeMapJumpPrevSibling = '<C-p>'
 
 " Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1
+
+" Shougo/neosnippet
+let g:neosnippet#enable_completed_snippet = 1
 
 " Shougo/vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'

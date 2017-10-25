@@ -7,4 +7,5 @@ npm install -g eslint \
                eslint-plugin-promise \
                eslint-plugin-standard
 
+npm install -g flow-bin
 npm install -g jsonlint
