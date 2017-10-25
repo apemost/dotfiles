@@ -216,6 +216,7 @@ let NERDTreeMapJumpPrevSibling = '<C-p>'
 
 " Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1
+autocmd CompleteDone * silent! pclose!
 
 " Shougo/neosnippet
 let g:neosnippet#enable_completed_snippet = 1
