@@ -162,6 +162,8 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimshell.vim'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
@@ -238,7 +240,6 @@ inoremap <C-e> <End>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
-inoremap <C-h> <BS>
 
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
@@ -262,7 +263,7 @@ nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
 nnoremap <leader>j              :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
-nnoremap <leader>sh             :shell<CR>
+nnoremap <leader>sh             :VimShell<CR>
 nnoremap <leader>t              :TagbarToggle<CR>
 
 "*********************************************************************
