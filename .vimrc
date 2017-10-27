@@ -146,8 +146,7 @@ endif
 if has('nvim')
     let has_features = has('timers')
 else
-    " Check if Job and Channel functions are available, instead of the
-    " features. This works better on old MacVim versions.
+    " Check if Job and Channel functions are available, instead of the features
     let has_features = has('timers') && exists('*job_start') && exists('*ch_close_in')
 endif
 
