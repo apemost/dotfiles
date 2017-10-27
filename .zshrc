@@ -7,9 +7,6 @@ fi
 # `_` and `-` will be interchangeable
 HYPHEN_INSENSITIVE="true"
 
-# Display red dots whilst waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
