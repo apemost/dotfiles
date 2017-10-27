@@ -35,6 +35,9 @@ SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_KUBECONTEXT_SHOW=false
 
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+
 source ~/.zplug/init.zsh
 zplug 'denysdovhan/spaceship-zsh-theme', use:spaceship.zsh, from:github, as:theme
 zplug 'zsh-users/zsh-autosuggestions'
