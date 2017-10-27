@@ -37,6 +37,7 @@ SPACESHIP_KUBECONTEXT_SHOW=false
 
 source ~/.zplug/init.zsh
 zplug 'denysdovhan/spaceship-zsh-theme', use:spaceship.zsh, from:github, as:theme
+zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug check || zplug install
 zplug load
