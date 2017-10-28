@@ -154,10 +154,8 @@ call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
-Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
-Plug 'gorodinskiy/vim-coloresque'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'houtsnip/vim-emacscommandline'
@@ -178,14 +176,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 if has_features
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'fszymanski/deoplete-emoji'
   Plug 'Shougo/neco-vim'
   Plug 'Shougo/neosnippet'
