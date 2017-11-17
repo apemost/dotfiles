@@ -156,7 +156,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
-Plug 'haya14busa/incsearch.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'houtsnip/vim-emacscommandline'
@@ -197,9 +196,6 @@ call plug#end()
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
-
-" haya14busa/incsearch.vim
-let g:incsearch#auto_nohlsearch = 1
 
 " heavenshell/vim-jsdoc
 let g:jsdoc_tags = {
@@ -256,17 +252,6 @@ let g:ale_linters = {
 "*********************************************************************
 " Keymap
 "*********************************************************************
-
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
