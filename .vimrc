@@ -188,7 +188,6 @@ if has_features
   Plug 'Shougo/vimshell.vim'
   Plug 'w0rp/ale'
   Plug 'fszymanski/deoplete-emoji'
-  Plug 'mhartington/nvim-typescript'
   Plug 'wokalski/autocomplete-flow'
   Plug 'zchee/deoplete-clang'
   Plug 'zchee/deoplete-jedi'
