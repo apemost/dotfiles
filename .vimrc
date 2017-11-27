@@ -155,6 +155,7 @@ endif
 
 call plug#begin()
 
+Plug '907th/vim-auto-save'
 Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
@@ -197,6 +198,9 @@ if has_features
 endif
 
 call plug#end()
+
+" 907th/vim-auto-save
+let g:auto_save = 1
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
