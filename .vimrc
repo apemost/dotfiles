@@ -131,6 +131,9 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" Disable the preview window feature
+set completeopt-=preview
+
 "*********************************************************************
 " Plugins
 "*********************************************************************
