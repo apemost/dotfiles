@@ -9,3 +9,4 @@ npm install -g eslint \
 
 npm install -g flow-bin
 npm install -g jsonlint
+npm install -g typescript tslint
