@@ -305,6 +305,7 @@ nnoremap <leader>gf             :GFiles<CR>
 nnoremap <leader>gg             :GGrep<SPACE><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
+nnoremap <leader>l              :ALELint<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
 nnoremap <leader>sh             :VimShell<CR>
 nnoremap <leader>t              :TagbarToggle<CR>
