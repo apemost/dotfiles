@@ -67,7 +67,6 @@ brew install vim --with-override-system-vi --with-python3
 # Install other useful binaries
 brew install autojump
 brew install binutils
-brew install emojify
 brew install ffmpeg
 brew install markdown
 brew install the_silver_searcher
