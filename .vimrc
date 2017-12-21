@@ -189,8 +189,6 @@ if has_features
   Plug 'Shougo/neco-vim'
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
-  Plug 'Shougo/vimproc.vim', {'do': 'make'}
-  Plug 'Shougo/vimshell.vim'
   Plug 'w0rp/ale'
   Plug 'fszymanski/deoplete-emoji'
   Plug 'wokalski/autocomplete-flow'
@@ -241,10 +239,6 @@ autocmd CompleteDone * silent! pclose!
 
 " Shougo/neosnippet
 let g:neosnippet#enable_completed_snippet = 1
-
-" Shougo/vimshell.vim
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt = '$ '
 
 " vim-airline/vim-airline
 let g:airline_theme='molokai'
@@ -313,7 +307,6 @@ nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
 nnoremap <leader>l              :ALELint<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
-nnoremap <leader>sh             :VimShell<CR>
 nnoremap <leader>t              :TagbarToggle<CR>
 
 "*********************************************************************
