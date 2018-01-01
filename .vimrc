@@ -68,16 +68,16 @@ let mapleader=" "
 " Appearance
 "*********************************************************************
 
-" if !has('gui_running')
-"   " Compatibility for Terminal
-"   let g:solarized_termtrans=1
-" endif
+if !has('gui_running')
+  " Compatibility for Terminal
+  let g:solarized_termtrans=1
+endif
 
 set background=dark
 syntax enable
 set t_Co=256
 
-colorscheme molokai
+colorscheme solarized
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
@@ -241,7 +241,7 @@ autocmd CompleteDone * silent! pclose!
 let g:neosnippet#enable_completed_snippet = 1
 
 " vim-airline/vim-airline
-let g:airline_theme='molokai'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
