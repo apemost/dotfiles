@@ -70,6 +70,9 @@ let mapleader=" "
 
 set background=dark
 syntax enable
+
+let g:molokai_original = 1
+let g:rehash256 = 1
 colorscheme molokai
 
 " Don’t show the intro message when starting Vim
