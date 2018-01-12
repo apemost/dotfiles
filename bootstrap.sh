@@ -17,8 +17,6 @@ else
     --exclude '.macos' \
     --exclude 'bootstrap.sh' \
     --exclude 'brew.sh' \
-    --exclude 'npm.sh' \
-    --exclude 'pip.sh' \
     --exclude 'README.md' \
     --exclude 'LICENSE' \
     -avh --no-perms . ~
