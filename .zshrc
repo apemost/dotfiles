@@ -41,3 +41,5 @@ zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug check || zplug install
 zplug load
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
