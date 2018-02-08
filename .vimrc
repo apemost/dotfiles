@@ -171,6 +171,7 @@ Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdtree'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -289,6 +290,7 @@ xmap <leader><TAB> <plug>(fzf-maps-x)
 omap <leader><TAB> <plug>(fzf-maps-o)
 
 nnoremap <leader>=              :Autoformat<CR>
+nnoremap <leader>:              :AsyncRun<SPACE>
 nnoremap <leader>W              :w !sudo tee % > /dev/null<CR>
 nnoremap <leader>b              :Buffers<CR>
 nnoremap <leader>f<SPACE>       :Files<SPACE>
