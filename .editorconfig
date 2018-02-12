@@ -8,6 +8,9 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.go]
+indent_style = tab
+
 [{.gitconfig,.gitmodules}]
 indent_style = tab
 
