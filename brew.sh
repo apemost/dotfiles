@@ -51,6 +51,8 @@ brew install python3
 brew install cmake
 brew install llvm --with-clang
 brew install node
+brew install go
+brew install protobuf
 
 # Install some development tools
 brew install ctags
