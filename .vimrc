@@ -202,6 +202,9 @@ let g:auto_save = 1
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
 
+" fatih/vim-go
+let g:go_fmt_autosave = 0
+
 " heavenshell/vim-jsdoc
 let g:jsdoc_tags = {
 \   'returns': 'return',
