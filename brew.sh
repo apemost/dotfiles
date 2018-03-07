@@ -64,7 +64,7 @@ brew install nvm
 brew install pyenv
 brew install shellcheck
 brew install tmux
-brew install vim --with-override-system-vi --with-python3
+brew install vim --with-override-system-vi
 
 # Install other useful binaries
 brew install autojump
