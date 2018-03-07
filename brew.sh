@@ -47,7 +47,6 @@ brew install screen
 # Install development environment
 brew install git
 brew install python
-brew install python3
 brew install cmake
 brew install llvm --with-clang
 brew install node
