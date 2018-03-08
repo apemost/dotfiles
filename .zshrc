@@ -25,7 +25,6 @@ if [ ! -d $ZPLUG_HOME ]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
-SPACESHIP_PROMPT_SYMBOL='$'
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_DOCKER_SHOW=false
