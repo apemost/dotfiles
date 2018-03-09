@@ -30,10 +30,11 @@ log_level = INFO
 # Timing of sql statments and table rendering.
 timing = True
 
-# Table format. Possible values: psql, plain, simple, grid, fancy_grid, pipe,
-# orgtbl, rst, mediawiki, html, latex, latex_booktabs, tsv.
-# Recommended: psql, fancy_grid and grid.
-table_format = psql
+# Table format. Possible values: ascii, double, github,
+# psql, plain, simple, grid, fancy_grid, pipe, orgtbl, rst, mediawiki, html,
+# latex, latex_booktabs, textile, moinmoin, jira, vertical, tsv, csv.
+# Recommended: ascii
+table_format = ascii
 
 # Syntax coloring style. Possible values (many support the "-dark" suffix):
 # manni, igor, xcode, vim, autumn, vs, rrt, native, perldoc, borland, tango, emacs,
@@ -51,11 +52,18 @@ key_bindings = emacs
 wider_completion_menu = False
 
 # MySQL prompt
-# \t - Product type (Percona, MySQL, Mariadb)
-# \u - Username
-# \h - Hostname of the server
+# \D - The full current date
 # \d - Database name
+# \h - Hostname of the server
+# \m - Minutes of the current time
 # \n - Newline
+# \P - AM/PM
+# \p - Port
+# \R - The current time, in 24-hour military time (0–23)
+# \r - The current time, standard 12-hour time (1–12)
+# \s - Seconds of the current time
+# \t - Product type (Percona, MySQL, MariaDB)
+# \u - Username
 prompt = '\t \u@\h:\d\n→ '
 prompt_continuation = '→ '
 
@@ -69,6 +77,12 @@ login_path_as_host = False
 # and using normal tabular format otherwise. (This applies to statements terminated by ; or \G.)
 auto_vertical_output = False
 
+# keyword casing preference. Possible values "lower", "upper", "auto"
+keyword_casing = auto
+
+# disabled pager on startup
+enable_pager = True
+
 # Custom colors for the completion menu, toolbar, etc.
 [colors]
 # Completion menus.
@@ -77,6 +91,11 @@ Token.Menu.Completions.Completion = 'bg:#008888 #ffffff'
 Token.Menu.Completions.MultiColumnMeta = 'bg:#aaffff #000000'
 Token.Menu.Completions.ProgressButton = 'bg:#003333'
 Token.Menu.Completions.ProgressBar = 'bg:#00aaaa'
+
+# Query results
+Token.Output.Header = 'bold'
+Token.Output.OddRow = ''
+Token.Output.EvenRow = ''
 
 # Selected text.
 Token.SelectedText = '#ffffff bg:#6666aa'
@@ -99,3 +118,7 @@ Token.Toolbar.Arg.Text = 'nobold'
 
 # Favorite queries.
 [favorite_queries]
+
+# Use the -d option to reference a DSN.
+[alias_dsn]
+# example_dsn = mysql://[user[:password]@][host][:port][/dbname]
