@@ -46,12 +46,11 @@ brew install screen
 
 # Install development environment
 brew install git
-brew install python
 brew install cmake
 brew install llvm --with-clang
+brew install python
 brew install node
 brew install go
-brew install protobuf
 
 # Install some development tools
 brew install ctags
@@ -59,12 +58,16 @@ brew install gnupg2
 brew install htop
 brew install httpie
 brew install jq
+brew install mercurial
 brew install mycli
-brew install nvm
-brew install pyenv
+brew install protobuf
 brew install shellcheck
 brew install tmux
 brew install vim --with-override-system-vi
+
+# Install programming language version managers
+brew install nvm
+brew install pyenv
 
 # Install other useful binaries
 brew install autojump
