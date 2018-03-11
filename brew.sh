@@ -64,6 +64,8 @@ brew install protobuf
 brew install shellcheck
 brew install tmux
 brew install vim --with-override-system-vi
+brew install watchman
+brew install yarn --without-node
 
 # Install programming language version managers
 brew install nvm
