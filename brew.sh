@@ -61,7 +61,6 @@ brew install jq
 brew install mercurial
 brew install mycli
 brew install protobuf
-brew install shellcheck
 brew install tmux
 brew install vim --with-override-system-vi
 brew install watchman
@@ -70,6 +69,10 @@ brew install yarn --without-node
 # Install programming language version managers
 brew install nvm
 brew install pyenv
+
+# Install type checker and linters
+brew install flow
+brew install shellcheck
 
 # Install other useful binaries
 brew install autojump
