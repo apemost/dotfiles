@@ -39,10 +39,15 @@ fi
 # Install `wget` with IRI support
 brew install wget --with-iri
 
+# Install GnuPG to enable PGP-signing commits
+brew install gnupg2
+
 # Install more recent versions of some macOS tools
+brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
+brew install tmux
 
 # Install development environment
 brew install git
@@ -50,36 +55,28 @@ brew install cmake
 brew install llvm --with-clang
 brew install python
 brew install node
+brew install typescript
 brew install go
+brew install protobuf
+brew install nvm
+brew install pyenv
+brew install ctags
+brew install the_silver_searcher
 
 # Install some development tools
-brew install ctags
-brew install gnupg2
 brew install htop
 brew install httpie
 brew install jq
-brew install mercurial
 brew install mycli
-brew install protobuf
-brew install tmux
-brew install vim --with-override-system-vi
 brew install watchman
 brew install yarn --without-node
-
-# Install programming language version managers
-brew install nvm
-brew install pyenv
-
-# Install type checker and linters
-brew install flow
-brew install shellcheck
 
 # Install other useful binaries
 brew install autojump
 brew install binutils
 brew install ffmpeg
 brew install markdown
-brew install the_silver_searcher
+brew install ssh-copy-id
 brew install tree
 brew install unrar
 
