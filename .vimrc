@@ -294,7 +294,7 @@ nnoremap <leader>gf             :GFiles<CR>
 nnoremap <leader>gg             :GGrep<SPACE><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
-nnoremap <leader>j              :YcmCompleter GoTo<CR>
+nnoremap <leader>j              :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>l              :ALELint<CR>
 nnoremap <leader>m              :Marks<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
