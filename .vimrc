@@ -252,6 +252,10 @@ let g:ale_linters = {
 \   'python': ['pylint'],
 \   'typescript': ['tslint'],
 \ }
+let g:ale_pattern_options = {
+\   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+\   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+\ }
 
 "*********************************************************************
 " Keymap
