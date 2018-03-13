@@ -177,8 +177,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 if has('timers') && exists('*job_start') && exists('*ch_close_in')
-  Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --go-completer --js-completer --java-completer'}
   Plug 'w0rp/ale'
+endif
+
+if has('mac')
+  Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --go-completer --js-completer --java-completer'}
 endif
 
 call plug#end()
