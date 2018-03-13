@@ -128,7 +128,7 @@ endif
 set scrolloff=3
 
 " Disable the preview window feature
-set completeopt-=preview
+" set completeopt-=preview
 
 "*********************************************************************
 " Plugins
@@ -142,13 +142,6 @@ if !filereadable(vim_plug_path)
   :execute 'source '.fnameescape(vim_plug_path)
 endif
 
-if has('nvim')
-    let has_features = has('timers')
-else
-    " Check if Job and Channel functions are available, instead of the features
-    let has_features = has('timers') && exists('*job_start') && exists('*ch_close_in')
-endif
-
 call plug#begin()
 
 Plug '907th/vim-auto-save'
@@ -159,6 +152,7 @@ Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
+Plug 'honza/vim-snippets'
 Plug 'houtsnip/vim-emacscommandline'
 Plug 'jamessan/vim-gnupg'
 Plug 'JamshedVesuna/vim-markdown-preview'
@@ -178,21 +172,13 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-if has_features
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'Shougo/neco-vim'
-  Plug 'Shougo/neosnippet'
-  Plug 'Shougo/neosnippet-snippets'
+if has('timers') && exists('*job_start') && exists('*ch_close_in')
+  Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --go-completer --js-completer --java-completer'}
   Plug 'w0rp/ale'
-  Plug 'fszymanski/deoplete-emoji'
-  Plug 'wokalski/autocomplete-flow'
-  Plug 'zchee/deoplete-clang'
-  Plug 'zchee/deoplete-jedi'
 endif
 
 call plug#end()
@@ -229,8 +215,10 @@ let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(gre
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
+" SirVer/ultisnips
+let g:UltiSnipsExpandTrigger="<C-j>"
+
 " scrooloose/nerdcommenter
-let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
 " scrooloose/nerdtree
@@ -239,12 +227,13 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
 let NERDTreeMapJumpNextSibling = '<C-n>'
 let NERDTreeMapJumpPrevSibling = '<C-p>'
 
-" Shougo/deoplete.nvim
-let g:deoplete#enable_at_startup = 1
-autocmd CompleteDone * silent! pclose!
-
-" Shougo/neosnippet
-let g:neosnippet#enable_completed_snippet = 1
+" Valloric/YouCompleteMe
+let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-p>', '<Up>']
+let g:ycm_auto_trigger = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_python_binary_path = 'python'
 
 " vim-airline/vim-airline
 let g:airline_theme='molokai'
@@ -274,10 +263,6 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-n> :bnext<CR>
 nmap <silent> <C-p> :bprevious<CR>
-
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
@@ -312,6 +297,7 @@ nnoremap <leader>gf             :GFiles<CR>
 nnoremap <leader>gg             :GGrep<SPACE><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
+nnoremap <leader>j              :YcmCompleter GoTo<CR>
 nnoremap <leader>l              :ALELint<CR>
 nnoremap <leader>m              :Marks<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
