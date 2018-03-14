@@ -163,7 +163,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdcommenter'
@@ -252,6 +251,7 @@ let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_semantic_triggers =  {'c,cpp,python,javascript,typescript,go,java': ['re!\w{2}']}
 let g:ycm_filetype_whitelist = {
   \ 'sh':1,
