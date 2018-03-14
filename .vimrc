@@ -128,7 +128,7 @@ endif
 set scrolloff=3
 
 " Disable the preview window feature
-" set completeopt-=preview
+set completeopt-=preview
 
 "*********************************************************************
 " Plugins
@@ -252,6 +252,19 @@ let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
+let g:ycm_semantic_triggers =  {'c,cpp,python,javascript,typescript,go,java': ['re!\w{2}']}
+let g:ycm_filetype_whitelist = {
+  \ 'sh':1,
+  \ 'zsh':1,
+  \ 'vim':1,
+  \ 'c':1,
+  \ 'cpp':1,
+  \ 'python':1,
+  \ 'javascript':1,
+  \ 'typescript':1,
+  \ 'go':1,
+  \ 'java':1,
+  \ }
 
 " vim-airline/vim-airline
 let g:airline_theme='molokai'
