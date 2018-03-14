@@ -213,9 +213,9 @@ let g:AutoPairsMapSpace = 0
 " junegunn/fzf
 let g:fzf_buffers_jump = 1
 let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
-command! -bang -nargs=* GGrep
+command! -bang -nargs=* Gg
   \ call fzf#vim#grep(
-  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   'git grep --line-number --color=always '.shellescape(<q-args>), 0,
   \   extend(
   \     {'dir': systemlist('git rev-parse --show-toplevel')[0]},
   \     <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
@@ -307,12 +307,12 @@ nnoremap <leader>aa             :Ag<SPACE><C-r><C-w><CR>
 nnoremap <leader>b              :Buffers<CR>
 nnoremap <leader>f<SPACE>       :Files<SPACE>
 nnoremap <leader>ff             :Files<CR>
-nnoremap <leader>g<SPACE>       :GGrep<SPACE>
+nnoremap <leader>g<SPACE>       :Gg<SPACE>
 nnoremap <leader>gb             :Gblame<CR>
 nnoremap <leader>gc             :BCommits<CR>
 nnoremap <leader>gd             :Gdiff<CR>
 nnoremap <leader>gf             :GFiles<CR>
-nnoremap <leader>gg             :GGrep<SPACE><C-r><C-w><CR>
+nnoremap <leader>gg             :Gg<SPACE><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
 nnoremap <leader>j              :YcmCompleter GoToDefinition<CR>
