@@ -197,8 +197,8 @@ let g:go_fmt_autosave = 0
 
 " heavenshell/vim-jsdoc
 let g:jsdoc_tags = {
-\   'returns': 'return',
-\ }
+  \   'returns': 'return',
+  \ }
 
 " JamshedVesuna/vim-markdown-preview
 let vim_markdown_preview_hotkey='<C-m>'
@@ -211,9 +211,24 @@ endif
 let g:AutoPairsMapSpace = 0
 
 " junegunn/fzf
-command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 let g:fzf_buffers_jump = 1
 let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   extend(
+  \     {'dir': systemlist('git rev-parse --show-toplevel')[0]},
+  \     <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   ), <bang>0)
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -248,14 +263,14 @@ let g:airline_powerline_fonts = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'python': ['pylint'],
-\   'typescript': ['tslint'],
-\ }
+  \   'javascript': ['eslint'],
+  \   'python': ['pylint'],
+  \   'typescript': ['tslint'],
+  \ }
 let g:ale_pattern_options = {
-\   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-\   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-\ }
+  \   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+  \   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+  \ }
 
 "*********************************************************************
 " Keymap
@@ -287,6 +302,8 @@ omap <leader><TAB> <plug>(fzf-maps-o)
 nnoremap <leader>=              :Autoformat<CR>
 nnoremap <leader>:              :AsyncRun<SPACE>
 nnoremap <leader>W              :w !sudo tee % > /dev/null<CR>
+nnoremap <leader>a<SPACE>       :Ag<SPACE>
+nnoremap <leader>aa             :Ag<SPACE><C-r><C-w><CR>
 nnoremap <leader>b              :Buffers<CR>
 nnoremap <leader>f<SPACE>       :Files<SPACE>
 nnoremap <leader>ff             :Files<CR>
@@ -302,6 +319,8 @@ nnoremap <leader>j              :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>l              :ALELint<CR>
 nnoremap <leader>m              :Marks<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
+nnoremap <leader>r<SPACE>       :Rg<SPACE>
+nnoremap <leader>rr             :Rg<SPACE><C-r><C-w><CR>
 nnoremap <leader>t              :TagbarToggle<CR>
 
 "*********************************************************************
