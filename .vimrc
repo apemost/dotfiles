@@ -147,6 +147,7 @@ call plug#begin()
 Plug '907th/vim-auto-save'
 Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
+Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
@@ -309,36 +310,36 @@ inoremap <C-d> <Del>
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
 
-nmap <leader><Tab> <Plug>(fzf-maps-n)
-xmap <leader><Tab> <Plug>(fzf-maps-x)
-omap <leader><Tab> <Plug>(fzf-maps-o)
+nmap <Leader><Tab> <Plug>(fzf-maps-n)
+xmap <Leader><Tab> <Plug>(fzf-maps-x)
+omap <Leader><Tab> <Plug>(fzf-maps-o)
 
-nnoremap <leader>=              :Autoformat<CR>
-nnoremap <leader>:              :AsyncRun<Space>
-nnoremap <leader>W              :w !sudo tee % > /dev/null<CR>
-nnoremap <leader>a<Space>       :Ag<Space>
-nnoremap <leader>aa             :Ag<Space><C-r><C-w><CR>
-nnoremap <leader>b              :Buffers<CR>
-nnoremap <leader>f<Space>       :Files<Space>
-nnoremap <leader>ff             :Files<CR>
-nnoremap <leader>g<Space>       :Gg<Space>
-nnoremap <leader>gb             :Gblame<CR>
-nnoremap <leader>gc             :BCommits<CR>
-nnoremap <leader>gd             :Gdiff<CR>
-nnoremap <leader>gf             :GFiles<CR>
-nnoremap <leader>gg             :Gg<Space><C-r><C-w><CR>
-nnoremap <leader>gl             :Commits<CR>
-nnoremap <leader>gs             :GFiles?<CR>
-nnoremap <leader>jd             :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>ji             :YcmCompleter GoToInclude<CR>
-nnoremap <leader>jj             :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>jr             :YcmCompleter GoToReferences<CR>
-nnoremap <leader>l              :ALELint<CR>
-nnoremap <leader>m              :Marks<CR>
-nnoremap <leader>n              :NERDTreeToggle<CR>
-nnoremap <leader>r<Space>       :Rg<Space>
-nnoremap <leader>rr             :Rg<Space><C-r><C-w><CR>
-nnoremap <leader>t              :TagbarToggle<CR>
+nnoremap <Leader>=              :Autoformat<CR>
+nnoremap <Leader>:              :AsyncRun<Space>
+nnoremap <Leader>W              :w !sudo tee % > /dev/null<CR>
+nnoremap <Leader>a<Space>       :Ag<Space>
+nnoremap <Leader>aa             :Ag<Space><C-r><C-w><CR>
+nnoremap <Leader>b              :Buffers<CR>
+nnoremap <Leader>f<Space>       :Files<Space>
+nnoremap <Leader>ff             :Files<CR>
+nnoremap <Leader>g<Space>       :Gg<Space>
+nnoremap <Leader>gb             :Gblame<CR>
+nnoremap <Leader>gc             :BCommits<CR>
+nnoremap <Leader>gd             :Gdiff<CR>
+nnoremap <Leader>gf             :GFiles<CR>
+nnoremap <Leader>gg             :Gg<Space><C-r><C-w><CR>
+nnoremap <Leader>gl             :Commits<CR>
+nnoremap <Leader>gs             :GFiles?<CR>
+nnoremap <Leader>jd             :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>ji             :YcmCompleter GoToInclude<CR>
+nnoremap <Leader>jj             :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>jr             :YcmCompleter GoToReferences<CR>
+nnoremap <Leader>l              :ALELint<CR>
+nnoremap <Leader>m              :Marks<CR>
+nnoremap <Leader>n              :NERDTreeToggle<CR>
+nnoremap <Leader>r<Space>       :Rg<Space>
+nnoremap <Leader>rr             :Rg<Space><C-r><C-w><CR>
+nnoremap <Leader>t              :TagbarToggle<CR>
 
 "*********************************************************************
 " Overrides
