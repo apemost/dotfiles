@@ -337,11 +337,12 @@ nnoremap <Leader>jj             :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>jr             :YcmCompleter GoToReferences<CR>
 nnoremap <Leader>l              :ALELint<CR>
 nnoremap <Leader>m              :Marks<CR>
-nnoremap <Leader>n              :NERDTreeToggle<CR>
 nnoremap <Leader>r<Space>       :Rg<Space>
 nnoremap <Leader>rr             :Rg<Space><C-r><C-w><CR>
-nnoremap <Leader>t              :TagbarToggle<CR>
-nnoremap <Leader>u              :UndotreeToggle<CR>
+
+nnoremap <silent> <Leader>n     :UndotreeHide<CR>:NERDTreeToggle<CR>
+nnoremap <silent> <Leader>t     :TagbarToggle<CR>
+nnoremap <silent> <Leader>u     :NERDTreeClose<CR>:UndotreeToggle<CR>
 
 "*********************************************************************
 " Overrides
