@@ -203,10 +203,10 @@ let g:jsdoc_tags = {
   \ }
 
 " JamshedVesuna/vim-markdown-preview
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_hotkey = '<C-m>'
+let vim_markdown_preview_browser = 'Google Chrome'
 if executable('grip')
-  let vim_markdown_preview_github=1
+  let vim_markdown_preview_github = 1
 endif
 
 " jiangmiao/auto-pairs
@@ -215,6 +215,10 @@ let g:AutoPairsMapSpace = 0
 " junegunn/fzf
 let g:fzf_buffers_jump = 1
 let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 command! -bang -nargs=* Gg
   \ call fzf#vim#grep(
   \   'git grep --line-number --color=always '.shellescape(<q-args>), 0,
@@ -222,10 +226,6 @@ command! -bang -nargs=* Gg
   \     {'dir': systemlist('git rev-parse --show-toplevel')[0]},
   \     <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   ), <bang>0)
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -236,7 +236,7 @@ command! -bang -nargs=* Rg
 let g:javascript_plugin_jsdoc = 1
 
 " SirVer/ultisnips
-let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsExpandTrigger = "<C-j>"
 
 " scrooloose/nerdcommenter
 let g:NERDDefaultAlign = 'left'
@@ -255,7 +255,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
 let g:ycm_show_diagnostics_ui = 0
-let g:ycm_semantic_triggers =  {'c,cpp,python,javascript,typescript,go,java': ['re!\w{2}']}
+let g:ycm_semantic_triggers = {'c,cpp,python,javascript,typescript,go,java': ['re!\w{2}']}
 let g:ycm_filetype_whitelist = {
   \ 'sh':1,
   \ 'zsh':1,
@@ -270,7 +270,7 @@ let g:ycm_filetype_whitelist = {
   \ }
 
 " vim-airline/vim-airline
-let g:airline_theme='molokai'
+let g:airline_theme = 'molokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
@@ -292,6 +292,9 @@ let g:ale_pattern_options = {
 " Keymap
 "*********************************************************************
 
+autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
+autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
+
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F
 map t <Plug>Sneak_t
@@ -308,46 +311,50 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 
-autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
-autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
-
 nmap <Leader><Tab> <Plug>(fzf-maps-n)
 xmap <Leader><Tab> <Plug>(fzf-maps-x)
 omap <Leader><Tab> <Plug>(fzf-maps-o)
 
-nnoremap <Leader>=              :Autoformat<CR>
-nnoremap <Leader>:              :AsyncRun<Space>
-nnoremap <Leader>W              :w !sudo tee % > /dev/null<CR>
+nnoremap <Leader>-      :ALELint<CR>
+nnoremap <Leader>:      :copen<CR>:AsyncRun<Space>
+nnoremap <Leader>=      :Autoformat<CR>
 
-nnoremap <Leader>bb             :Buffers<CR>
-nnoremap <Leader>bc             :BCommits<CR>
-nnoremap <Leader>fa             :Ag<Space><C-r><C-w><CR>
-nnoremap <Leader>ff             :Files<CR>
-nnoremap <Leader>fc             :Commits<CR>
-nnoremap <Leader>fg             :Gg<Space><C-r><C-w><CR>
-nnoremap <Leader>fm             :Marks<CR>
-nnoremap <Leader>fr             :Rg<Space><C-r><C-w><CR>
-nnoremap <Leader>fs             :GFiles?<CR>
-nnoremap <Leader>gb             :Gblame<CR>
-nnoremap <Leader>gc             :Gcommit<Space>
-nnoremap <Leader>gd             :Gdiff<CR>
-nnoremap <Leader>ge             :Gedit<Space>
-nnoremap <Leader>gg             :GFiles<CR>
-nnoremap <Leader>gf             :Gfetch<Space>
-nnoremap <Leader>gl             :Gpull<Space>
-nnoremap <Leader>gm             :Gmerge<Space>
-nnoremap <Leader>gp             :Gpull<Space>
-nnoremap <Leader>gr             :Gread<Space>
-nnoremap <Leader>gs             :Gstatus<CR>
-nnoremap <Leader>gw             :Gwrite<Space>
-nnoremap <Leader>jd             :YcmCompleter GoToDeclaration<CR>
-nnoremap <Leader>ji             :YcmCompleter GoToInclude<CR>
-nnoremap <Leader>jj             :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>jr             :YcmCompleter GoToReferences<CR>
-nnoremap <Leader>ll             :ALELint<CR>
-nnoremap <Leader>tn             :UndotreeHide<CR>:NERDTreeToggle<CR>
-nnoremap <Leader>tt             :TagbarToggle<CR>
-nnoremap <Leader>tu             :NERDTreeClose<CR>:UndotreeToggle<CR>
+nnoremap <Leader>H      :help<Space>
+nnoremap <Leader>W      :w !sudo tee % > /dev/null<CR>
+
+nnoremap <Leader>bb     :Buffers<CR>
+nnoremap <Leader>bd     :bdelete<CR>
+nnoremap <Leader>bl     :BCommits<CR>
+
+nnoremap <Leader>fa     :Ag<Space><C-r><C-w><CR>
+nnoremap <Leader>ff     :Files<CR>
+nnoremap <Leader>fg     :Gg<Space><C-r><C-w><CR>
+nnoremap <Leader>fl     :Commits<CR>
+nnoremap <Leader>fm     :Marks<CR>
+nnoremap <Leader>fr     :Rg<Space><C-r><C-w><CR>
+nnoremap <Leader>fs     :GFiles?<CR>
+
+nnoremap <Leader>gb     :Gblame<CR>
+nnoremap <Leader>gc     :Gcommit<Space>
+nnoremap <Leader>gd     :Gdiff<CR>
+nnoremap <Leader>ge     :Gedit<Space>
+nnoremap <Leader>gg     :GFiles<CR>
+nnoremap <Leader>gf     :Gfetch<Space>
+nnoremap <Leader>gl     :Gpull<Space>
+nnoremap <Leader>gm     :Gmerge<Space>
+nnoremap <Leader>gp     :Gpush<Space>
+nnoremap <Leader>gr     :Gread<Space>
+nnoremap <Leader>gs     :Gstatus<CR>
+nnoremap <Leader>gw     :Gwrite<Space>
+
+nnoremap <Leader>jd     :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>ji     :YcmCompleter GoToInclude<CR>
+nnoremap <Leader>jj     :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>jr     :YcmCompleter GoToReferences<CR>
+
+nnoremap <Leader>tn     :UndotreeHide<CR>:NERDTreeToggle<CR>
+nnoremap <Leader>tt     :TagbarToggle<CR>
+nnoremap <Leader>tu     :NERDTreeClose<CR>:UndotreeToggle<CR>
 
 "*********************************************************************
 " Overrides
