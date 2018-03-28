@@ -318,31 +318,36 @@ omap <Leader><Tab> <Plug>(fzf-maps-o)
 nnoremap <Leader>=              :Autoformat<CR>
 nnoremap <Leader>:              :AsyncRun<Space>
 nnoremap <Leader>W              :w !sudo tee % > /dev/null<CR>
-nnoremap <Leader>a<Space>       :Ag<Space>
-nnoremap <Leader>aa             :Ag<Space><C-r><C-w><CR>
-nnoremap <Leader>b              :Buffers<CR>
-nnoremap <Leader>f<Space>       :Files<Space>
+
+nnoremap <Leader>bb             :Buffers<CR>
+nnoremap <Leader>bc             :BCommits<CR>
+nnoremap <Leader>fa             :Ag<Space><C-r><C-w><CR>
 nnoremap <Leader>ff             :Files<CR>
-nnoremap <Leader>g<Space>       :Gg<Space>
+nnoremap <Leader>fc             :Commits<CR>
+nnoremap <Leader>fg             :Gg<Space><C-r><C-w><CR>
+nnoremap <Leader>fm             :Marks<CR>
+nnoremap <Leader>fr             :Rg<Space><C-r><C-w><CR>
+nnoremap <Leader>fs             :GFiles?<CR>
 nnoremap <Leader>gb             :Gblame<CR>
-nnoremap <Leader>gc             :BCommits<CR>
+nnoremap <Leader>gc             :Gcommit<Space>
 nnoremap <Leader>gd             :Gdiff<CR>
-nnoremap <Leader>gf             :GFiles<CR>
-nnoremap <Leader>gg             :Gg<Space><C-r><C-w><CR>
-nnoremap <Leader>gl             :Commits<CR>
-nnoremap <Leader>gs             :GFiles?<CR>
+nnoremap <Leader>ge             :Gedit<Space>
+nnoremap <Leader>gg             :GFiles<CR>
+nnoremap <Leader>gf             :Gfetch<Space>
+nnoremap <Leader>gl             :Gpull<Space>
+nnoremap <Leader>gm             :Gmerge<Space>
+nnoremap <Leader>gp             :Gpull<Space>
+nnoremap <Leader>gr             :Gread<Space>
+nnoremap <Leader>gs             :Gstatus<CR>
+nnoremap <Leader>gw             :Gwrite<Space>
 nnoremap <Leader>jd             :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>ji             :YcmCompleter GoToInclude<CR>
 nnoremap <Leader>jj             :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>jr             :YcmCompleter GoToReferences<CR>
-nnoremap <Leader>l              :ALELint<CR>
-nnoremap <Leader>m              :Marks<CR>
-nnoremap <Leader>r<Space>       :Rg<Space>
-nnoremap <Leader>rr             :Rg<Space><C-r><C-w><CR>
-
-nnoremap <silent> <Leader>n     :UndotreeHide<CR>:NERDTreeToggle<CR>
-nnoremap <silent> <Leader>t     :TagbarToggle<CR>
-nnoremap <silent> <Leader>u     :NERDTreeClose<CR>:UndotreeToggle<CR>
+nnoremap <Leader>ll             :ALELint<CR>
+nnoremap <Leader>tn             :UndotreeHide<CR>:NERDTreeToggle<CR>
+nnoremap <Leader>tt             :TagbarToggle<CR>
+nnoremap <Leader>tu             :NERDTreeClose<CR>:UndotreeToggle<CR>
 
 "*********************************************************************
 " Overrides
