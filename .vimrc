@@ -165,6 +165,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'mbbill/undotree'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdcommenter'
@@ -340,6 +341,7 @@ nnoremap <Leader>n              :NERDTreeToggle<CR>
 nnoremap <Leader>r<Space>       :Rg<Space>
 nnoremap <Leader>rr             :Rg<Space><C-r><C-w><CR>
 nnoremap <Leader>t              :TagbarToggle<CR>
+nnoremap <Leader>u              :UndotreeToggle<CR>
 
 "*********************************************************************
 " Overrides
