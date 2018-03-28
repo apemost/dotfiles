@@ -309,24 +309,24 @@ inoremap <C-d> <Del>
 autocmd BufNewFile,BufRead *.js nmap <silent> <C-l> <Plug>(jsdoc)
 autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
 
-nmap <leader><TAB> <plug>(fzf-maps-n)
-xmap <leader><TAB> <plug>(fzf-maps-x)
-omap <leader><TAB> <plug>(fzf-maps-o)
+nmap <leader><Tab> <Plug>(fzf-maps-n)
+xmap <leader><Tab> <Plug>(fzf-maps-x)
+omap <leader><Tab> <Plug>(fzf-maps-o)
 
 nnoremap <leader>=              :Autoformat<CR>
-nnoremap <leader>:              :AsyncRun<SPACE>
+nnoremap <leader>:              :AsyncRun<Space>
 nnoremap <leader>W              :w !sudo tee % > /dev/null<CR>
-nnoremap <leader>a<SPACE>       :Ag<SPACE>
-nnoremap <leader>aa             :Ag<SPACE><C-r><C-w><CR>
+nnoremap <leader>a<Space>       :Ag<Space>
+nnoremap <leader>aa             :Ag<Space><C-r><C-w><CR>
 nnoremap <leader>b              :Buffers<CR>
-nnoremap <leader>f<SPACE>       :Files<SPACE>
+nnoremap <leader>f<Space>       :Files<Space>
 nnoremap <leader>ff             :Files<CR>
-nnoremap <leader>g<SPACE>       :Gg<SPACE>
+nnoremap <leader>g<Space>       :Gg<Space>
 nnoremap <leader>gb             :Gblame<CR>
 nnoremap <leader>gc             :BCommits<CR>
 nnoremap <leader>gd             :Gdiff<CR>
 nnoremap <leader>gf             :GFiles<CR>
-nnoremap <leader>gg             :Gg<SPACE><C-r><C-w><CR>
+nnoremap <leader>gg             :Gg<Space><C-r><C-w><CR>
 nnoremap <leader>gl             :Commits<CR>
 nnoremap <leader>gs             :GFiles?<CR>
 nnoremap <leader>jd             :YcmCompleter GoToDeclaration<CR>
@@ -336,8 +336,8 @@ nnoremap <leader>jr             :YcmCompleter GoToReferences<CR>
 nnoremap <leader>l              :ALELint<CR>
 nnoremap <leader>m              :Marks<CR>
 nnoremap <leader>n              :NERDTreeToggle<CR>
-nnoremap <leader>r<SPACE>       :Rg<SPACE>
-nnoremap <leader>rr             :Rg<SPACE><C-r><C-w><CR>
+nnoremap <leader>r<Space>       :Rg<Space>
+nnoremap <leader>rr             :Rg<Space><C-r><C-w><CR>
 nnoremap <leader>t              :TagbarToggle<CR>
 
 "*********************************************************************
