@@ -42,9 +42,6 @@ export PROXYCHAINS_CONF_FILE=$HOME/.proxychains.conf
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty)
 
-# Set ag as the default source for fzf
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
 # Path to oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
@@ -59,3 +56,11 @@ export PYENV_ROOT=$HOME/.pyenv
 
 # Path to nvm directory
 export NVM_DIR=$HOME/.nvm
+
+# Set default options for fzf
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+
+if command -v ag &> /dev/null; then
+  # Set ag as the default source for fzf
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+fi
