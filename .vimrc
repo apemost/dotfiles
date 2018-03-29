@@ -252,6 +252,7 @@ let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-p>', '<Up>']
 let g:ycm_auto_trigger = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_python_binary_path = 'python'
 let g:ycm_show_diagnostics_ui = 0
