@@ -353,6 +353,10 @@ nnoremap <Leader>ji     :YcmCompleter GoToInclude<CR>
 nnoremap <Leader>jj     :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>jr     :YcmCompleter GoToReferences<CR>
 
+nnoremap <Leader>sa     :Ag<Space>
+nnoremap <Leader>sg     :Gg<Space>
+nnoremap <Leader>sr     :Rg<Space>
+
 nnoremap <Leader>tn     :UndotreeHide<CR>:NERDTreeToggle<CR>
 nnoremap <Leader>tt     :TagbarToggle<CR>
 nnoremap <Leader>tu     :NERDTreeClose<CR>:UndotreeToggle<CR>
