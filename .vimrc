@@ -166,6 +166,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdcommenter'
@@ -231,6 +232,11 @@ command! -bang -nargs=* Rg
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+" octol/vim-cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_no_function_highlight = 1
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
