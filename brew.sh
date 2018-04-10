@@ -55,8 +55,8 @@ brew install cmake
 brew install llvm --with-clang
 brew install python
 brew install node
-brew install typescript
 brew install go
+brew install kotlin
 brew install protobuf
 brew install nvm
 brew install pyenv
