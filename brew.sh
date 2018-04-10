@@ -65,6 +65,7 @@ brew install ripgrep
 brew install the_silver_searcher
 
 # Install some development tools
+brew install gradle
 brew install htop
 brew install httpie
 brew install jq
