@@ -66,6 +66,7 @@ brew install the_silver_searcher
 
 # Install some development tools
 brew install clang-format
+brew install dep
 brew install gradle
 brew install htop
 brew install httpie
