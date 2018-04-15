@@ -151,6 +151,7 @@ Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
 Plug 'haya14busa/is.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
@@ -168,6 +169,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -241,6 +243,11 @@ let g:cpp_no_function_highlight = 1
 
 " pangloss/vim-javascript
 let g:javascript_plugin_jsdoc = 1
+
+" plasticboy/vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_new_list_item_indent = 2
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger = "<C-j>"
@@ -329,6 +336,11 @@ nnoremap <Leader>=      :Autoformat<CR>
 
 nnoremap <Leader>H      :help<Space>
 nnoremap <Leader>W      :w !sudo tee % > /dev/null<CR>
+
+nnoremap <Leader>a=     :Tabularize /=<CR>
+nnoremap <Leader>a:     :Tabularize /:\zs<CR>
+vnoremap <Leader>a=     :Tabularize /=<CR>
+vnoremap <Leader>a:     :Tabularize /:\zs<CR>
 
 nnoremap <Leader>bb     :Buffers<CR>
 nnoremap <Leader>bd     :bdelete<CR>
