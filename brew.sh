@@ -56,7 +56,6 @@ brew install llvm --with-clang
 brew install python
 brew install node
 brew install go
-brew install kotlin
 brew install protobuf
 brew install nvm
 brew install pyenv
@@ -64,22 +63,16 @@ brew install ctags
 brew install ripgrep
 brew install the_silver_searcher
 
-# Install some development tools
-brew install clang-format
-brew install dep
-brew install gradle
-brew install htop
-brew install httpie
-brew install jq
-brew install mycli
-brew install watchman
-brew install yarn --without-node
-
 # Install other useful binaries
 brew install autojump
 brew install binutils
+brew install clang-format
 brew install ffmpeg
+brew install htop
+brew install httpie
+brew install jq
 brew install markdown
+brew install mycli
 brew install ssh-copy-id
 brew install tree
 brew install unrar
