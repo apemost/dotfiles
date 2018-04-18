@@ -330,12 +330,10 @@ nmap <Leader><Tab> <Plug>(fzf-maps-n)
 xmap <Leader><Tab> <Plug>(fzf-maps-x)
 omap <Leader><Tab> <Plug>(fzf-maps-o)
 
+nnoremap <Leader>!      :w !sudo tee % > /dev/null<CR>
 nnoremap <Leader>-      :ALELint<CR>
 nnoremap <Leader>:      :copen<CR>:AsyncRun<Space>
 nnoremap <Leader>=      :Autoformat<CR>
-
-nnoremap <Leader>H      :help<Space>
-nnoremap <Leader>W      :w !sudo tee % > /dev/null<CR>
 
 nnoremap <Leader>a=     :Tabularize /=<CR>
 nnoremap <Leader>a:     :Tabularize /:\zs<CR>
