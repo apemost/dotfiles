@@ -332,7 +332,7 @@ omap <Leader><Tab> <Plug>(fzf-maps-o)
 
 nnoremap <Leader>!      :w !sudo tee % > /dev/null<CR>
 nnoremap <Leader>-      :ALELint<CR>
-nnoremap <Leader>:      :copen<CR>:AsyncRun<Space>
+nnoremap <Leader>:      :AsyncRun<Space>
 nnoremap <Leader>=      :Autoformat<CR>
 
 nnoremap <Leader>a=     :Tabularize /=<CR>
