@@ -346,13 +346,13 @@ vnoremap <Leader>a=     :Tabularize /=<CR>
 vnoremap <Leader>a:     :Tabularize /:\zs<CR>
 
 nnoremap <Leader>bb     :Buffers<CR>
+nnoremap <Leader>bc     :BCommits<CR>
 nnoremap <Leader>bd     :bdelete<CR>
-nnoremap <Leader>bl     :BCommits<CR>
 
 nnoremap <Leader>fa     :Ag<Space><C-r><C-w><CR>
+nnoremap <Leader>fc     :Commits<CR>
 nnoremap <Leader>ff     :Files<CR>
 nnoremap <Leader>fg     :Gg<Space><C-r><C-w><CR>
-nnoremap <Leader>fl     :Commits<CR>
 nnoremap <Leader>fm     :Marks<CR>
 nnoremap <Leader>fr     :Rg<Space><C-r><C-w><CR>
 nnoremap <Leader>fs     :GFiles?<CR>
