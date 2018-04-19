@@ -383,6 +383,9 @@ nnoremap <Leader>tn     :UndotreeHide<CR>:NERDTreeToggle<CR>
 nnoremap <Leader>tt     :TagbarToggle<CR>
 nnoremap <Leader>tu     :NERDTreeClose<CR>:UndotreeToggle<CR>
 
+nnoremap <Leader>wo     :copen<CR>
+nnoremap <Leader>wx     :cclose<CR>
+
 "*********************************************************************
 " Overrides
 "*********************************************************************
