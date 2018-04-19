@@ -68,6 +68,7 @@ brew install autojump
 brew install binutils
 brew install clang-format
 brew install ffmpeg
+brew install grip
 brew install htop
 brew install httpie
 brew install jq
