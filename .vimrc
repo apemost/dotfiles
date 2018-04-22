@@ -263,7 +263,6 @@ let NERDTreeMapJumpPrevSibling = '<C-p>'
 
 " skywind3000/asyncrun.vim
 command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
-let g:asyncrun_status = ''
 
 " Valloric/YouCompleteMe
 let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
@@ -293,7 +292,6 @@ let g:airline_theme = 'molokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
-let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
 
 " w0rp/ale
 let g:ale_lint_on_text_changed = 'never'
