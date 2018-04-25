@@ -1,4 +1,4 @@
-# Install command-line tools using Homebrew
+#!/usr/bin/env bash
 
 # Make sure we’re using the latest Homebrew
 brew update
