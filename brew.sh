@@ -50,9 +50,8 @@ brew install screen
 brew install tmux
 
 # Install development environment
-brew install git
 brew install cmake
-brew install llvm --with-clang
+brew install git
 brew install python
 brew install node
 brew install go
