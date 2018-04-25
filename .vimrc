@@ -75,6 +75,11 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
 
+" Make comments italic
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
+
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 
