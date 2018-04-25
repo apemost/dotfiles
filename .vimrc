@@ -375,6 +375,7 @@ nnoremap <Leader>sa     :Ag<Space>
 nnoremap <Leader>sg     :Gg<Space>
 nnoremap <Leader>sr     :Rg<Space>
 
+nnoremap <Leader>tf     :UndotreeHide<CR>:NERDTreeFind<CR>
 nnoremap <Leader>tn     :UndotreeHide<CR>:NERDTreeToggle<CR>
 nnoremap <Leader>tt     :TagbarToggle<CR>
 nnoremap <Leader>tu     :NERDTreeClose<CR>:UndotreeToggle<CR>
