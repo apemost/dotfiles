@@ -7,14 +7,14 @@ brew update
 brew upgrade
 
 # Install GNU core utilities (those that come with macOS are outdated)
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`
 brew install coreutils
-
-# Install some other useful utilities like `sponge`
-brew install moreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew install findutils
+
+# Install some other useful utilities like `sponge`
+brew install binutils
+brew install moreutils
 
 # Install GNU `sed`, overwriting the built-in `sed`
 brew install gnu-sed --with-default-names
@@ -64,7 +64,6 @@ brew install the_silver_searcher
 
 # Install other useful binaries
 brew install autojump
-brew install binutils
 brew install clang-format
 brew install ffmpeg
 brew install grip
