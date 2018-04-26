@@ -76,9 +76,11 @@ let g:rehash256 = 1
 colorscheme molokai
 
 " Make comments italic
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+if $TERM == 'xterm-256color'
+  let &t_ZH="\e[3m"
+  let &t_ZR="\e[23m"
+  highlight Comment cterm=italic
+endif
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
