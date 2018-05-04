@@ -71,9 +71,12 @@ let mapleader=" "
 set background=dark
 syntax enable
 
+" Enable 256 colors
+set t_Co=256
+
+colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
-colorscheme molokai
 
 " Make comments italic
 if $TERM == 'xterm-256color'
