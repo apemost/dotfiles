@@ -1,1 +1,43 @@
+let g:theme_background = 'dark'
+let g:theme_colorscheme = 'molokai'
+
+let g:enabled_plugins = [
+      \   'YouCompleteMe',
+      \   'ale',
+      \   'asyncrun',
+      \   'auto-pairs',
+      \   'editorconfig',
+      \   'emmet',
+      \   'fzf',
+      \   'is',
+      \   'kotlin',
+      \   'nerdcommenter',
+      \   'nerdtree',
+      \   'rename',
+      \   'tabular',
+      \   'tagbar',
+      \   'typescript',
+      \   'ultisnips',
+      \   'undotree',
+      \   'vim-airline',
+      \   'vim-auto-save',
+      \   'vim-autoformat',
+      \   'vim-cpp-enhanced-highlight',
+      \   'vim-emacscommandline',
+      \   'vim-fugitive',
+      \   'vim-gitgutter',
+      \   'vim-gnupg',
+      \   'vim-go',
+      \   'vim-javascript',
+      \   'vim-jsdoc',
+      \   'vim-json',
+      \   'vim-markdown-preview',
+      \   'vim-markdown',
+      \   'vim-pydocstring',
+      \   'vim-repeat',
+      \   'vim-sneak',
+      \   'vim-surround',
+      \   'vim-vue',
+      \ ]
+
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/.vim/init.vim'
