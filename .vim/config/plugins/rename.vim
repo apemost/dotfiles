@@ -1,0 +1,1 @@
+Plug 'danro/rename.vim'

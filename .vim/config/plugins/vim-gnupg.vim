@@ -1,0 +1,1 @@
+Plug 'jamessan/vim-gnupg'
