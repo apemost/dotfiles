@@ -1,5 +1,5 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" posva/vim-vue
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'posva/vim-vue'

@@ -1,5 +1,5 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" jamessan/vim-gnupg
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'jamessan/vim-gnupg'

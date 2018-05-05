@@ -6,16 +6,16 @@
 syntax enable
 
 " Set theme background
-let g:theme_background = get(g:, 'theme_background', 'dark')
-execute 'set background=' . g:theme_background
+let g:custom_theme_background = get(g:, 'custom_theme_background', 'dark')
+execute 'set background=' . g:custom_theme_background
 
 " Set theme colorscheme
-let g:theme_colorscheme = get(g:, 'theme_colorscheme', 'molokai')
-if !has('gui_running') && g:theme_colorscheme == 'molokai'
+let g:custom_theme_colorscheme = get(g:, 'custom_theme_colorscheme', 'molokai')
+if !has('gui_running') && g:custom_theme_colorscheme == 'molokai'
   let g:molokai_original = 1
   let g:rehash256 = 1
 endif
-execute 'colorscheme ' . g:theme_colorscheme
+execute 'colorscheme ' . g:custom_theme_colorscheme
 
 if has('gui_running')
   execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/gui.vim'

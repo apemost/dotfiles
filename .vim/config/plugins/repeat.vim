@@ -1,5 +1,5 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" tpope/vim-repeat
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-repeat'

@@ -1,5 +1,7 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" elzr/vim-json
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'elzr/vim-json'
+
+let g:vim_json_syntax_conceal = 0

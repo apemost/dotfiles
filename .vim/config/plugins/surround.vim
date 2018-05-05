@@ -1,5 +1,5 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" tpope/vim-surround
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround'

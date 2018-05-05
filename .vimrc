@@ -1,43 +1,45 @@
-let g:theme_background = 'dark'
-let g:theme_colorscheme = 'molokai'
+let g:custom_theme_background = 'dark'
+let g:custom_theme_colorscheme = 'molokai'
 
-let g:enabled_plugins = [
+let g:custom_plugins_completion = 'youcompleteme'
+let g:custom_plugins_lint = 'ale'
+
+let g:custom_plugins_enabled = [
       \   'YouCompleteMe',
+      \   'airline',
       \   'ale',
       \   'asyncrun',
       \   'auto-pairs',
+      \   'auto-save',
+      \   'autoformat',
+      \   'cpp',
       \   'editorconfig',
+      \   'emacscommandline',
       \   'emmet',
+      \   'fugitive',
       \   'fzf',
+      \   'gitgutter',
+      \   'gnupg',
+      \   'go',
       \   'is',
+      \   'javascript',
+      \   'jsdoc',
+      \   'json',
       \   'kotlin',
+      \   'markdown',
       \   'nerdcommenter',
       \   'nerdtree',
+      \   'pydocstring',
       \   'rename',
+      \   'repeat',
+      \   'sneak',
+      \   'surround',
       \   'tabular',
       \   'tagbar',
       \   'typescript',
       \   'ultisnips',
       \   'undotree',
-      \   'vim-airline',
-      \   'vim-auto-save',
-      \   'vim-autoformat',
-      \   'vim-cpp-enhanced-highlight',
-      \   'vim-emacscommandline',
-      \   'vim-fugitive',
-      \   'vim-gitgutter',
-      \   'vim-gnupg',
-      \   'vim-go',
-      \   'vim-javascript',
-      \   'vim-jsdoc',
-      \   'vim-json',
-      \   'vim-markdown-preview',
-      \   'vim-markdown',
-      \   'vim-pydocstring',
-      \   'vim-repeat',
-      \   'vim-sneak',
-      \   'vim-surround',
-      \   'vim-vue',
+      \   'vue',
       \ ]
 
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/.vim/init.vim'

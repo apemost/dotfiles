@@ -1,5 +1,7 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" fatih/vim-go
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
+
+let g:go_fmt_autosave = 0

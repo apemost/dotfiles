@@ -1,5 +1,7 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" 907th/vim-auto-save
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug '907th/vim-auto-save'
+
+let g:auto_save = 1

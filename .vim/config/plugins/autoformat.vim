@@ -1,5 +1,7 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" chiel92/vim-autoformat
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'chiel92/vim-autoformat'
+
+nnoremap <Leader>= :Autoformat<CR>

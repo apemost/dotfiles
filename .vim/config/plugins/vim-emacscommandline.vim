@@ -1,1 +1,0 @@
-Plug 'houtsnip/vim-emacscommandline'

@@ -1,5 +1,7 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" pangloss/vim-javascript
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'pangloss/vim-javascript'
+
+let g:javascript_plugin_jsdoc = 1

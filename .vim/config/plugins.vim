@@ -11,12 +11,10 @@ if !filereadable(s:vim_plug_path)
 endif
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
-if !exists('g:enabled_plugins')
-  let g:enabled_plugins = []
-endif
+let s:plugins = get(g:, 'custom_plugins_enabled', [])
 
 function! s:load_plugins()
-  for plugin in g:enabled_plugins
+  for plugin in s:plugins
     if matchend(plugin, '\.vim') == len(plugin)
       call TrySource(s:dirname . '/plugins/' . plugin)
     else

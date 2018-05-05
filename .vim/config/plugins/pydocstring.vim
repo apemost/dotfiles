@@ -1,5 +1,7 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" heavenshell/vim-pydocstring
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'heavenshell/vim-pydocstring'
+
+autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)

@@ -1,5 +1,5 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" houtsnip/vim-emacscommandline
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'houtsnip/vim-emacscommandline'

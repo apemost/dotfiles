@@ -1,5 +1,5 @@
 "*********************************************************************
-" editorconfig/editorconfig-vim
+" airblade/vim-gitgutter
 "*********************************************************************
 
-Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
