@@ -17,17 +17,17 @@ if !exists('g:plugins')
         \   'ale',
         \   'asyncrun',
         \   'auto-pairs',
-        \   'editorconfig-vim',
-        \   'emmet-vim',
+        \   'editorconfig',
+        \   'emmet',
         \   'fzf',
         \   'is',
-        \   'kotlin-vim',
+        \   'kotlin',
         \   'nerdcommenter',
         \   'nerdtree',
         \   'rename',
         \   'tabular',
         \   'tagbar',
-        \   'typescript-vim',
+        \   'typescript',
         \   'ultisnips',
         \   'undotree',
         \   'vim-airline',
@@ -54,7 +54,7 @@ endif
 
 function! s:load_plugins()
   for plugin in g:plugins
-    if matchend(plugin, '.vim') == len(plugin)
+    if matchend(plugin, '\.vim') == len(plugin)
       call TrySource(s:dirname . '/plugins/' . plugin)
     else
       call TrySource(s:dirname . '/plugins/' . plugin . '.vim')
