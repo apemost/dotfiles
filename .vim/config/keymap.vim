@@ -2,9 +2,6 @@
 " Keymap
 "*********************************************************************
 
-" Change mapleader
-let mapleader=" "
-
 nmap <silent> <C-n> :bnext<CR>
 nmap <silent> <C-p> :bprevious<CR>
 
