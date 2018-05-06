@@ -40,15 +40,15 @@ nnoremap <Leader>f/ :History/<CR>
 nnoremap <Leader>f: :History:<CR>
 nnoremap <Leader>fa :Ag<Space><C-r><C-w><CR>
 nnoremap <Leader>fc :Commands<CR>
-nnoremap <Leader>ff :Files<CR>
+nnoremap <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Files\<CR>"
 nnoremap <Leader>fg :Gg<Space><C-r><C-w><CR>
-nnoremap <Leader>fh :History<CR>
+nnoremap <expr> <Leader>fh (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":History\<CR>"
 nnoremap <Leader>fm :Marks<CR>
 nnoremap <Leader>fr :Rg<Space><C-r><C-w><CR>
-nnoremap <Leader>fs :GFiles?<CR>
+nnoremap <expr> <Leader>fs (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles?\<CR>"
 nnoremap <Leader>fu :Snippets<CR>
 
-nnoremap <Leader>gg :GFiles<CR>
+nnoremap <expr> <Leader>gg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles\<CR>"
 nnoremap <Leader>gh :Commits<CR>
 
 nnoremap <Leader>sa :Ag<Space>
