@@ -1,7 +1,5 @@
 "*********************************************************************
-" airblade/vim-gitgutter
+" tpope/vim-endwise
 "*********************************************************************
 
-Plug 'airblade/vim-gitgutter'
-
-let g:gitgutter_map_keys = 0
+Plug 'tpope/vim-endwise'

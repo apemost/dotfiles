@@ -13,5 +13,9 @@ inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
 
+nnoremap <Leader>bd :bdelete<CR>
+nnoremap <Leader>bf :bfirst<CR>
+nnoremap <Leader>bl :blast<CR>
+
 nnoremap <Leader>wo :copen<CR>
 nnoremap <Leader>wx :cclose<CR>
