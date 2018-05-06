@@ -36,10 +36,13 @@ omap <Leader><Tab> <Plug>(fzf-maps-o)
 nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bc :BCommits<CR>
 
+nnoremap <Leader>f/ :History/<CR>
+nnoremap <Leader>f: :History:<CR>
 nnoremap <Leader>fa :Ag<Space><C-r><C-w><CR>
 nnoremap <Leader>fc :Commands<CR>
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fg :Gg<Space><C-r><C-w><CR>
+nnoremap <Leader>fh :History<CR>
 nnoremap <Leader>fm :Marks<CR>
 nnoremap <Leader>fr :Rg<Space><C-r><C-w><CR>
 nnoremap <Leader>fs :GFiles?<CR>
@@ -47,10 +50,6 @@ nnoremap <Leader>fu :Snippets<CR>
 
 nnoremap <Leader>gg :GFiles<CR>
 nnoremap <Leader>gh :Commits<CR>
-
-nnoremap <Leader>hc :History:<CR>
-nnoremap <Leader>hh :History<CR>
-nnoremap <Leader>hs :History/<CR>
 
 nnoremap <Leader>sa :Ag<Space>
 nnoremap <Leader>sg :Gg<Space>

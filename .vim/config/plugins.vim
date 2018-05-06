@@ -84,7 +84,6 @@ if !exists('g:custom_leader_guide')
         \     'c': {'name': 'Comments'},
         \     'f': {'name': 'Fuzzy finder'},
         \     'g': {'name': 'Git'},
-        \     'h': {'name': 'History'},
         \     'j': {'name': 'Jump'},
         \     's': {'name': 'Search'},
         \     't': {'name': 'Toggle'},
