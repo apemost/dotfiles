@@ -93,6 +93,4 @@ if !exists('g:custom_leader_guide')
         \ }
 endif
 
-if !leaderGuide#has_configuration()
-  call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide')
-endif
+autocmd VimEnter * if exists(':LeaderGuide') | call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide') | endif
