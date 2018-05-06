@@ -2,10 +2,10 @@
 " Valloric/YouCompleteMe
 "*********************************************************************
 
-let s:completion_plugin = get(g:, 'custom_plugins_completion', '')
-let s:enable = s:completion_plugin == 'youcompleteme'
+if HasFeatures() && get(g:, 'custom_completion_plugin', '') == 'youcompleteme'
+  let g:custom_plugins_ycm_install_options = get(g:, 'custom_plugins_ycm_install_options', '--clang-completer')
+  Plug 'Valloric/YouCompleteMe', {'do': './install.py ' . g:custom_plugins_ycm_install_options}
 
-if s:enable &&  HasFeatures()
   let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-p>', '<Up>']
   let g:ycm_auto_trigger = 1
@@ -27,10 +27,6 @@ if s:enable &&  HasFeatures()
         \   'go':1,
         \   'java':1,
         \ }
-
-  let g:custom_plugins_ycm_install_options = get(g:, 'custom_plugins_ycm_install_options', '--clang-completer')
-
-  Plug 'Valloric/YouCompleteMe', {'do': './install.py ' . g:custom_plugins_ycm_install_options}
 
   nnoremap <Leader>jd :YcmCompleter GoToDeclaration<CR>
   nnoremap <Leader>ji :YcmCompleter GoToInclude<CR>

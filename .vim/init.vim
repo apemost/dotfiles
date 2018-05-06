@@ -11,12 +11,12 @@ endif
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
 let s:scrips = [
-      \   '/preload.vim',
+      \   '/custom/preload.vim',
       \   '/config/general.vim',
       \   '/config/appearance.vim',
       \   '/config/plugins.vim',
       \   '/config/keymap.vim',
-      \   '/afterload.vim',
+      \   '/custom/afterload.vim',
       \ ]
 
 execute 'source' fnameescape(s:dirname . '/functions.vim')

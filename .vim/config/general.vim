@@ -71,3 +71,4 @@ set backupskip=/tmp/*,/private/tmp/*
 
 " Change mapleader
 let mapleader=' '
+let maplocalleader=','

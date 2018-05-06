@@ -11,10 +11,50 @@ if !filereadable(s:vim_plug_path)
 endif
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
-let s:plugins = get(g:, 'custom_plugins_enabled', [])
+let s:builtin_plugins = [
+      \   'YouCompleteMe',
+      \   'airline',
+      \   'ale',
+      \   'asyncrun',
+      \   'auto-pairs',
+      \   'auto-save',
+      \   'autoformat',
+      \   'cpp',
+      \   'editorconfig',
+      \   'emacscommandline',
+      \   'emmet',
+      \   'fugitive',
+      \   'fzf',
+      \   'gitgutter',
+      \   'gnupg',
+      \   'go',
+      \   'is',
+      \   'javascript',
+      \   'jsdoc',
+      \   'json',
+      \   'kotlin',
+      \   'leader-guide',
+      \   'markdown',
+      \   'nerdcommenter',
+      \   'nerdtree',
+      \   'pydocstring',
+      \   'rename',
+      \   'repeat',
+      \   'sneak',
+      \   'surround',
+      \   'tabular',
+      \   'tagbar',
+      \   'typescript',
+      \   'ultisnips',
+      \   'undotree',
+      \   'vue',
+      \ ]
 
-function! s:load_plugins()
-  for plugin in s:plugins
+let s:custom_plugins = get(g:, 'custom_plugins', [])
+let s:disabled_plugins = get(g:, 'custom_disabled_plugins', [])
+
+function! s:load_builtin_plugins()
+  for plugin in s:builtin_plugins
     if matchend(plugin, '\.vim') == len(plugin)
       call TrySource(s:dirname . '/plugins/' . plugin)
     else
@@ -23,6 +63,36 @@ function! s:load_plugins()
   endfor
 endfunction
 
+function! s:load_custom_plugins()
+  for plugin in s:custom_plugins
+    Plug plugin
+  endfor
+endfunction
+
 call plug#begin()
-call s:load_plugins()
+call s:load_builtin_plugins()
+call s:load_custom_plugins()
 call plug#end()
+
+if !exists('g:custom_leader_guide')
+  let g:custom_leader_guide = {
+        \   mapleader: {
+        \     'name': '<Leader>',
+        \     'a': {'name': 'Alignment'},
+        \     'c': {'name': 'Comments'},
+        \     'f': {'name': 'Fuzzy finder'},
+        \     'g': {'name': 'Git'},
+        \     'j': {'name': 'Jump'},
+        \     's': {'name': 'Search'},
+        \     't': {'name': 'Toggle'},
+        \     'w': {'name': 'Windows'},
+        \   },
+        \   maplocalleader: {
+        \     'name': '<LocalLeader>'
+        \   }
+        \ }
+endif
+
+if !leaderGuide#has_configuration()
+  call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide')
+endif
