@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 
-git pull origin master
+git pull --recurse-submodules origin master
 
 rsync \
   --exclude '.git' \
+  --exclude '.gitmodules' \
   --exclude '.DS_Store' \
-  --exclude '.travis.yml' \
   --exclude 'LICENSE' \
   --exclude 'README.md' \
   --exclude 'bootstrap.sh' \
   --exclude 'brew.sh' \
   --exclude 'macos.sh' \
+  --exclude 'macos.sh' \
+  --exclude 'vimrc' \
   -avh --no-perms . ~
+
+cd vimrc && source bootstrap.sh && cd -
 
 if [[ "$SHELL" =~ 'zsh$' ]]; then
   source ~/.zshrc
