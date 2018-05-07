@@ -2,6 +2,8 @@
 
 [Mathias Bynens]'s dotfiles + my Vim configuration.
 
+![Screenshot of Vim](https://github.com/apemost/vimrc/blob/master/assets/vim.png)
+
 ## Installation
 
 You can clone this repository wherever you want. To install, run command:
