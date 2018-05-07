@@ -27,7 +27,8 @@ function! s:search_engine(q)
   let url = get(g:, 'custom_search_engine', 'https://www.google.com/search?q=%s')
   let q = substitute(a:q, '["\n]', ' ', 'g')
   let q = substitute(q, '[[:punct:] ]', '\=printf("%%%02X", char2nr(submatch(0)))', 'g')
-  call system(printf('open "' . url . '"', q))
+  let open = IsLinux() ? 'xdg-open' : 'open'
+  call system(printf(open . ' "' . url . '"', q))
 endfunction
 
 nnoremap <silent> <Leader>se :call <SID>search_engine(expand('<cWORD>'))<CR>
