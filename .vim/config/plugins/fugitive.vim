@@ -5,6 +5,7 @@
 Plug 'tpope/vim-fugitive'
 
 nnoremap <Leader>gb :Gblame<CR>
+vnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gc :Gcommit<Space>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>ge :Gedit<Space>
