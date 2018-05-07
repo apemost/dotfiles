@@ -4,4 +4,4 @@
 
 Plug 'heavenshell/vim-pydocstring'
 
-autocmd BufNewFile,BufRead *.py nmap <silent> <C-l> <Plug>(pydocstring)
+autocmd BufNewFile,BufRead *.py nmap <silent> <LocalLeader>d <Plug>(pydocstring)
