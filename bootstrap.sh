@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-git pull --recurse-submodules origin master
+git pull origin master
+git submodule update --init --recursive
 
 rsync \
   --exclude '.git' \
