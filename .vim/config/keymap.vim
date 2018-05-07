@@ -23,11 +23,12 @@ nnoremap <Leader>bl :blast<CR>
 nnoremap <Leader>wo :copen<CR>
 nnoremap <Leader>wx :cclose<CR>
 
-function! s:google(q)
+function! s:search_engine(q)
+  let url = get(g:, 'custom_search_engine', 'https://www.google.com/search?q=%s')
   let q = substitute(a:q, '["\n]', ' ', 'g')
   let q = substitute(q, '[[:punct:] ]', '\=printf("%%%02X", char2nr(submatch(0)))', 'g')
-  call system(printf('open "https://www.google.com/search?q=%s"', q))
+  call system(printf('open "' . url . '"', q))
 endfunction
 
-nnoremap <leader>? :call <SID>google(expand('<cWORD>'))<CR>
-xnoremap <leader>? "gy:call <SID>google(@g)<CR>
+nnoremap <silent> <Leader>se :call <SID>search_engine(expand('<cWORD>'))<CR>
+xnoremap <silent> <Leader>se "gy:call <SID>search_engine(@g)<CR>
