@@ -77,6 +77,7 @@ brew install tree
 brew install unrar
 
 # Install fonts
+brew tap caskroom/fonts
 brew cask install font-hack
 
 # Remove outdated versions from the cellar
