@@ -14,7 +14,7 @@ HIST_STAMPS="yyyy-mm-dd"
 DISABLE_AUTO_UPDATE="true"
 
 # Load plugins
-plugins=(autojump git pip tmux virtualenv colored-man-pages)
+plugins=(autojump git tmux colored-man-pages)
 
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
