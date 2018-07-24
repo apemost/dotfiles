@@ -14,7 +14,15 @@ HIST_STAMPS="yyyy-mm-dd"
 DISABLE_AUTO_UPDATE="true"
 
 # Load plugins
-plugins=(autojump colored-man-pages git pip tmux)
+plugins=(colored-man-pages)
+awesome_plugins=(autojump docker git pip tmux)
+for plugin in ${awesome_plugins[@]}; do
+  if command -v $plugin &> /dev/null; then
+    plugins+=($plugin)
+  fi
+done
+unset plugin
+unset awesome_plugins
 
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
