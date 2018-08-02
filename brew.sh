@@ -52,6 +52,7 @@ brew install tmux
 # Install development environment
 brew install cmake
 brew install git
+brew install git-lfs
 brew install python
 brew install node
 brew install go
