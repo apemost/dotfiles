@@ -6,3 +6,27 @@ if command -v git > /dev/null; then
     git diff --no-index --color-words "$@"
   }
 fi
+
+if ! command -v httpproxy > /dev/null; then
+  httpproxy() {
+    if [ $1 == 'off' ]; then
+      unset FTP_PROXY
+      unset HTTP_PROXY
+      unset HTTPS_PROXY
+      unset NO_PROXY
+      unset ftp_proxy
+      unset http_proxy
+      unset https_proxy
+      unset no_proxy
+    else
+      export FTP_PROXY=$1
+      export HTTP_PROXY=$1
+      export HTTPS_PROXY=$1
+      export NO_PROXY='localhost,127.0.0.1,localaddress,.localdomain.com'
+      export http_proxy=$HTTP_PROXY
+      export https_proxy=$HTTPS_PROXY
+      export ftp_proxy=$FTP_PROXY
+      export no_proxy=$NO_PROXY
+    fi
+  }
+fi
