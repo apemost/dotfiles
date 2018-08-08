@@ -9,7 +9,7 @@ fi
 
 if ! command -v httpproxy > /dev/null; then
   httpproxy() {
-    if [ $1 = 'off' ]; then
+    if [ $1 = '--off' ]; then
       unset FTP_PROXY
       unset HTTP_PROXY
       unset HTTPS_PROXY
