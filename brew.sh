@@ -57,8 +57,6 @@ brew install python
 brew install node
 brew install go
 brew install protobuf
-brew install nvm
-brew install pyenv
 brew install ctags
 brew install ripgrep
 brew install the_silver_searcher
