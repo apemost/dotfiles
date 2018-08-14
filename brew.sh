@@ -67,7 +67,6 @@ brew install clang-format
 brew install ffmpeg
 brew install grip
 brew install htop
-brew install httpie
 brew install jq
 brew install markdown
 brew install mycli
