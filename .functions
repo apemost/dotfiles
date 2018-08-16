@@ -8,7 +8,7 @@ if command -v git > /dev/null; then
 fi
 
 if ! command -v proxy > /dev/null; then
-  proxy() {
+  httproxy() {
     if [ $1 = '--off' ]; then
       unset FTP_PROXY
       unset HTTP_PROXY
