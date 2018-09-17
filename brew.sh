@@ -70,6 +70,7 @@ brew install htop
 brew install jq
 brew install markdown
 brew install mycli
+brew install nmap
 brew install ssh-copy-id
 brew install tree
 brew install unrar
