@@ -1,6 +1,6 @@
 {
   "settings": {
-    "bullet": "*",
+    "bullet": "-",
     "fences": true,
     "listItemIndent": "1"
   }
