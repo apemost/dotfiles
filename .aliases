@@ -12,8 +12,8 @@ fi
 # List all files colorized in long format
 alias ll="ls -lF $colorflag"
 
-# List all files colorized in long format, including dotfiles
-alias la="ls -laF $colorflag"
+# List all files colorized in long format, excluding . and ..
+alias la="ls -lAF $colorflag"
 
 # List only directories
 alias lsd="ls -lF $colorflag | grep --color=never '^d'"
