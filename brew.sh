@@ -60,6 +60,8 @@ brew install protobuf
 brew install ctags
 brew install ripgrep
 brew install the_silver_searcher
+brew install pyenv
+brew install jabba
 
 # Install other useful binaries
 brew install autojump
