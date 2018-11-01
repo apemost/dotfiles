@@ -25,7 +25,7 @@ source bootstrap.sh
   - [Gruvbox Dark](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Gruvbox%20Dark.itermcolors)
   - [Molokai](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Molokai.itermcolors)
 
-- macOs terminal
+- macOS terminal
 
   - [Gruvbox Dark](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Gruvbox%20Dark.terminal)
   - [Molokai](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Molokai.terminal)
