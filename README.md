@@ -1,6 +1,6 @@
 # dotfiles
 
-[Mathias Bynens](https://mathiasbynens.be)'s dotfiles + my Vim configuration.
+Enhanced [Mathias Bynens](https://mathiasbynens.be)'s dotfiles + my [Vim configuration](https://github.com/apemost/vimrc).
 
 ![Screenshot of Vim](https://github.com/apemost/vimrc/blob/master/assets/vim.png)
 
