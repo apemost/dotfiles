@@ -71,3 +71,6 @@ if command -v ag &> /dev/null; then
   # Set ag as the default source for fzf
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 fi
+
+# Disable pyenv-virtualenv prompt
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
