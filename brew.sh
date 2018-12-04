@@ -65,6 +65,7 @@ brew install jabba
 
 # Install other useful binaries
 brew install autojump
+brew install bat
 brew install clang-format
 brew install ctop
 brew install ffmpeg
