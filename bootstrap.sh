@@ -10,6 +10,7 @@ rsync \
   --exclude '.minttyrc' \
   --exclude 'LICENSE' \
   --exclude 'README.md' \
+  --exclude 'apt.sh' \
   --exclude 'bootstrap.sh' \
   --exclude 'brew.sh' \
   --exclude 'macos.sh' \

@@ -67,13 +67,11 @@ brew install jabba
 brew install autojump
 brew install bat
 brew install clang-format
-brew install ctop
 brew install ffmpeg
 brew install grip
 brew install htop
 brew install jq
 brew install markdown
-brew install mycli
 brew install nmap
 brew install ssh-copy-id
 brew install tree
