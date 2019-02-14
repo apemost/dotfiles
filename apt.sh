@@ -34,4 +34,7 @@ sudo apt install jq
 sudo apt install markdown
 sudo apt install nmap
 
+# Install fonts
+sudo apt install fonts-hack-ttf
+
 sudo apt autoremove
