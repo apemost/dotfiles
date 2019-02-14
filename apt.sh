@@ -4,9 +4,6 @@ sudo apt update
 
 sudo apt upgrade
 
-# Install GnuPG to enable PGP-signing commits
-sudo apt install gnupg
-
 # Install Zsh
 sudo apt install zsh
 
@@ -15,6 +12,7 @@ if ! fgrep -q '/usr/bin/zsh' /etc/shells; then
   chsh -s /usr/bin/zsh
 fi
 
+sudo apt install curl
 sudo apt install screen
 sudo apt install tmux
 
