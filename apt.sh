@@ -12,6 +12,7 @@ if ! fgrep -q '/usr/bin/zsh' /etc/shells; then
   chsh -s /usr/bin/zsh
 fi
 
+sudo apt install vim
 sudo apt install curl
 sudo apt install screen
 sudo apt install tmux
