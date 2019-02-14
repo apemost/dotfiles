@@ -22,6 +22,9 @@ sudo apt install tmux
 sudo apt install cmake
 sudo apt install git
 sudo apt install git-lfs
+sudo apt install ctags
+sudo apt install silversearcher-ag
+sudo apt install ripgrep  # Require Ubuntu Cosmic (18.10) or newer
 
 # Install other useful binaries
 sudo apt install autojump
