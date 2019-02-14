@@ -33,6 +33,7 @@ sudo apt install htop
 sudo apt install jq
 sudo apt install markdown
 sudo apt install nmap
+sudo apt install terminator
 
 # Install fonts
 sudo apt install fonts-hack-ttf
