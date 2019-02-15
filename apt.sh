@@ -13,6 +13,7 @@ if ! fgrep -q '/usr/bin/zsh' /etc/shells; then
 fi
 
 sudo apt install vim
+sudo apt install vim-gtk
 sudo apt install curl
 sudo apt install screen
 sudo apt install tmux
