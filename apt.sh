@@ -43,5 +43,6 @@ sudo apt install xclip
 
 # Install fonts
 sudo apt install fonts-hack-ttf
+sudo apt install fonts-roboto
 
 sudo apt autoremove
