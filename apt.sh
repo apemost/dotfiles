@@ -36,6 +36,7 @@ sudo apt install htop
 sudo apt install jq
 sudo apt install markdown
 sudo apt install nmap
+sudo apt install parcellite
 sudo apt install pavucontrol-qt
 sudo apt install terminator
 sudo apt install xclip
