@@ -39,9 +39,13 @@ sudo apt install jq
 sudo apt install markdown
 sudo apt install nmap
 sudo apt install parcellite
+sudo apt install xclip
+
+# Install GUI
+sudo apt install blender
+sudo apt install gimp
 sudo apt install pavucontrol-qt
 sudo apt install terminator
-sudo apt install xclip
 
 # Install fonts
 sudo apt install fonts-hack-ttf
