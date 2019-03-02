@@ -30,7 +30,6 @@ sudo apt install ripgrep  # Require Ubuntu Cosmic (18.10) or newer
 
 # Install other useful binaries
 sudo apt install autojump
-sudo apt install certbot
 sudo apt install clang-format
 sudo apt install expect
 sudo apt install ffmpeg

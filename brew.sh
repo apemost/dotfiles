@@ -66,7 +66,6 @@ brew install jabba
 # Install other useful binaries
 brew install autojump
 brew install bat
-brew install certbot
 brew install clang-format
 brew install ffmpeg
 brew install grip
