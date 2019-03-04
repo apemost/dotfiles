@@ -14,17 +14,21 @@ fi
 
 sudo apt install vim
 sudo apt install vim-gtk
+
+sudo apt install binutils
 sudo apt install curl
 sudo apt install screen
 sudo apt install tmux
 
 # Install development environment
+sudo apt install build-essential
 sudo apt install cmake
+sudo apt install ctags
 sudo apt install git
 sudo apt install git-lfs
-sudo apt install gradle
-sudo apt install golang-go
-sudo apt install ctags
+sudo apt install make
+sudo apt install gcc
+sudo apt install g++
 sudo apt install silversearcher-ag
 sudo apt install ripgrep  # Require Ubuntu Cosmic (18.10) or newer
 
