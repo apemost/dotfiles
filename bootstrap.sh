@@ -15,6 +15,7 @@ rsync \
   --exclude 'brew.sh' \
   --exclude 'macos.sh' \
   --exclude 'npm.sh' \
+  --exclude 'pip.sh' \
   --exclude 'vimrc' \
   -avh --no-perms . ~
 
