@@ -14,6 +14,7 @@ rsync \
   --exclude 'bootstrap.sh' \
   --exclude 'brew.sh' \
   --exclude 'macos.sh' \
+  --exclude 'npm.sh' \
   --exclude 'vimrc' \
   -avh --no-perms . ~
 
