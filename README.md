@@ -21,17 +21,21 @@ To update, `cd` into your local `dotfiles` repository and then:
 source bootstrap.sh
 ```
 
-## Notice
+## Usage
 
-If you use bash by default, intall zsh, and then:
+If you use bash by default, install zsh, and then:
 
 ```bash
 chsh -s `which zsh`
 ```
 
-To Install vim plugins, run `vim +PlugInstall`.
+To install vim plugins, run command:
 
-## Color schemes
+```bash
+vim +PlugInstall
+```
+
+## Recommended color schemes
 
 - iTerm2
 
