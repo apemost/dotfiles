@@ -37,7 +37,7 @@ vim +PlugInstall
 
 ## Vimrc
 
-You can find all the documentation [here](https//github.com/apemost/vimrc).
+You can find all the documentation [here](https://github.com/apemost/vimrc).
 
 ## Recommended color schemes
 
