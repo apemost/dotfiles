@@ -35,6 +35,10 @@ To install vim plugins, run command:
 vim +PlugInstall
 ```
 
+## Vimrc
+
+[See full documentation](https//github.com/apemost/vimrc)
+
 ## Recommended color schemes
 
 - iTerm2
