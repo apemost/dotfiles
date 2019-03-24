@@ -15,7 +15,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Load plugins
 plugins=(colored-man-pages)
-awesome_plugins=(autojump docker git pip tmux)
+awesome_plugins=(autojump docker git kubectl pip tmux)
 for plugin in ${awesome_plugins[@]}; do
   if command -v $plugin > /dev/null; then
     plugins+=($plugin)
