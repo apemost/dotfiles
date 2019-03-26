@@ -4,8 +4,8 @@ git pull origin master
 git submodule update --init --recursive
 
 rsync \
+  --exclude 'config' \
   --exclude '.DS_Store' \
-  --exclude '.config' \
   --exclude '.git' \
   --exclude '.gitmodules' \
   --exclude '.minttyrc' \
