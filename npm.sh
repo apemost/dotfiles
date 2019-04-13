@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-npm install -g typescript tslint
+npm install -g typescript
+npm install -g prettier
