@@ -5,6 +5,7 @@ git submodule update --init --recursive
 
 rsync \
   --exclude 'config' \
+  --exclude 'samples' \
   --exclude 'scripts' \
   --exclude '.DS_Store' \
   --exclude '.git' \
