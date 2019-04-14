@@ -3,24 +3,25 @@
 git pull origin master
 git submodule update --init --recursive
 
-rsync \
-  --exclude 'config' \
-  --exclude 'samples' \
-  --exclude 'scripts' \
-  --exclude '.DS_Store' \
-  --exclude '.git' \
-  --exclude '.gitmodules' \
-  --exclude '.minttyrc' \
-  --exclude 'LICENSE' \
-  --exclude 'README.md' \
-  --exclude 'apt.sh' \
-  --exclude 'bootstrap.sh' \
-  --exclude 'brew.sh' \
-  --exclude 'macos.sh' \
-  --exclude 'npm.sh' \
-  --exclude 'pip.sh' \
-  --exclude 'vimrc' \
-  -avh --no-perms . ~
+rsync -avh --no-perms \
+  .aliases \
+  .curlrc \
+  .editorconfig \
+  .exports \
+  .functions \
+  .gdbinit \
+  .gitconfig \
+  .gitignore \
+  .hushlogin \
+  .inputrc \
+  .myclirc \
+  .remarkrc \
+  .screenrc \
+  .shellrc \
+  .tmux.conf \
+  .wgetrc \
+  .zshrc \
+  ~
 
 cd vimrc && source bootstrap.sh && cd -
 
