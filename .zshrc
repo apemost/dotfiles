@@ -5,13 +5,13 @@ if [ ! -d $ZSH ]; then
 fi
 
 # `_` and `-` will be interchangeable
-HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE='true'
 
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy-mm-dd"
+HIST_STAMPS='yyyy-mm-dd'
 
 # Disable oh-my-zsh auto update
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE='true'
 
 # Load plugins
 plugins=(colored-man-pages)
