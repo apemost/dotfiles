@@ -27,23 +27,19 @@ To update, `cd` into your local `dotfiles` repository and then:
 source bootstrap.sh
 ```
 
-Alternatively, to install or update with my [Vim configuration](https://github.com/apemost/vimrc):
+Alternatively, to install or update with [Andrew's vimrc](https://github.com/apemost/vimrc):
 
 ```bash
 source bootstrap.sh --with-vimrc
 ```
 
-## Add custom commands without creating a new fork
+## FAQ
+
+### How to add custom commands without creating a new fork
 
 If `~/.extra` exists, it will be sourced along with the other files. You can
 use this to add a few custom commands without the need to fork this entire
 repository, or to add commands you don’t want to commit to a public repository.
-
-## Vimrc
-
-You can find all the documentation [here](https://github.com/apemost/vimrc).
-
-## FAQ
 
 ### How to install and set up zsh as default
 
@@ -54,6 +50,10 @@ See <https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH>.
 ```bash
 vim +PlugInstall
 ```
+
+### Are there any docs for Andrew's vimrc
+
+You can find all the documentation [here](https://github.com/apemost/vimrc).
 
 ## Recommended color schemes
 
