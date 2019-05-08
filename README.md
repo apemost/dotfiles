@@ -39,35 +39,32 @@ If `~/.extra` exists, it will be sourced along with the other files. You can
 use this to add a few custom commands without the need to fork this entire
 repository, or to add commands you don’t want to commit to a public repository.
 
-## Usage
+## Vimrc
 
-If you use bash by default, install zsh, and then:
+You can find all the documentation [here](https://github.com/apemost/vimrc).
 
-```bash
-chsh -s `which zsh`
-```
+## FAQ
 
-To install vim plugins:
+### How to install and set up zsh as default
+
+See <https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH>.
+
+### How to install vim plugins via [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```bash
 vim +PlugInstall
 ```
 
-## Vimrc
-
-You can find all the documentation [here](https://github.com/apemost/vimrc).
-
 ## Recommended color schemes
 
-- iTerm2
+| Color Scheme | Terminal                                                                                                                                                                                                          |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gruvbox Dark | [iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Gruvbox%20Dark.itermcolors), [Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Molokai.itermcolors) |
+| Molokai      | [iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Gruvbox%20Dark.terminal), [Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Molokai.terminal)     |
 
-  - [Gruvbox Dark](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Gruvbox%20Dark.itermcolors)
-  - [Molokai](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Molokai.itermcolors)
-
-- macOS terminal
-
-  - [Gruvbox Dark](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Gruvbox%20Dark.terminal)
-  - [Molokai](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Molokai.terminal)
+Alternatively, you can find over 200 terminal color schemes/themes [here](https://github.com/mbadolato/iTerm2-Color-Schemes)
+for iTerm/iTerm2, Terminal, Konsole, PuTTY, Xresources, XRDB, Remina, Termite,
+XFCE, Tilda, FreeBSD VT, Terminator, Kitty, and MobaXterm.
 
 ## Feedback
 
