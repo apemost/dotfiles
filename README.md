@@ -5,8 +5,6 @@
 
 Enhanced [Mathias Bynens](https://mathiasbynens.be)'s dotfiles + my [Vim configuration](https://github.com/apemost/vimrc).
 
-![Screenshot of Vim](https://github.com/apemost/vimrc/blob/master/assets/vim.png)
-
 ## Installation
 
 You can clone this repository wherever you want. To install, run command:
@@ -19,6 +17,12 @@ To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
 source bootstrap.sh
+```
+
+To install or update with my [Vim configuration](https://github.com/apemost/vimrc), run command:
+
+```bash
+source bootstrap.sh --with-vimrc
 ```
 
 ## Usage

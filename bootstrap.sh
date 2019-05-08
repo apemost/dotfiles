@@ -23,10 +23,10 @@ rsync -avh --no-perms \
   .zshrc \
   ~
 
-cd vimrc && source bootstrap.sh && cd -
+if [[ $1 == '--with-vimrc' ]]; then
+  cd vimrc && source bootstrap.sh && cd -
+fi
 
-if [[ "$SHELL" =~ 'zsh$' ]]; then
+if [[ $SHELL =~ 'zsh$' ]]; then
   source ~/.zshrc
-else
-  source ~/.bashrc
 fi
