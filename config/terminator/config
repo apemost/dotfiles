@@ -1,21 +1,32 @@
 [global_config]
-  borderless = True
   geometry_hinting = True
 [keybindings]
+  new_tab = <Super>t
   copy = <Super>c
+  paste = <Super>v
+  line_up = <Super>Up
+  line_down = <Super>Down
+  move_tab_right = <Shift><Super>Right
+  move_tab_left = <Shift><Super>Left
+  next_tab = <Super>Right
+  prev_tab = <Super>Left
   full_screen = <Super>Return
   group_all = None
   group_tab = None
   insert_number = None
   insert_padded = None
-  line_down = <Super>Down
-  line_up = <Super>Up
-  move_tab_left = <Shift><Super>Left
-  move_tab_right = <Shift><Super>Right
-  new_tab = <Super>t
-  next_tab = <Super>Right
-  paste = <Super>v
-  prev_tab = <Super>Left
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.75
+    cursor_color = "#aaaaaa"
+    font = Hack 9
+    foreground_color = "#ebdbb2"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -25,15 +36,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#282828"
-    background_darkness = 0.75
-    copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    font = Hack 9
-    foreground_color = "#ebdbb2"
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
