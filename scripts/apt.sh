@@ -48,6 +48,7 @@ sudo apt install xclip
 
 # Install GUI
 sudo apt install blender
+sudo apt install flameshot
 sudo apt install gimp
 sudo apt install pavucontrol-qt
 sudo apt install terminator
