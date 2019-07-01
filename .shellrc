@@ -16,6 +16,10 @@ if command -v goenv &> /dev/null; then
   eval "$(goenv init -)"
 fi
 
+if command -v go &> /dev/null; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
+
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
