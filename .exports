@@ -21,6 +21,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Path to look for executable files
 export PATH="$HOME/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$PATH"
 
+# Path to the location of go workspace
+export GOPATH="$HOME/go"
+
 # Set terminal type
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color &> /dev/null; then
   export TERM='gnome-256color'
