@@ -43,7 +43,7 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 source ~/.zplug/init.zsh
-zplug 'denysdovhan/spaceship-zsh-theme', use:spaceship.zsh, from:github, as:theme
+zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug check || zplug install
