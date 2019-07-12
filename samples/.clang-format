@@ -7,7 +7,4 @@ PointerAlignment: Left
 ---
 Language: Java
 ColumnLimit: 100
----
-Language: Proto
-DisableFormat: true
 ...
