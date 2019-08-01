@@ -40,6 +40,7 @@ sudo apt install ffmpeg
 sudo apt install grip
 sudo apt install htop
 sudo apt install jq
+sudo apt install latexmk
 sudo apt install markdown
 sudo apt install nmap
 sudo apt install parcellite
