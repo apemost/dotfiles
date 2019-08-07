@@ -10,6 +10,9 @@ unset file
 
 if command -v pyenv &> /dev/null; then
   eval "$(pyenv init -)"
+  if pyenv commands | grep virtualenv-init &> /dev/null; then
+    eval "$(pyenv virtualenv-init -)"
+  fi
 fi
 
 if command -v goenv &> /dev/null; then
