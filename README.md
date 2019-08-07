@@ -33,6 +33,39 @@ Alternatively, to install or update with [Andrew's vimrc](https://github.com/ape
 source bootstrap.sh --with-vimrc
 ```
 
+### pyenv
+
+> Simple Python version management
+
+```bash
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+```
+
+### goenv
+
+> Like pyenv and rbenv, but for Go
+
+```bash
+git clone https://github.com/syndbg/goenv.git ~/.goenv
+```
+
+### nvm
+
+> Node Version Manager - Simple bash script to manage multiple active node.js versions
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+```
+
+### SDKMAN!
+
+> The Software Development Kit Manager
+
+```bash
+curl -s https://get.sdkman.io | bash
+```
+
 ## FAQ
 
 ### How to add custom commands without creating a new fork
