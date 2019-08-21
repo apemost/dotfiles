@@ -19,6 +19,7 @@ RUN apt update && apt install -y binutils \
       zsh
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
+RUN git clone https://github.com/zplug/zplug.git /root/.zplug
 
 ADD . /dotfiles
 
@@ -26,5 +27,6 @@ WORKDIR /dotfiles
 
 RUN bash -c 'source bootstrap.sh --with-vimrc'
 RUN bash -c 'yes | vim +PlugInstall +qa'
+RUN ["/usr/bin/zsh", "-l"]
 
-CMD ["/usr/bin/zsh","-l"]
+CMD ["/usr/bin/zsh", "-l"]
