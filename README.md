@@ -13,10 +13,10 @@ repository, review the code, and remove things you don’t want or need. Don’t
 blindly use my settings unless you know what that entails.
 Use at your own risk!
 
-## Try in Docker
+## Trying with Docker
 
 ```bash
-docker run -it --rm apemost/dotfiles vim
+docker run -it --rm apemost/dotfiles
 ```
 
 ## Installation
