@@ -22,12 +22,15 @@ RUN apt update && apt install -y binutils \
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 RUN git clone https://github.com/zplug/zplug.git /root/.zplug
+RUN git clone https://github.com/zplug/zplug.git /root/.zplug/repos/zplug/zplug
+RUN git clone https://github.com/denysdovhan/spaceship-prompt.git /root/.zplug/repos/denysdovhan/spaceship-prompt
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions.git /root/.zplug/repos/zsh-users/zsh-autosuggestions
+RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /root/.zplug/repos/zsh-users/zsh-syntax-highlighting
 
 ADD . /dotfiles
 
 WORKDIR /dotfiles
 
 RUN ["/usr/bin/bash", "-c", "source bootstrap.sh --with-vimrc && yes | vim +PlugInstall +qa"]
-RUN ["/usr/bin/zsh", "-ci", "zplug install || true"]
 
 CMD ["/usr/bin/zsh", "-l"]
