@@ -1,0 +1,13 @@
+language: generic
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+services:
+  - docker
+
+script:
+  - docker build --tag apemost/dotfiles:latest .
