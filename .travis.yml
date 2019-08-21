@@ -10,7 +10,7 @@ services:
   - docker
 
 script:
-  - docker build --tag apemost/dotfiles:latest .
+  - docker build --compress --tag apemost/dotfiles:latest .
 
 deploy:
   provider: script
