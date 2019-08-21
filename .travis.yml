@@ -11,3 +11,11 @@ services:
 
 script:
   - docker build --tag apemost/dotfiles:latest .
+
+deploy:
+  provider: script
+  script:
+    - echo "$(DOCKER_PASSWORD)" | docker login -u $(DOCKER_USER) --password-stdin
+    - docker push apemost/dotfiles:latest
+  on:
+    branch: master

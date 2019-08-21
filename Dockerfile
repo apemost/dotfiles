@@ -25,6 +25,6 @@ ADD . /dotfiles
 WORKDIR /dotfiles
 
 RUN bash -c 'source bootstrap.sh --with-vimrc'
-RUN yes | vim +PlugUpdate +qa
+RUN yes | vim +PlugUpdate +qa &> /dev/null
 
 CMD ['/usr/bin/zsh', '-l']
