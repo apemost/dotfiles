@@ -44,6 +44,7 @@ sudo apt install latexmk
 sudo apt install markdown
 sudo apt install nmap
 sudo apt install parcellite
+sudo apt install rsync
 sudo apt install tree
 sudo apt install xclip
 

@@ -14,11 +14,9 @@ RUN apt update && apt install -y binutils \
       jq \
       latexmk \
       markdown \
+      rsync \
       ripgrep \
       zsh
-
-RUN curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb && \
-      dpkg -i ripgrep_11.0.2_amd64.deb
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 
