@@ -19,7 +19,7 @@ RUN apt update && apt install -y binutils \
       locales \
       zsh && locale-gen 'en_US.UTF-8'
 
-RUN $(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended
+RUN "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended
 RUN git clone https://github.com/zplug/zplug.git /root/.zplug
 
 ADD . /dotfiles
