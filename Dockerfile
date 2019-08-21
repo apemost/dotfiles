@@ -27,7 +27,7 @@ ADD . /dotfiles
 WORKDIR /dotfiles
 
 RUN ["/usr/bin/bash", "-c", "source bootstrap.sh --with-vimrc && yes | vim +PlugInstall +qa"]
-RUN ["/usr/bin/bash", "-c", "source /root/.zplug/init.zsh && \
+RUN ["/usr/bin/zsh", "-c", "source /root/.zplug/init.zsh && \
       zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme && \
       zplug 'zsh-users/zsh-autosuggestions' && \
       zplug 'zsh-users/zsh-syntax-highlighting', defer:2 && \
