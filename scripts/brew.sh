@@ -17,7 +17,7 @@ brew install binutils
 brew install moreutils
 
 # Install GNU `sed`, overwriting the built-in `sed`
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 
 # Install GnuPG to enable PGP-signing commits
 brew install gnupg
@@ -39,11 +39,11 @@ if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
   chsh -s /usr/local/bin/zsh
 fi
 
-# Install `wget` with IRI support
-brew install wget --with-iri
+# Install `wget`
+brew install wget
 
 # Install more recent versions of some macOS tools
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install screen
