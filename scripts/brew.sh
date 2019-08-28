@@ -62,6 +62,7 @@ brew install autojump
 brew install bat
 brew install clang-format
 brew install ffmpeg
+brew install gawk
 brew install grip
 brew install htop
 brew install jq
