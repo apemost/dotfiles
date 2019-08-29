@@ -6,3 +6,10 @@ if command -v git > /dev/null; then
     git diff --no-index --color-words "$@"
   }
 fi
+
+# Check if we are running inside docker container
+if ! command -v running_in_docker > /dev/null; then
+  running_in_docker() {
+    awk -F/ '$2 == "docker"' /proc/self/cgroup | read
+  }
+fi
