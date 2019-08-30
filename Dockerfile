@@ -28,6 +28,8 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions.git /root/.zplug/
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /root/.zplug/repos/zsh-users/zsh-syntax-highlighting
 RUN git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm
 
+ENV RUNNING_IN_DOCKER=1
+
 ADD . /dotfiles
 
 WORKDIR /dotfiles
