@@ -19,6 +19,11 @@ Use at your own risk!
 docker run -it --rm apemost/dotfiles
 ```
 
+## Requirements
+
+- `zsh`: version 4.3.9 or higher
+- `git`: version 1.7 or higher
+
 ## Installation
 
 You can clone this repository wherever you want. The bootstrapper script will
