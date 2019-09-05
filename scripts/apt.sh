@@ -55,6 +55,7 @@ sudo apt install flameshot
 sudo apt install gimp
 sudo apt install pavucontrol-qt
 sudo apt install terminator
+sudo apt install wireshark
 
 # Install fonts
 sudo apt install fonts-hack-ttf
