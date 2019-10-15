@@ -7,5 +7,4 @@ PointerAlignment: Left
 ---
 Language: Java
 ColumnLimit: 100
-BreakAfterJavaFieldAnnotations: true
 ...
