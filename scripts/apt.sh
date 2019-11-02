@@ -44,6 +44,7 @@ sudo apt install htop
 sudo apt install jq
 sudo apt install latexmk
 sudo apt install markdown
+sudo apt install mysql-client
 sudo apt install net-tools
 sudo apt install nmap
 sudo apt install parcellite
