@@ -73,7 +73,7 @@ brew install tree
 brew install unrar
 
 # Install fonts
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-hack
 brew cask install font-fira-code
 
