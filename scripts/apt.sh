@@ -57,6 +57,7 @@ sudo apt install xclip
 sudo apt install blender
 sudo apt install flameshot
 sudo apt install gimp
+sudo apt install meld
 sudo apt install pavucontrol-qt
 sudo apt install terminator
 sudo apt install wireshark
