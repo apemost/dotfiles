@@ -2,11 +2,12 @@
 
 git config --global user.name 'Andrew Lyu'
 git config --global user.email 'apemost@gmail.com'
-git config --global user.signingkey 450327FA
+git config --global user.signingKey 450327FA
 git config --global diff.tool meld
 git config --global difftool.prompt false
 git config --global difftool.meld.cmd 'meld "$LOCAL" "$REMOTE" --label "DIFF"'
 git config --global merge.tool meld
 git config --global mergetool.prompt false
-git config --global mergetool.keepbackup false
+git config --global mergetool.keepBackup false
 git config --global mergetool.meld.cmd 'meld --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED" --label "MERGE"'
+git config --global mergetool.meld.trustExitCode false

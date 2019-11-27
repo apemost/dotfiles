@@ -11,7 +11,7 @@
 	trustctime = false
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-	precomposeunicode = false
+	precomposeUnicode = false
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
@@ -34,7 +34,7 @@
 	untracked = cyan
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgSign = true
 [diff]
 	# Detect copies as well as renames
 	renames = copies
@@ -43,7 +43,7 @@
 	textconv = hexdump -v -C
 [help]
 	# Automatically correct and execute mistyped commands
-	autocorrect = 1
+	autoCorrect = 1
 [push]
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
 	default = simple
