@@ -26,7 +26,6 @@ RUN git clone https://github.com/zplug/zplug.git /root/.zplug
 RUN git clone https://github.com/zplug/zplug.git /root/.zplug/repos/zplug/zplug
 RUN git clone https://github.com/denysdovhan/spaceship-prompt.git /root/.zplug/repos/denysdovhan/spaceship-prompt
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions.git /root/.zplug/repos/zsh-users/zsh-autosuggestions
-RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /root/.zplug/repos/zsh-users/zsh-syntax-highlighting
 RUN git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm
 
 ENV RUNNING_IN_DOCKER=1
