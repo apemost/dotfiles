@@ -13,6 +13,9 @@ HIST_STAMPS='yyyy-mm-dd'
 # Disable oh-my-zsh auto update
 DISABLE_AUTO_UPDATE='true'
 
+# Initialize colors
+autoload -U colors && colors
+
 # The value of this parameter is expanded and used as the primary prompt string.
 PS1="%{$fg[green]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}
 %{$fg[green]%}%B➜%b%{$reset_color%} "
