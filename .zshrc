@@ -13,6 +13,13 @@ HIST_STAMPS='yyyy-mm-dd'
 # Disable oh-my-zsh auto update
 DISABLE_AUTO_UPDATE='true'
 
+# The value of this parameter is expanded and used as the primary prompt string.
+PS1="%{$fg[green]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}
+%{$fg[green]%}%B➜%b%{$reset_color%} "
+
+# The value of this parameter is expanded as with PS1 and used as the secondary prompt string.
+PS2="%{$fg[yellow]%}%B➜%b%{$reset_color%} "
+
 # Load plugins
 plugins=(colored-man-pages)
 awesome_plugins=(autojump docker git kubectl pip tmux)
@@ -21,32 +28,11 @@ for plugin in ${awesome_plugins[@]}; do
     plugins+=($plugin)
   fi
 done
-unset plugin
-unset awesome_plugins
+unset plugin awesome_plugins
 
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
-
-if [ ! -d $ZPLUG_HOME ]; then
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-fi
-
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_BATTERY_SHOW=false
-SPACESHIP_DOCKER_SHOW=false
-SPACESHIP_EXEC_TIME_SHOW=false
-SPACESHIP_PACKAGE_SHOW=false
-
-ZSH_AUTOSUGGEST_USE_ASYNC=true
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-
-source ~/.zplug/init.zsh
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
-zplug 'zsh-users/zsh-autosuggestions'
-zplug check || zplug install
-zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
