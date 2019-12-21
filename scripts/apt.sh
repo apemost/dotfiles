@@ -42,6 +42,7 @@ sudo apt install ffmpeg
 sudo apt install gawk
 sudo apt install grip
 sudo apt install htop
+sudo apt install iftop
 sudo apt install jq
 sudo apt install latexmk
 sudo apt install markdown
