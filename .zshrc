@@ -38,4 +38,25 @@ PS1="%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b
 # The value of this parameter is expanded as with PS1 and used as the secondary prompt string.
 PS2="%B%F{yellow}➜%f%b "
 
+if [ ! -d $ZPLUG_HOME ]; then
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+fi
+
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_BATTERY_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
+SPACESHIP_EXEC_TIME_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_VENV_SHOW=false
+
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+
+source ~/.zplug/init.zsh
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
+zplug 'zsh-users/zsh-autosuggestions'
+zplug check || zplug install
+zplug load
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
