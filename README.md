@@ -1,5 +1,6 @@
 # dotfiles
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/00eb6b601f194b6c98c31e51de5f8bad)](https://app.codacy.com/manual/apemost/dotfiles?utm_source=github.com&utm_medium=referral&utm_content=apemost/dotfiles&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/apemost/dotfiles.svg?branch=master)](https://travis-ci.com/apemost/dotfiles)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-brightgreen.svg)](https://github.com/apemost/dotfiles)
 [![PRs Welcome](https://img.shields.io/badge/pull%20requests-welcome-brightgreen.svg)](https://github.com/apemost/dotfiles/pulls)
