@@ -31,6 +31,8 @@ sudo apt install gcc
 sudo apt install g++
 sudo apt install silversearcher-ag
 sudo apt install ripgrep  # Require Ubuntu Cosmic (18.10) or newer
+sudo apt install libpq-dev
+sudo apt install python3-dev
 
 # Install other useful binaries
 sudo apt install apache2-utils
