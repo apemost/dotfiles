@@ -55,6 +55,7 @@ sudo apt install parcellite
 sudo apt install redis-tools
 sudo apt install rsync
 sudo apt install tree
+sudo apt install tshark
 sudo apt install xclip
 
 # Install GUI
