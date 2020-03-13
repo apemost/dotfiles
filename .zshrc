@@ -13,9 +13,22 @@ HIST_STAMPS='yyyy-mm-dd'
 # Disable oh-my-zsh auto update
 DISABLE_AUTO_UPDATE='true'
 
+plugins=(
+  colored-man-pages
+  urltools
+)
+
+awesome_plugins=(
+  autojump
+  docker
+  git
+  kubectl
+  pip
+  rsync
+  tmux
+)
+
 # Load plugins
-plugins=(colored-man-pages)
-awesome_plugins=(autojump docker git kubectl pip tmux)
 for plugin in ${awesome_plugins[@]}; do
   if command -v $plugin > /dev/null; then
     plugins+=($plugin)
