@@ -15,10 +15,11 @@ DISABLE_AUTO_UPDATE='true'
 
 plugins=(
   colored-man-pages
+  extract
   urltools
 )
 
-awesome_plugins=(
+additional_plugins=(
   autojump
   docker
   git
@@ -29,12 +30,12 @@ awesome_plugins=(
 )
 
 # Load plugins
-for plugin in ${awesome_plugins[@]}; do
+for plugin in ${additional_plugins[@]}; do
   if command -v $plugin > /dev/null; then
     plugins+=($plugin)
   fi
 done
-unset plugin awesome_plugins
+unset plugin additional_plugins
 
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
