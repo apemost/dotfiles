@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-brightgreen.svg)](https://github.com/apemost/dotfiles)
 [![PRs Welcome](https://img.shields.io/badge/pull%20requests-welcome-brightgreen.svg)](https://github.com/apemost/dotfiles/pulls)
 
-Enhanced [Mathias](https://mathiasbynens.be)' dotfiles,
+Enhanced [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles),
 sensible hacker defaults for Linux and macOS.
 
 **Warning:**
