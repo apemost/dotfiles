@@ -11,3 +11,4 @@ git config --global mergetool.prompt false
 git config --global mergetool.keepBackup false
 git config --global mergetool.meld.cmd 'meld --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED" --label "MERGE"'
 git config --global mergetool.meld.trustExitCode false
+git config --global pull.rebase true
