@@ -34,8 +34,8 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.5
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
-# Automatic show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
+# Show scrollbars when scrolling
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable the over-the-top focus ring animation
