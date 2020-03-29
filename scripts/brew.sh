@@ -71,6 +71,7 @@ brew install nmap
 brew install ssh-copy-id
 brew install tree
 brew install unrar
+brew install watch
 
 # Install fonts
 brew tap homebrew/cask-fonts
