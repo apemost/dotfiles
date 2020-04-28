@@ -70,5 +70,6 @@ sudo apt install wireshark
 # Install fonts
 sudo apt install fonts-hack-ttf
 sudo apt install fonts-roboto
+sudo apt install fonts-droid-fallback
 
 sudo apt autoremove
