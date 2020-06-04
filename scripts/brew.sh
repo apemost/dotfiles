@@ -72,6 +72,7 @@ brew install ssh-copy-id
 brew install tree
 brew install unrar
 brew install watch
+brew install wrk
 
 # Install fonts
 brew tap homebrew/cask-fonts
