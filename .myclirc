@@ -65,7 +65,7 @@ wider_completion_menu = False
 # \t - Product type (Percona, MySQL, MariaDB)
 # \u - Username
 prompt = '\u@\h:\d\n➜ '
-prompt_continuation = '➜ '
+prompt_continuation = '➜'
 
 # Skip intro info on startup and outro info on exit
 less_chatty = True
