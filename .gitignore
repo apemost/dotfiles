@@ -12,6 +12,9 @@ Thumbs.db
 *.py[cod]
 __pycache__/
 
+# Dependency directories
+node_modules/
+
 # IntelliJ IDEA
 .idea/
 *.iws
