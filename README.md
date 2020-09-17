@@ -68,7 +68,7 @@ git clone https://github.com/syndbg/goenv.git ~/.goenv
 > Node Version Manager - Simple bash script to manage multiple active node.js versions
 
 ```bash
-mkdir -p "$HOME/.nvm"
+mkdir -p ~/.nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
