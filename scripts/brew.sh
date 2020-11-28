@@ -69,6 +69,7 @@ brew install jq
 brew install markdown
 brew install nmap
 brew install ssh-copy-id
+brew install svn
 brew install tree
 brew install unrar
 brew install watch
