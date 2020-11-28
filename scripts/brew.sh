@@ -68,6 +68,8 @@ brew install htop
 brew install jq
 brew install markdown
 brew install nmap
+brew install openvpn
+brew install proxychains-ng
 brew install ssh-copy-id
 brew install svn
 brew install tree
