@@ -47,8 +47,6 @@
 [help]
 	# Automatically correct and execute mistyped commands.
 	autoCorrect = 1
-[init]
-	defaultBranch = main
 [push]
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
 	default = simple
