@@ -1,27 +1,28 @@
 FROM ubuntu:20.04
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-      binutils \
+      autojump \
       bat \
-      curl \
-      git \
-      vim \
+      binutils \
       build-essential \
-      make \
       cmake \
       ctags \
-      silversearcher-ag \
-      autojump \
+      curl \
       gawk \
+      git \
       htop \
       jq \
       latexmk \
-      markdown \
-      rsync \
       locales \
+      make \
+      markdown \
+      python3-venv \
+      rsync \
+      silversearcher-ag \
+      vim \
       zsh && locale-gen 'en_US.UTF-8'
 
-RUN curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
+RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
 RUN dpkg -i ripgrep_12.1.1_amd64.deb
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
