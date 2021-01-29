@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
-RUN apt update && apt install -y binutils \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      binutils \
       bat \
       curl \
       git \
@@ -20,7 +21,7 @@ RUN apt update && apt install -y binutils \
       locales \
       zsh && locale-gen 'en_US.UTF-8'
 
-RUN apt install -y ripgrep
+RUN apt-get install -y ripgrep
 
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
