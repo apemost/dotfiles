@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:21.04
 
 RUN apt update && apt install -y binutils \
       bat \
@@ -17,9 +17,11 @@ RUN apt update && apt install -y binutils \
       latexmk \
       markdown \
       rsync \
-      ripgrep \
       locales \
       zsh && locale-gen 'en_US.UTF-8'
+
+RUN apt install -y ripgrep
+
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 RUN git clone https://github.com/zplug/zplug.git /root/.zplug
