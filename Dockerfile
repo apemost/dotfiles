@@ -21,8 +21,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       locales \
       zsh && locale-gen 'en_US.UTF-8'
 
-RUN apt-get install -y ripgrep
-
+RUN curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
+RUN dpkg -i ripgrep_12.1.1_amd64.deb
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 RUN git clone https://github.com/zplug/zplug.git /root/.zplug
