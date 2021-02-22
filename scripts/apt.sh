@@ -16,6 +16,7 @@ sudo apt install vim
 sudo apt install vim-gtk
 
 sudo apt install binutils
+sudo apt install dnsutils
 sudo apt install curl
 sudo apt install screen
 sudo apt install tmux
