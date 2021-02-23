@@ -12,14 +12,13 @@ if ! fgrep -q '/usr/bin/zsh' /etc/shells; then
   chsh -s /usr/bin/zsh
 fi
 
-sudo apt install vim
-sudo apt install vim-gtk
-
 sudo apt install binutils
-sudo apt install dnsutils
 sudo apt install curl
+sudo apt install dnsutils
+sudo apt install iputils-ping
 sudo apt install screen
 sudo apt install tmux
+sudo apt install vim
 
 # Install development environment
 sudo apt install build-essential
@@ -46,6 +45,7 @@ sudo apt install gawk
 sudo apt install grip
 sudo apt install htop
 sudo apt install iftop
+sudo apt install iotop
 sudo apt install jq
 sudo apt install latexmk
 sudo apt install markdown
@@ -66,6 +66,7 @@ sudo apt install gimp
 sudo apt install meld
 sudo apt install pavucontrol-qt
 sudo apt install terminator
+sudo apt install vim-gtk
 sudo apt install wireshark
 
 # Install fonts
