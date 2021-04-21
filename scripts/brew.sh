@@ -49,6 +49,9 @@ brew install openssh
 brew install screen
 brew install tmux
 
+# Mac OS X pasteboard access under tmux and screen
+brew install reattach-to-user-namespace
+
 # Install development environment
 brew install cmake
 brew install git
