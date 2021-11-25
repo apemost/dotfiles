@@ -80,11 +80,12 @@ brew install unrar
 brew install watch
 brew install wrk
 
+# Install GUI
+brew install --cask wireshark
+
 # Install fonts
 brew tap homebrew/cask-fonts
 brew install --cask font-hack
-brew install --cask font-fira-code
-brew install --cask font-monofur-for-powerline
 
 # Remove outdated versions from the cellar
 brew cleanup
