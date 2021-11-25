@@ -49,12 +49,12 @@ sudo apt install iotop
 sudo apt install jq
 sudo apt install latexmk
 sudo apt install markdown
+sudo apt install mtr
 sudo apt install mysql-client
 sudo apt install net-tools
 sudo apt install nmap
 sudo apt install parcellite
 sudo apt install percona-toolkit
-sudo apt install pstack
 sudo apt install redis-tools
 sudo apt install rsync
 sudo apt install strace

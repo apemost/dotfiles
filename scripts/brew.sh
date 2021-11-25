@@ -70,6 +70,7 @@ brew install grip
 brew install htop
 brew install jq
 brew install markdown
+brew install mtr
 brew install nmap
 brew install openvpn
 brew install proxychains-ng
