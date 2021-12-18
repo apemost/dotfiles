@@ -71,6 +71,7 @@ brew install htop
 brew install jq
 brew install markdown
 brew install mtr
+brew install mysql-client
 brew install nmap
 brew install openvpn
 brew install proxychains-ng
