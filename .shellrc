@@ -7,20 +7,21 @@ for file in ~/.{path,exports,aliases,functions}; do
 done
 unset file
 
+if command -v go &> /dev/null; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
+
+if command -v goenv &> /dev/null; then
+  export PATH="$GOENV_ROOT/shims:$PATH"
+  eval "$(goenv init -)"
+fi
+
 if command -v pyenv &> /dev/null; then
-  eval "$(pyenv init --path)"
+  export PATH="$PYENV_ROOT/shims:$PATH"
   eval "$(pyenv init -)"
   if pyenv commands | grep virtualenv-init &> /dev/null; then
     eval "$(pyenv virtualenv-init -)"
   fi
-fi
-
-if command -v goenv &> /dev/null; then
-  eval "$(goenv init -)"
-fi
-
-if command -v go &> /dev/null; then
-  export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
