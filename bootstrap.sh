@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-git pull origin master
-git submodule update --init --recursive
+git pull origin main
 
 rsync -avh --no-perms \
   .aliases \
@@ -22,10 +21,6 @@ rsync -avh --no-perms \
   .wgetrc \
   .zshrc \
   ~
-
-if [[ $1 == '--with-vimrc' ]]; then
-  cd vimrc && source bootstrap.sh && cd -
-fi
 
 if [[ $SHELL =~ 'zsh$' ]]; then
   source ~/.zshrc
