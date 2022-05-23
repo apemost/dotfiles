@@ -22,8 +22,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       vim \
       zsh && locale-gen 'en_US.UTF-8'
 
-RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
-RUN dpkg -i ripgrep_12.1.1_amd64.deb && rm ripgrep_12.1.1_amd64.deb
+RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+RUN dpkg -i ripgrep_13.0.0_amd64.deb && rm ripgrep_13.0.0_amd64.deb
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 RUN git clone https://github.com/zplug/zplug.git /root/.zplug
@@ -36,20 +36,22 @@ ENV RUNNING_IN_DOCKER=1
 
 RUN adduser --disabled-password --gecos '' apemost && usermod -aG sudo apemost
 
-USER apemost
-
 ADD . /home/apemost/projects/apemost/dotfiles
+
+RUN chown -R apemost:apemost /home/apemost
+
+USER apemost
 
 WORKDIR /home/apemost/projects/apemost/dotfiles
 
-RUN ["/usr/bin/bash", "-c", "source bootstrap.sh"]
+RUN ["/bin/bash", "-c", "source bootstrap.sh"]
 
 RUN git clone https://github.com/apemost/vimrc.git /home/apemost/projects/apemost/vimrc
 
 WORKDIR /home/apemost/projects/apemost/vimrc
 
-RUN ["/usr/bin/bash", "-c", "source bootstrap.sh"]
+RUN ["/bin/bash", "-c", "source bootstrap.sh"]
 
-WORKDIR /home/apemost/projects/apemost
+WORKDIR /home/apemost
 
 CMD ["/usr/bin/zsh", "-l"]
