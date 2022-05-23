@@ -90,12 +90,6 @@ instead, though.
 
 See <https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH>.
 
-### How to install vim plugins via [vim-plug](https://github.com/junegunn/vim-plug):
-
-```bash
-vim +PlugInstall
-```
-
 ## Recommended terminal color schemes/themes
 
 | Color Scheme | Terminal                                                                                                                                                                                                               |
