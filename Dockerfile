@@ -25,7 +25,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 RUN dpkg -i ripgrep_13.0.0_amd64.deb && rm ripgrep_13.0.0_amd64.deb
 
-RUN adduser --disabled-password --gecos '' apemost && usermod -aG sudo apemost
+RUN adduser --disabled-password --gecos '' apemost
 RUN mkdir -p /home/apemost/projects/apemost
 
 COPY . /home/apemost/projects/apemost/dotfiles
