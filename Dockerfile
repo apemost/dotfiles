@@ -34,10 +34,22 @@ RUN git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm
 
 ENV RUNNING_IN_DOCKER=1
 
-ADD . /dotfiles
+RUN adduser --disabled-password --gecos '' apemost && usermod -aG sudo apemost
 
-WORKDIR /dotfiles
+USER apemost
+
+ADD . /home/apemost/projects/apemost/dotfiles
+
+WORKDIR /home/apemost/projects/apemost/dotfiles
 
 RUN ["/usr/bin/bash", "-c", "source bootstrap.sh"]
+
+RUN git clone https://github.com/apemost/vimrc.git /home/apemost/projects/apemost/vimrc
+
+WORKDIR /home/apemost/projects/apemost/vimrc
+
+RUN ["/usr/bin/bash", "-c", "source bootstrap.sh"]
+
+WORKDIR /home/apemost/projects/apemost
 
 CMD ["/usr/bin/zsh", "-l"]
