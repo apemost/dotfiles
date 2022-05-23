@@ -40,12 +40,6 @@ To update, `cd` into your local `dotfiles` repository and then:
 source bootstrap.sh
 ```
 
-Alternatively, to install or update with [Andrew's vimrc](https://github.com/apemost/vimrc):
-
-```bash
-source bootstrap.sh --with-vimrc
-```
-
 ### pyenv
 
 > Simple Python version management
@@ -101,10 +95,6 @@ See <https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH>.
 ```bash
 vim +PlugInstall
 ```
-
-### Are there any docs for Andrew's vimrc
-
-You can find all the documentation [here](https://github.com/apemost/vimrc).
 
 ## Recommended terminal color schemes/themes
 

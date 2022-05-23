@@ -38,6 +38,6 @@ ADD . /dotfiles
 
 WORKDIR /dotfiles
 
-RUN ["/usr/bin/bash", "-c", "source bootstrap.sh --with-vimrc && yes | vim +PlugInstall +qa"]
+RUN ["/usr/bin/bash", "-c", "source bootstrap.sh"]
 
 CMD ["/usr/bin/zsh", "-l"]
