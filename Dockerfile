@@ -37,7 +37,7 @@ USER apemost
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 RUN git clone https://github.com/zplug/zplug.git /home/apemost/.zplug
-RUN git clone https://github.com/zplug/zplug.git /home/apemost/repos/zplug/zplug
+RUN git clone https://github.com/zplug/zplug.git /home/apemost/.zplug/repos/zplug/zplug
 RUN git clone https://github.com/denysdovhan/spaceship-prompt.git /home/apemost/.zplug/repos/denysdovhan/spaceship-prompt
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions.git /home/apemost/.zplug/repos/zsh-users/zsh-autosuggestions
 RUN git clone https://github.com/tmux-plugins/tpm /home/apemost/.tmux/plugins/tpm
