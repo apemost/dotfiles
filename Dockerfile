@@ -25,9 +25,14 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 RUN dpkg -i ripgrep_13.0.0_amd64.deb && rm ripgrep_13.0.0_amd64.deb
 
-ENV RUNNING_IN_DOCKER=1
-
 RUN adduser --disabled-password --gecos '' apemost && usermod -aG sudo apemost
+
+RUN mkdir -p /home/apemost/projects/apemost
+
+COPY . /home/apemost/projects/apemost/dotfiles
+
+RUN chown -R apemost:apemost /home/apemost
+
 USER apemost
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
@@ -37,11 +42,7 @@ RUN git clone https://github.com/denysdovhan/spaceship-prompt.git /home/apemost/
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions.git /home/apemost/.zplug/repos/zsh-users/zsh-autosuggestions
 RUN git clone https://github.com/tmux-plugins/tpm /home/apemost/.tmux/plugins/tpm
 
-RUN mkdir -p /home/apemost/projects/apemost
-
-COPY . /home/apemost/projects/apemost/dotfiles
-
-RUN chown -R apemost:apemost /home/apemost
+ENV RUNNING_IN_DOCKER=1
 
 WORKDIR /home/apemost/projects/apemost/dotfiles
 
