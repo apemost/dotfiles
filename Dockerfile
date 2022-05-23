@@ -26,7 +26,6 @@ RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/rip
 RUN dpkg -i ripgrep_13.0.0_amd64.deb && rm ripgrep_13.0.0_amd64.deb
 
 RUN adduser --disabled-password --gecos '' apemost && usermod -aG sudo apemost
-
 RUN mkdir -p /home/apemost/projects/apemost
 
 COPY . /home/apemost/projects/apemost/dotfiles
@@ -52,7 +51,7 @@ RUN git clone https://github.com/apemost/vimrc.git /home/apemost/projects/apemos
 
 WORKDIR /home/apemost/projects/apemost/vimrc
 
-RUN ["/bin/bash", "-c", "source bootstrap.sh"]
+RUN ["/bin/bash", "-c", "source bootstrap.sh && yes | vim +PlugInstall +qa"]
 
 WORKDIR /home/apemost
 
