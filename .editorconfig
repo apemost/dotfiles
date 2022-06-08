@@ -11,6 +11,10 @@ trim_trailing_whitespace = true
 [*.go]
 indent_style = tab
 
+[*.py]
+indent_style = space
+indent_size = 4
+
 [{.gitconfig,.gitmodules}]
 indent_style = tab
 
