@@ -40,6 +40,7 @@ sudo apt install autojump
 sudo apt install bat  # Require Ubuntu Eoan (19.10) or newer
 sudo apt install clang-format
 sudo apt install expect
+sudo apt install fatrace
 sudo apt install ffmpeg
 sudo apt install gawk
 sudo apt install grip
