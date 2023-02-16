@@ -20,3 +20,6 @@ indent_style = tab
 
 [Makefile]
 indent_style = tab
+
+[.bumpversion.cfg]
+indent_style = tab
