@@ -18,6 +18,8 @@
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
+	# https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath
+	quotePath = false
 [color]
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal (This is the default setting in Git ≥ 1.8.4.)
