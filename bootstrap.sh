@@ -7,7 +7,6 @@ rsync -avh --no-perms \
   .curlrc \
   .editorconfig \
   .exports \
-  .functions \
   .gdbinit \
   .gitconfig \
   .gitignore \

@@ -82,7 +82,7 @@ If `~/.extra` exists, it will be sourced along with the other files. You can
 use this to add a few custom commands without the need to fork this entire
 repository, or to add commands you don’t want to commit to a public repository.
 
-You could also use `~/.extra` to override settings, functions and aliases from
+You could also use `~/.extra` to override settings and aliases from
 my dotfiles repository. It’s probably better to [fork this repository](https://github.com/apemost/dotfiles/fork)
 instead, though.
 
