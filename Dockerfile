@@ -41,17 +41,9 @@ RUN git clone https://github.com/denysdovhan/spaceship-prompt.git /home/apemost/
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions.git /home/apemost/.zplug/repos/zsh-users/zsh-autosuggestions
 RUN git clone https://github.com/tmux-plugins/tpm /home/apemost/.tmux/plugins/tpm
 
-ENV RUNNING_IN_DOCKER=1
-
 WORKDIR /home/apemost/projects/apemost/dotfiles
 
 RUN ["/bin/bash", "-c", "source bootstrap.sh"]
-
-RUN git clone https://github.com/apemost/vimrc.git /home/apemost/projects/apemost/vimrc
-
-WORKDIR /home/apemost/projects/apemost/vimrc
-
-RUN ["/bin/bash", "-c", "source bootstrap.sh && yes | vim +PlugInstall +qa"]
 
 WORKDIR /home/apemost
 
