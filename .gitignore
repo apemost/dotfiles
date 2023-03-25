@@ -7,19 +7,8 @@ Thumbs.db
 # Sensitive files
 .env
 
-# Byte-compiled / optimized / DLL files
-*$py.class
-*.py[cod]
-__pycache__/
-
-# Dependency directories
-node_modules/
-
 # IntelliJ IDEA
 .idea/
-*.iws
-*.iml
-*.ipr
 
 # VS Code
 .vscode/
