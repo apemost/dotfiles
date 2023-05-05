@@ -13,6 +13,9 @@ HIST_STAMPS='yyyy-mm-dd'
 # Disable oh-my-zsh auto update
 DISABLE_AUTO_UPDATE='true'
 
+# Disable magic functions
+DISABLE_MAGIC_FUNCTIONS='true'
+
 plugins=(
   colored-man-pages
   extract
