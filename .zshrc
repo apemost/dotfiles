@@ -59,11 +59,12 @@ if [ ! -d $ZPLUG_HOME ]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
-SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_EXEC_TIME_SHOW=false
+SPACESHIP_GRADLE_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_VENV_SHOW=false
 
 ZSH_AUTOSUGGEST_USE_ASYNC=true
