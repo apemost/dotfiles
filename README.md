@@ -54,7 +54,7 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-v
 > Like pyenv and rbenv, but for Go
 
 ```bash
-git clone https://github.com/syndbg/goenv.git ~/.goenv
+git clone https://github.com/go-nv/goenv.git ~/.goenv
 ```
 
 ### nvm
