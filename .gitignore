@@ -6,8 +6,9 @@ Thumbs.db
 
 # Sensitive files
 .env
+
+# Local files
 .local
-.secrets
 
 # IntelliJ IDEA
 .idea/
