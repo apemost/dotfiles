@@ -25,6 +25,7 @@ plugins=(
 additional_plugins=(
   autojump
   docker
+  fzf
   git
   kubectl
   pip
@@ -79,5 +80,3 @@ zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
 zplug 'zsh-users/zsh-autosuggestions'
 zplug check || zplug install
 zplug load
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
