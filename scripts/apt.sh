@@ -42,6 +42,7 @@ sudo apt install clang-format
 sudo apt install expect
 sudo apt install fatrace
 sudo apt install ffmpeg
+sudo apt install fzf
 sudo apt install gawk
 sudo apt install grip
 sudo apt install htop
