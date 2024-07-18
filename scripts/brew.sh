@@ -77,6 +77,7 @@ brew install nmap
 brew install openvpn
 brew install proxychains-ng
 brew install ssh-copy-id
+brew install starship
 brew install svn
 brew install tree
 brew install unrar
