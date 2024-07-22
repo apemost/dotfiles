@@ -40,6 +40,14 @@ To update, `cd` into your local `dotfiles` repository and then:
 source bootstrap.sh
 ```
 
+### Shell prompt
+
+Install [Starship](https://github.com/starship/starship) using Homebrew:
+
+```bash
+brew install starship
+```
+
 ### pyenv
 
 > Simple Python version management
