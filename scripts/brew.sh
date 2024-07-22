@@ -90,6 +90,7 @@ brew install --cask wireshark
 # Install fonts
 brew tap homebrew/cask-fonts
 brew install --cask font-hack
+brew install --cask font-hack-nerd-font
 
 # Remove outdated versions from the cellar
 brew cleanup
