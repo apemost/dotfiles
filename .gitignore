@@ -8,7 +8,7 @@ Thumbs.db
 .env
 
 # Local files
-.local
+.local/
 
 # IntelliJ IDEA
 .idea/
