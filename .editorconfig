@@ -8,19 +8,17 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{java,kt,kts}]
-max_line_length = 100
-
-[*.py]
-indent_size = 4
+[Makefile]
+indent_style = tab
 
 [*.go]
 indent_style = tab
 
-[Makefile]
-indent_style = tab
+[*.{py,ipynb}]
+indent_style = space
+indent_size = 4
 
-[.{gitconfig,gitmodules}]
+[{.gitconfig,.gitmodules}]
 indent_style = tab
 
 [*.{md,markdown}]
