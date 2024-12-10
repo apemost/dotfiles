@@ -19,16 +19,16 @@ DISABLE_MAGIC_FUNCTIONS='true'
 plugins=(
   colored-man-pages
   extract
+  fzf
+  git
+  nvm
   urltools
 )
 
 additional_plugins=(
   autojump
   docker
-  fzf
-  git
   kubectl
-  pip
   rsync
   starship
   tmux
@@ -44,6 +44,10 @@ unset plugin additional_plugins
 
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+zstyle ':omz:plugins:nvm' lazy yes
+zstyle ':omz:plugins:nvm' autoload yes
+zstyle ':omz:plugins:nvm' silent-autoload yes
 
 source $ZSH/oh-my-zsh.sh
 
