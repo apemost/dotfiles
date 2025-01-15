@@ -14,8 +14,13 @@ indent_style = tab
 [*.go]
 indent_style = tab
 
-[*.{py,ipynb}]
-indent_style = space
+[*.ipynb]
+indent_size = 4
+
+[*.{py,pyi}]
+indent_size = 4
+
+[*.rs]
 indent_size = 4
 
 [{.gitconfig,.gitmodules}]
