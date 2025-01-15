@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 
 # Path to look for executable files
-export PATH="$HOME/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$PATH"
 
 # Set terminal type
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color &> /dev/null; then
