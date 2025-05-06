@@ -5,7 +5,7 @@
 add_newline = false
 
 # Timeout for commands executed by starship (in milliseconds)
-command_timeout = 2000
+command_timeout = 1000
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character]
