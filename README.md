@@ -48,6 +48,15 @@ Install [Starship](https://github.com/starship/starship) using Homebrew:
 brew install starship
 ```
 
+### uv
+
+> An extremely fast Python package and project manager, written in Rust
+
+```bash
+# On macOS and Linux.
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
 ### pyenv
 
 > Simple Python version management

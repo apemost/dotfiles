@@ -12,7 +12,7 @@ if command -v goenv &> /dev/null; then
   eval "$(goenv init -)"
 fi
 
-if command -v pyenv &> /dev/null; then
+if ! command -v uv &> /dev/null && command -v pyenv &> /dev/null; then
   eval "$(pyenv init -)"
   if pyenv commands | grep virtualenv-init &> /dev/null; then
     eval "$(pyenv virtualenv-init -)"
