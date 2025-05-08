@@ -4,9 +4,6 @@
 # Thumbnail cache files
 Thumbs.db
 
-# Sensitive files
-.env
-
 # Local files
 .local/
 
@@ -15,3 +12,10 @@ Thumbs.db
 
 # VS Code
 .vscode/
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
