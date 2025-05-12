@@ -1,7 +1,14 @@
 printWidth: 80
 tabWidth: 2
 semi: true
-singleQuote: true
+singleQuote: false
+jsxSingleQuote: false
 bracketSpacing: true
-arrowParens: 'always'
-endOfLine: 'lf'
+arrowParens: "always"
+endOfLine: "lf"
+overrides:
+  - files:
+      - "**/*.js"
+      - "**/*.ts"
+    options:
+      singleQuote: true
