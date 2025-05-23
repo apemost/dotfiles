@@ -46,7 +46,6 @@ unset plugin additional_plugins
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' autoload yes
 zstyle ':omz:plugins:nvm' silent-autoload yes
 
