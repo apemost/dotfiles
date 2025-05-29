@@ -13,6 +13,9 @@ Thumbs.db
 # VS Code
 .vscode/
 
+# Cursor
+.cursor/
+
 # dotenv environment variable files
 .env
 .env.development.local
