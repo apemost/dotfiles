@@ -90,6 +90,9 @@ brew install --cask wireshark
 # Install fonts
 brew install --cask font-hack
 brew install --cask font-hack-nerd-font
+brew install --cask font-maple-mono
+brew install --cask font-maple-mono-nf
+brew install --cask font-maple-mono-nf-cn
 
 # Remove outdated versions from the cellar
 brew cleanup
