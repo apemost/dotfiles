@@ -111,7 +111,7 @@ See <https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH>.
 
 | Color Scheme | Terminal                                                                                                                                                                                                               |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Gruvbox Dark | [iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Gruvbox%20Dark.itermcolors), [Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Gruvbox%20Dark.terminal) |
+| Gruvbox Dark | [iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/GruvboxDark.itermcolors), [Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/GruvboxDark.terminal) |
 | Molokai      | [iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Molokai.itermcolors), [Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminal/Molokai.terminal)               |
 
 Alternatively, you can find over 200 terminal color schemes/themes [here](https://github.com/mbadolato/iTerm2-Color-Schemes)
