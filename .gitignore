@@ -4,6 +4,11 @@
 # Thumbnail cache files
 Thumbs.db
 
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
 # Local files
 .local/
 
@@ -15,8 +20,3 @@ Thumbs.db
 
 # Cursor
 .cursor/
-
-# dotenv environment variable files
-.env
-.env.*
-!.env.example
