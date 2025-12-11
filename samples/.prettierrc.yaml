@@ -9,7 +9,6 @@ arrowParens: "always"
 endOfLine: "lf"
 overrides:
   - files:
-      - "**/*.js"
-      - "**/*.ts"
+      - "**/*.{js,jsx,ts,tsx,mjs,mts}"
     options:
       singleQuote: true
