@@ -18,21 +18,21 @@ DISABLE_MAGIC_FUNCTIONS='true'
 
 plugins=(
   colored-man-pages
-  docker
   extract
-  fzf
-  git
-  kubectl
   nvm
   rsync
   urltools
-  uv
 )
 
 additional_plugins=(
   autojump
+  docker
+  fzf
+  git
+  kubectl
   starship
   tmux
+  uv
 )
 
 # Load plugins
