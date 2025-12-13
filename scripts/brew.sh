@@ -75,12 +75,15 @@ brew install mtr
 brew install mysql-client
 brew install nmap
 brew install openvpn
+brew install prettier
 brew install proxychains-ng
 brew install ssh-copy-id
 brew install starship
 brew install svn
+brew install taplo
 brew install tree
 brew install unrar
+brew install uv
 brew install watch
 brew install wrk
 
