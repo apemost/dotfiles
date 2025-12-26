@@ -26,6 +26,7 @@ plugins=(
 
 additional_plugins=(
   autojump
+  bun
   docker
   fzf
   git

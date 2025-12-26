@@ -19,6 +19,8 @@ if ! command -v uv &> /dev/null && command -v pyenv &> /dev/null; then
   fi
 fi
 
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
 [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # ~/.extra can be used for other settings you don’t want to commit

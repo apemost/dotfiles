@@ -18,8 +18,11 @@ export NVM_DIR="$HOME/.nvm"
 # Path to sdkman directory
 export SDKMAN_DIR="$HOME/.sdkman"
 
+# Path to bun directory
+export BUN_INSTALL="$HOME/.bun"
+
 # Path to look for executable files
-export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$BUN_INSTALL/bin:$PATH"
 
 # Set terminal type
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color &> /dev/null; then
