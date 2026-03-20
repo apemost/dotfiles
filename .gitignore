@@ -11,12 +11,3 @@ Thumbs.db
 
 # Local files
 .local/
-
-# IntelliJ IDEA
-.idea/
-
-# VS Code
-.vscode/
-
-# Cursor
-.cursor/
