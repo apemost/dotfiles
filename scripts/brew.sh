@@ -69,6 +69,7 @@ brew install fzf
 brew install gawk
 brew install grip
 brew install htop
+brew install imagemagick
 brew install jq
 brew install markdown
 brew install mtr
