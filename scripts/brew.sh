@@ -64,6 +64,7 @@ brew install the_silver_searcher
 brew install autojump
 brew install bat
 brew install clang-format
+brew install direnv
 brew install ffmpeg
 brew install fzf
 brew install gawk
