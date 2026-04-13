@@ -1,0 +1,22 @@
+# Folder view configuration files
+.DS_Store
+
+# Thumbnail cache files
+Thumbs.db
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# Local files
+.local/
+
+# Agents
+.agents
+.claude
+.codex
+
+# Editor/IDE
+.idea/
+.vscode/
