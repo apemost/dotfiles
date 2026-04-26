@@ -18,5 +18,7 @@ Thumbs.db
 .codex
 
 # Editor/IDE
+.cursor/
 .idea/
 .vscode/
+.zed/
