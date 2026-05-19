@@ -16,6 +16,7 @@ sudo apt install binutils
 sudo apt install curl
 sudo apt install dnsutils
 sudo apt install iputils-ping
+sudo apt install network-manager
 sudo apt install screen
 sudo apt install tmux
 sudo apt install vim
