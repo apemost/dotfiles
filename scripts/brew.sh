@@ -68,6 +68,7 @@ brew install direnv
 brew install ffmpeg
 brew install fzf
 brew install gawk
+brew install goenv
 brew install grip
 brew install htop
 brew install imagemagick
