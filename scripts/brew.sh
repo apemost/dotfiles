@@ -44,6 +44,7 @@ brew install wget
 
 # Install more recent versions of some macOS tools
 brew install vim
+brew install neovim
 brew install grep
 brew install openssh
 brew install screen
