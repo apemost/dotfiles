@@ -55,11 +55,15 @@ brew install reattach-to-user-namespace
 
 # Install development environment
 brew install cmake
+brew install ctags
+brew install fvm
 brew install git
 brew install git-lfs
-brew install ctags
+brew install goenv
 brew install ripgrep
+brew install rustup
 brew install the_silver_searcher
+brew install uv
 
 # Install other useful binaries
 brew install autojump
@@ -69,7 +73,6 @@ brew install direnv
 brew install ffmpeg
 brew install fzf
 brew install gawk
-brew install goenv
 brew install grip
 brew install htop
 brew install imagemagick
@@ -87,7 +90,6 @@ brew install svn
 brew install taplo
 brew install tree
 brew install unrar
-brew install uv
 brew install watch
 brew install wrk
 
