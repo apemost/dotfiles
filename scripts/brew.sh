@@ -56,6 +56,7 @@ brew install reattach-to-user-namespace
 # Install development environment
 brew install cmake
 brew install ctags
+brew install devcontainer
 brew install fvm
 brew install git
 brew install git-lfs
