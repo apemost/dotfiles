@@ -83,6 +83,7 @@ brew install mycli
 brew install mysql-client
 brew install nmap
 brew install openvpn
+brew install playwright-cli
 brew install prettier
 brew install proxychains-ng
 brew install ssh-copy-id
