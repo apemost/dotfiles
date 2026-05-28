@@ -79,6 +79,7 @@ brew install imagemagick
 brew install jq
 brew install markdown
 brew install mtr
+brew install mycli
 brew install mysql-client
 brew install nmap
 brew install openvpn
