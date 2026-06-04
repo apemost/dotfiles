@@ -87,10 +87,12 @@ brew install openvpn
 brew install playwright-cli
 brew install prettier
 brew install proxychains-ng
+brew install redis
 brew install ssh-copy-id
 brew install starship
 brew install svn
 brew install taplo
+brew install telnet
 brew install tree
 brew install unrar
 brew install watch
