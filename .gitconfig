@@ -47,8 +47,7 @@
 	# Use `hexdump` to diff binary files.
 	textconv = hexdump -v -C
 [help]
-	# Automatically correct and execute mistyped commands.
-	autoCorrect = 1
+	autoCorrect = 0
 [init]
 	defaultBranch = main
 [push]
