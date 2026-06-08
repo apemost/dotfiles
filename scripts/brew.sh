@@ -61,6 +61,7 @@ brew install fvm
 brew install git
 brew install git-lfs
 brew install goenv
+brew install pnpm
 brew install ripgrep
 brew install rustup
 brew install the_silver_searcher
