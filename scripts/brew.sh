@@ -71,6 +71,7 @@ brew install uv
 brew install autojump
 brew install bat
 brew install clang-format
+brew install ctx7
 brew install direnv
 brew install ffmpeg
 brew install fzf
@@ -95,6 +96,7 @@ brew install starship
 brew install svn
 brew install taplo
 brew install telnet
+brew install tlrc
 brew install tree
 brew install unrar
 brew install watch
