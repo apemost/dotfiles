@@ -63,25 +63,27 @@ fi
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
-source ~/.zplug/init.zsh
+if [ -r "$ZPLUG_HOME/init.zsh" ]; then
+  source "$ZPLUG_HOME/init.zsh"
 
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug 'zsh-users/zsh-autosuggestions'
+  zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+  zplug 'zsh-users/zsh-autosuggestions'
 
-if ! command -v starship > /dev/null; then
-  SPACESHIP_BATTERY_SHOW=false
-  SPACESHIP_DOCKER_COMPOSE_SHOW=false
-  SPACESHIP_DOCKER_SHOW=false
-  SPACESHIP_EXEC_TIME_SHOW=false
-  SPACESHIP_GIT_ASYNC=false
-  SPACESHIP_GRADLE_SHOW=false
-  SPACESHIP_KOTLIN_SHOW=false
-  SPACESHIP_PACKAGE_SHOW=false
-  SPACESHIP_PROMPT_ADD_NEWLINE=false
-  SPACESHIP_VENV_SHOW=false
+  if ! command -v starship > /dev/null; then
+    SPACESHIP_BATTERY_SHOW=false
+    SPACESHIP_DOCKER_COMPOSE_SHOW=false
+    SPACESHIP_DOCKER_SHOW=false
+    SPACESHIP_EXEC_TIME_SHOW=false
+    SPACESHIP_GIT_ASYNC=false
+    SPACESHIP_GRADLE_SHOW=false
+    SPACESHIP_KOTLIN_SHOW=false
+    SPACESHIP_PACKAGE_SHOW=false
+    SPACESHIP_PROMPT_ADD_NEWLINE=false
+    SPACESHIP_VENV_SHOW=false
 
-  zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
+    zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
+  fi
+
+  zplug check || zplug install
+  zplug load
 fi
-
-zplug check || zplug install
-zplug load
