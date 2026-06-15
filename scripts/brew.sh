@@ -77,9 +77,11 @@ brew install ffmpeg
 brew install fzf
 brew install gawk
 brew install grip
+brew install helm
 brew install htop
 brew install imagemagick
 brew install jq
+brew install kubernetes-cli
 brew install markdown
 brew install mtr
 brew install mycli
