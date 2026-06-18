@@ -103,6 +103,7 @@ brew install tree
 brew install unrar
 brew install watch
 brew install wrk
+brew install yq
 
 # Install GUI
 brew install --cask wireshark
