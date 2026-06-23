@@ -19,6 +19,12 @@ if ! command -v uv &> /dev/null && command -v pyenv &> /dev/null; then
   fi
 fi
 
+if command -v rustup &> /dev/null && command -v brew &> /dev/null; then
+  _rustup_prefix="$(brew --prefix rustup 2>/dev/null)"
+  [ -x "$_rustup_prefix/bin/rustup" ] && export PATH="$_rustup_prefix/bin:$PATH"
+  unset _rustup_prefix
+fi
+
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"

@@ -32,6 +32,7 @@ additional_plugins=(
   fzf
   git
   kubectl
+  rust
   starship
   tmux
   uv
