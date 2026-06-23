@@ -94,6 +94,7 @@ brew install prettier
 brew install proxychains-ng
 brew install redis
 brew install shellcheck
+brew install socat
 brew install ssh-copy-id
 brew install starship
 brew install svn
