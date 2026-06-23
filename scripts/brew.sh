@@ -82,6 +82,7 @@ brew install htop
 brew install imagemagick
 brew install jq
 brew install kubernetes-cli
+brew install llama.cpp
 brew install markdown
 brew install mtr
 brew install mycli
