@@ -87,7 +87,6 @@ brew install markdown
 brew install mtr
 brew install mycli
 brew install mysql-client
-brew install nerdctl
 brew install nmap
 brew install openvpn
 brew install playwright-cli
@@ -107,6 +106,11 @@ brew install unrar
 brew install watch
 brew install wrk
 brew install yq
+
+# Linux only
+if [[ "$(uname -s)" == "Linux" ]]; then
+  brew install nerdctl
+fi
 
 # Install GUI
 brew install --cask wireshark
