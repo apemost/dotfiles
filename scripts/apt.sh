@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Prompt for confirmation. Returns success (0) only when the user answers
+# y / Y / yes / YES (etc.); anything else (including empty / EOF) skips.
+confirm() {
+  local response
+  read -r -p "$1 [y/N] " response
+  [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+}
+
 sudo apt update
 
 sudo apt upgrade
@@ -66,19 +74,23 @@ sudo apt install tree
 sudo apt install tshark
 sudo apt install xclip
 
-# Install GUI
-sudo apt install blender
-sudo apt install flameshot
-sudo apt install gimp
-sudo apt install meld
-sudo apt install pavucontrol-qt
-sudo apt install terminator
-sudo apt install vim-gtk
-sudo apt install wireshark
+# Install GUI (requires confirmation)
+if confirm "Install GUI applications?"; then
+  sudo apt install blender
+  sudo apt install flameshot
+  sudo apt install gimp
+  sudo apt install meld
+  sudo apt install pavucontrol-qt
+  sudo apt install terminator
+  sudo apt install vim-gtk
+  sudo apt install wireshark
+fi
 
-# Install fonts
-sudo apt install fonts-hack-ttf
-sudo apt install fonts-roboto
-sudo apt install fonts-droid-fallback
+# Install fonts (requires confirmation)
+if confirm "Install fonts?"; then
+  sudo apt install fonts-hack-ttf
+  sudo apt install fonts-roboto
+  sudo apt install fonts-droid-fallback
+fi
 
 sudo apt autoremove

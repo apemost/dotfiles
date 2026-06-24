@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Prompt for confirmation. Returns success (0) only when the user answers
+# y / Y / yes / YES (etc.); anything else (including empty / EOF) skips.
+confirm() {
+  local response
+  read -r -p "$1 [y/N] " response
+  [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+}
+
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -112,15 +120,19 @@ if [[ "$(uname -s)" == "Linux" ]]; then
   brew install nerdctl
 fi
 
-# Install GUI
-brew install --cask wireshark
+# Install GUI (requires confirmation)
+if confirm "Install GUI applications?"; then
+  brew install --cask wireshark
+fi
 
-# Install fonts
-brew install --cask font-hack
-brew install --cask font-hack-nerd-font
-brew install --cask font-maple-mono
-brew install --cask font-maple-mono-nf
-brew install --cask font-maple-mono-nf-cn
+# Install fonts (requires confirmation)
+if confirm "Install fonts?"; then
+  brew install --cask font-hack
+  brew install --cask font-hack-nerd-font
+  brew install --cask font-maple-mono
+  brew install --cask font-maple-mono-nf
+  brew install --cask font-maple-mono-nf-cn
+fi
 
 # Remove outdated versions from the cellar
 brew cleanup
