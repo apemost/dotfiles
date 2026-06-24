@@ -25,6 +25,7 @@ sudo apt install curl
 sudo apt install dnsutils
 sudo apt install iputils-ping
 sudo apt install network-manager
+sudo apt install rsync
 sudo apt install screen
 sudo apt install tmux
 sudo apt install vim
@@ -68,7 +69,6 @@ sudo apt install nmap
 sudo apt install parcellite
 sudo apt install percona-toolkit
 sudo apt install redis-tools
-sudo apt install rsync
 sudo apt install strace
 sudo apt install tree
 sudo apt install tshark
