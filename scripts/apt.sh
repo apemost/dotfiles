@@ -33,7 +33,6 @@ sudo apt install vim
 # Install development environment
 sudo apt install build-essential
 sudo apt install cmake
-sudo apt install ctags
 sudo apt install g++
 sudo apt install gcc
 sudo apt install git
@@ -41,14 +40,15 @@ sudo apt install git-lfs
 sudo apt install libpq-dev
 sudo apt install make
 sudo apt install python3-dev
-sudo apt install ripgrep  # Require Ubuntu Cosmic (18.10) or newer
+sudo apt install ripgrep
 sudo apt install silversearcher-ag
+sudo apt install universal-ctags
 sudo apt install zip
 
 # Install other useful binaries
 sudo apt install apache2-utils
 sudo apt install autojump
-sudo apt install bat  # Require Ubuntu Eoan (19.10) or newer
+sudo apt install bat
 sudo apt install clang-format
 sudo apt install expect
 sudo apt install fatrace
