@@ -87,6 +87,7 @@ brew install markdown
 brew install mtr
 brew install mycli
 brew install mysql-client
+brew install nerdctl
 brew install nmap
 brew install openvpn
 brew install playwright-cli
