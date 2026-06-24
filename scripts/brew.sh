@@ -38,15 +38,6 @@ brew install bash-completion@2
 brew install zsh
 brew install zsh-completions
 
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
-fi
-
-if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
-  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells
-  chsh -s /usr/local/bin/zsh
-fi
-
 # Install `wget`
 brew install wget
 

@@ -15,11 +15,6 @@ sudo apt upgrade
 # Install Zsh
 sudo apt install zsh
 
-if ! fgrep -q '/usr/bin/zsh' /etc/shells; then
-  echo '/usr/bin/zsh' | sudo tee -a /etc/shells
-  chsh -s /usr/bin/zsh
-fi
-
 sudo apt install binutils
 sudo apt install curl
 sudo apt install dnsutils
