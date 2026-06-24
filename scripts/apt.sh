@@ -35,6 +35,7 @@ sudo apt install git-lfs
 sudo apt install libpq-dev
 sudo apt install make
 sudo apt install python3-dev
+sudo apt install python3-venv
 sudo apt install ripgrep
 sudo apt install silversearcher-ag
 sudo apt install universal-ctags
