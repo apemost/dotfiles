@@ -63,6 +63,7 @@ sudo apt install markdown
 sudo apt install mtr
 sudo apt install mysql-client
 sudo apt install net-tools
+sudo apt install netcat-openbsd
 sudo apt install nmap
 sudo apt install pciutils
 sudo apt install percona-toolkit
