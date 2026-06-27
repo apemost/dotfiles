@@ -42,12 +42,12 @@ brew install zsh-completions
 brew install wget
 
 # Install more recent versions of some macOS tools
-brew install vim
-brew install neovim
 brew install grep
+brew install neovim
 brew install openssh
 brew install screen
 brew install tmux
+brew install vim
 
 # macOS pasteboard access under tmux and screen
 brew install reattach-to-user-namespace
