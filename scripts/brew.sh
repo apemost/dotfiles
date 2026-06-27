@@ -53,57 +53,60 @@ brew install tmux
 brew install reattach-to-user-namespace
 
 # Install development environment
+brew install clang-format
 brew install cmake
-brew install ctags
 brew install devcontainer
+brew install direnv
 brew install fvm
 brew install git
 brew install git-lfs
 brew install goenv
 brew install pnpm
-brew install ripgrep
+brew install prettier
 brew install rustup
-brew install the_silver_searcher
+brew install shellcheck
 brew install uv
+
+# Install system and network utilities
+brew install btop
+brew install htop
+brew install mtr
+brew install nmap
+brew install openvpn
+brew install proxychains-ng
+brew install socat
+brew install ssh-copy-id
+brew install telnet
+brew install watch
+brew install wrk
 
 # Install other useful binaries
 brew install autojump
 brew install bat
-brew install clang-format
+brew install ctags
 brew install ctx7
-brew install direnv
 brew install ffmpeg
 brew install fzf
 brew install gawk
 brew install grip
 brew install helm
-brew install htop
 brew install imagemagick
 brew install jq
 brew install kubernetes-cli
 brew install llama.cpp
 brew install markdown
-brew install mtr
 brew install mycli
 brew install mysql-client
-brew install nmap
-brew install openvpn
 brew install playwright-cli
-brew install prettier
-brew install proxychains-ng
 brew install redis
-brew install shellcheck
-brew install socat
-brew install ssh-copy-id
+brew install ripgrep
 brew install starship
 brew install svn
 brew install taplo
-brew install telnet
+brew install the_silver_searcher
 brew install tlrc
 brew install tree
 brew install unrar
-brew install watch
-brew install wrk
 brew install yq
 
 # Linux only

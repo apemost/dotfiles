@@ -41,36 +41,38 @@ sudo apt install silversearcher-ag
 sudo apt install universal-ctags
 sudo apt install zip
 
+# Install system and network utilities
+sudo apt install ethtool
+sudo apt install fatrace
+sudo apt install htop
+sudo apt install iftop
+sudo apt install iotop
+sudo apt install iperf3
+sudo apt install mtr
+sudo apt install net-tools
+sudo apt install netcat-openbsd
+sudo apt install nmap
+sudo apt install pciutils
+sudo apt install strace
+sudo apt install tshark
+
 # Install other useful binaries
 sudo apt install apache2-utils
 sudo apt install autojump
 sudo apt install bat
 sudo apt install clang-format
-sudo apt install ethtool
 sudo apt install expect
-sudo apt install fatrace
 sudo apt install ffmpeg
 sudo apt install fzf
 sudo apt install gawk
 sudo apt install grip
-sudo apt install htop
-sudo apt install iftop
-sudo apt install iotop
-sudo apt install iperf3
 sudo apt install jq
 sudo apt install latexmk
 sudo apt install markdown
-sudo apt install mtr
 sudo apt install mysql-client
-sudo apt install net-tools
-sudo apt install netcat-openbsd
-sudo apt install nmap
-sudo apt install pciutils
 sudo apt install percona-toolkit
 sudo apt install redis-tools
-sudo apt install strace
 sudo apt install tree
-sudo apt install tshark
 sudo apt install xclip
 
 # Install GUI (requires confirmation)
