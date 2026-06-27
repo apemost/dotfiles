@@ -1,0 +1,7 @@
+cursor-style = "block"
+cursor-style-blink = false
+font-family = "Hack Nerd Font"
+font-family = "Maple Mono NF CN"
+font-size = 13
+shell-integration-features = "no-cursor"
+theme = "Gruvbox Dark"
