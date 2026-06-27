@@ -7,10 +7,11 @@ add_newline = false
 # Timeout for commands executed by starship (in milliseconds)
 command_timeout = 1000
 
+# Explicit format = whitelist + order; omit $all so unlisted modules stay hidden.
+format = """$time$username$directory$hostname$git_branch$git_status$nodejs$python$golang$rust$java$lua
+$battery$jobs$status$sudo$character"""
+
 # Replace the '❯' symbol in the prompt with '➜'
 [character]
 success_symbol = '[➜](bold green)'
 error_symbol = '[➜](bold red)'
-
-[docker_context]
-disabled = true
