@@ -71,16 +71,25 @@ if [ -r "$ZPLUG_HOME/init.zsh" ]; then
   zplug 'zsh-users/zsh-autosuggestions'
 
   if ! command -v starship > /dev/null; then
-    SPACESHIP_BATTERY_SHOW=false
-    SPACESHIP_DOCKER_COMPOSE_SHOW=false
-    SPACESHIP_DOCKER_SHOW=false
-    SPACESHIP_EXEC_TIME_SHOW=false
-    SPACESHIP_GIT_ASYNC=false
-    SPACESHIP_GRADLE_SHOW=false
-    SPACESHIP_KOTLIN_SHOW=false
-    SPACESHIP_PACKAGE_SHOW=false
-    SPACESHIP_PROMPT_ADD_NEWLINE=false
-    SPACESHIP_VENV_SHOW=false
+    SPACESHIP_PROMPT_ORDER=(
+      time           # Time stamps section
+      user           # Username section
+      dir            # Current directory section
+      host           # Hostname section
+      git            # Git section (git_branch + git_status)
+      node           # Node.js section
+      python         # Python section
+      golang         # Go section
+      rust           # Rust section
+      java           # Java section
+      lua            # Lua section
+      line_sep       # Line break
+      battery        # Battery level and status
+      jobs           # Background jobs indicator
+      exit_code      # Exit code section
+      sudo           # Sudo indicator
+      char           # Prompt character
+    )
 
     zplug 'denysdovhan/spaceship-prompt', use:spaceship.zsh, from:github, as:theme
   fi
