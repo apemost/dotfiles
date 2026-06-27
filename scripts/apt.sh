@@ -67,6 +67,7 @@ sudo apt install apache2-utils
 sudo apt install autojump
 sudo apt install bat
 sudo apt install clang-format
+sudo apt install default-mysql-client
 sudo apt install expect
 sudo apt install ffmpeg
 sudo apt install fzf
@@ -75,7 +76,6 @@ sudo apt install grip
 sudo apt install jq
 sudo apt install latexmk
 sudo apt install markdown
-sudo apt install mysql-client
 sudo apt install percona-toolkit
 sudo apt install redis-tools
 sudo apt install tree
