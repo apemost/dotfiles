@@ -15,10 +15,12 @@ sudo apt upgrade
 # Install Zsh
 sudo apt install zsh
 
+# Install base system tools
 sudo apt install binutils
 sudo apt install curl
 sudo apt install dnsutils
 sudo apt install iputils-ping
+sudo apt install neovim
 sudo apt install network-manager
 sudo apt install rsync
 sudo apt install screen
@@ -28,6 +30,7 @@ sudo apt install vim
 # Install development environment
 sudo apt install build-essential
 sudo apt install cmake
+sudo apt install direnv
 sudo apt install g++
 sudo apt install gcc
 sudo apt install git
@@ -37,11 +40,13 @@ sudo apt install make
 sudo apt install python3-dev
 sudo apt install python3-venv
 sudo apt install ripgrep
+sudo apt install shellcheck
 sudo apt install silversearcher-ag
 sudo apt install universal-ctags
 sudo apt install zip
 
 # Install system and network utilities
+sudo apt install btop
 sudo apt install ethtool
 sudo apt install fatrace
 sudo apt install htop
@@ -53,6 +58,7 @@ sudo apt install net-tools
 sudo apt install netcat-openbsd
 sudo apt install nmap
 sudo apt install pciutils
+sudo apt install socat
 sudo apt install strace
 sudo apt install tshark
 
