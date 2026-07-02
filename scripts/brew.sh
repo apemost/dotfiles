@@ -8,6 +8,10 @@ confirm() {
   [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 }
 
+# Platform detection helpers
+is_macos() { [[ "$(uname -s)" == "Darwin" ]]; }
+is_linux() { [[ "$(uname -s)" == "Linux" ]]; }
+
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -49,8 +53,11 @@ brew install screen
 brew install tmux
 brew install vim
 
-# macOS pasteboard access under tmux and screen
-brew install reattach-to-user-namespace
+# macOS pasteboard access under tmux and screen. macOS-only: this formula
+# relies on macOS-specific APIs and is unavailable on Linux.
+if is_macos; then
+  brew install reattach-to-user-namespace
+fi
 
 # Install development environment
 brew install clang-format
@@ -99,6 +106,7 @@ brew install mycli
 brew install mysql-client
 brew install playwright-cli
 brew install redis
+brew install restish
 brew install ripgrep
 brew install starship
 brew install svn
@@ -110,17 +118,17 @@ brew install unrar
 brew install yq
 
 # Linux only
-if [[ "$(uname -s)" == "Linux" ]]; then
+if is_linux; then
   brew install nerdctl
 fi
 
-# Install GUI (requires confirmation)
-if confirm "Install GUI applications?"; then
+# Install GUI applications (requires confirmation; macOS only)
+if is_macos && confirm "Install GUI applications?"; then
   brew install --cask wireshark
 fi
 
-# Install fonts (requires confirmation)
-if confirm "Install fonts?"; then
+# Install fonts (requires confirmation; macOS only)
+if is_macos && confirm "Install fonts?"; then
   brew install --cask font-hack
   brew install --cask font-hack-nerd-font
   brew install --cask font-maple-mono
