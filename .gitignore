@@ -11,3 +11,6 @@ Thumbs.db
 
 # Local files
 .local/
+
+# Editor/IDE
+.idea/
