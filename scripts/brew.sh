@@ -96,6 +96,7 @@ brew install ffmpeg
 brew install fzf
 brew install gawk
 brew install grip
+brew install grpcurl
 brew install helm
 brew install imagemagick
 brew install jq
