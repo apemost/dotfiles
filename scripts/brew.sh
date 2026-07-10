@@ -72,6 +72,7 @@ brew install pnpm
 brew install prettier
 brew install rustup
 brew install shellcheck
+brew install stylua
 brew install uv
 
 # Install system and network utilities
