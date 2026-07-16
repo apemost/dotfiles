@@ -46,6 +46,16 @@ defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool 
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
+# Microsoft Edge                                                              #
+###############################################################################
+
+# Disable the all too sensitive backswipe on trackpads
+defaults write com.microsoft.edgemac AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Disable the all too sensitive backswipe on Magic Mouse
+defaults write com.microsoft.edgemac AppleEnableMouseSwipeNavigateWithScrolls -bool false
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -55,7 +65,8 @@ for app in "Activity Monitor" \
   "Dock" \
   "Finder" \
   "Google Chrome Canary" \
-  "Google Chrome"; do
+  "Google Chrome" \
+  "Microsoft Edge"; do
   killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
