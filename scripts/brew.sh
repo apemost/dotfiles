@@ -89,6 +89,7 @@ brew install watch
 brew install wrk
 
 # Install other useful binaries
+brew install aria2
 brew install autojump
 brew install bat
 brew install ctags
