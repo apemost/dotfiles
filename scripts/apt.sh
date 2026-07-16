@@ -62,7 +62,6 @@ utility_packages=(
   ffmpeg
   fzf
   gawk
-  grip
   jq
   latexmk
   markdown
