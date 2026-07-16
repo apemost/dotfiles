@@ -1,103 +1,151 @@
 #!/usr/bin/env bash
+set -Eeuo pipefail
+
+base_packages=(
+  zsh
+  binutils
+  curl
+  dnsutils
+  iputils-ping
+  neovim
+  network-manager
+  rsync
+  screen
+  tmux
+  vim
+)
+
+development_packages=(
+  build-essential
+  cmake
+  direnv
+  g++
+  gcc
+  git
+  git-lfs
+  libpq-dev
+  make
+  python3-dev
+  python3-venv
+  ripgrep
+  shellcheck
+  silversearcher-ag
+  universal-ctags
+  zip
+)
+
+network_packages=(
+  btop
+  ethtool
+  fatrace
+  htop
+  iftop
+  iotop
+  iperf3
+  mtr
+  net-tools
+  netcat-openbsd
+  nmap
+  pciutils
+  socat
+  strace
+  tshark
+)
+
+utility_packages=(
+  apache2-utils
+  autojump
+  bat
+  clang-format
+  default-mysql-client
+  expect
+  ffmpeg
+  fzf
+  gawk
+  grip
+  jq
+  latexmk
+  markdown
+  percona-toolkit
+  redis-tools
+  tree
+  xclip
+)
+
+gui_packages=(
+  blender
+  flameshot
+  gimp
+  meld
+  pavucontrol-qt
+  terminator
+  vim-gtk
+  wireshark
+)
+
+font_packages=(
+  fonts-hack-ttf
+  fonts-roboto
+  fonts-droid-fallback
+)
 
 # Prompt for confirmation. Returns success (0) only when the user answers
 # y / Y / yes / YES (etc.); anything else (including empty / EOF) skips.
 confirm() {
   local response
-  read -r -p "$1 [y/N] " response
+  read -r -p "$1 [y/N] " response || return 1
   [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 }
 
-sudo apt update
+# Ensure sudo exists before normal apt operations.
+ensure_sudo() {
+  if command -v sudo >/dev/null 2>&1; then
+    return 0
+  fi
 
-sudo apt upgrade
+  if [[ "$(id -u)" != "0" ]]; then
+    echo "Run this script as root or install sudo for the current user." >&2
+    return 1
+  fi
 
-# Install Zsh
-sudo apt install zsh
+  DEBIAN_FRONTEND="${DEBIAN_FRONTEND:-noninteractive}" apt-get update
+  DEBIAN_FRONTEND="${DEBIAN_FRONTEND:-noninteractive}" apt-get install sudo
+}
 
-# Install base system tools
-sudo apt install binutils
-sudo apt install curl
-sudo apt install dnsutils
-sudo apt install iputils-ping
-sudo apt install neovim
-sudo apt install network-manager
-sudo apt install rsync
-sudo apt install screen
-sudo apt install tmux
-sudo apt install vim
+# Run apt-get through sudo.
+run_apt() {
+  sudo "DEBIAN_FRONTEND=${DEBIAN_FRONTEND:-noninteractive}" apt-get "$@"
+}
 
-# Install development environment
-sudo apt install build-essential
-sudo apt install cmake
-sudo apt install direnv
-sudo apt install g++
-sudo apt install gcc
-sudo apt install git
-sudo apt install git-lfs
-sudo apt install libpq-dev
-sudo apt install make
-sudo apt install python3-dev
-sudo apt install python3-venv
-sudo apt install ripgrep
-sudo apt install shellcheck
-sudo apt install silversearcher-ag
-sudo apt install universal-ctags
-sudo apt install zip
+# Install a package group in one apt-get invocation.
+install_packages() {
+  (($# > 0)) || return 0
+  run_apt install "$@"
+}
 
-# Install system and network utilities
-sudo apt install btop
-sudo apt install ethtool
-sudo apt install fatrace
-sudo apt install htop
-sudo apt install iftop
-sudo apt install iotop
-sudo apt install iperf3
-sudo apt install mtr
-sudo apt install net-tools
-sudo apt install netcat-openbsd
-sudo apt install nmap
-sudo apt install pciutils
-sudo apt install socat
-sudo apt install strace
-sudo apt install tshark
+# Install the standard Debian package set for this dotfiles environment.
+main() {
+  ensure_sudo
 
-# Install other useful binaries
-sudo apt install apache2-utils
-sudo apt install autojump
-sudo apt install bat
-sudo apt install clang-format
-sudo apt install default-mysql-client
-sudo apt install expect
-sudo apt install ffmpeg
-sudo apt install fzf
-sudo apt install gawk
-sudo apt install grip
-sudo apt install jq
-sudo apt install latexmk
-sudo apt install markdown
-sudo apt install percona-toolkit
-sudo apt install redis-tools
-sudo apt install tree
-sudo apt install xclip
+  run_apt update
+  run_apt upgrade
 
-# Install GUI (requires confirmation)
-if confirm "Install GUI applications?"; then
-  sudo apt install blender
-  sudo apt install flameshot
-  sudo apt install gimp
-  sudo apt install meld
-  sudo apt install pavucontrol-qt
-  sudo apt install terminator
-  sudo apt install vim-gtk
-  sudo apt install wireshark
+  install_packages "${base_packages[@]}"
+  install_packages "${development_packages[@]}"
+  install_packages "${network_packages[@]}"
+  install_packages "${utility_packages[@]}"
+
+  if confirm "Install GUI applications?"; then
+    install_packages "${gui_packages[@]}"
+  fi
+
+  if confirm "Install fonts?"; then
+    install_packages "${font_packages[@]}"
+  fi
+
+  run_apt autoremove
+}
+
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  main "$@"
 fi
-
-# Install fonts (requires confirmation)
-if confirm "Install fonts?"; then
-  sudo apt install fonts-hack-ttf
-  sudo apt install fonts-roboto
-  sudo apt install fonts-droid-fallback
-fi
-
-sudo apt autoremove
