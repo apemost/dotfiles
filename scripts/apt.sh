@@ -62,6 +62,7 @@ utility_packages=(
   ffmpeg
   fzf
   gawk
+  imagemagick
   jq
   latexmk
   markdown
