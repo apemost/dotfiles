@@ -70,6 +70,7 @@ utility_packages=(
   percona-toolkit
   redis-tools
   tree
+  unar
   xclip
 )
 
