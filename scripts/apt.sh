@@ -16,6 +16,7 @@ base_packages=(
 )
 
 development_packages=(
+  bubblewrap
   build-essential
   cmake
   direnv
@@ -70,6 +71,10 @@ utility_packages=(
   redis-tools
   tree
   xclip
+)
+
+virtualization_packages=(
+  qemu
 )
 
 gui_packages=(
@@ -134,6 +139,10 @@ main() {
   install_packages "${development_packages[@]}"
   install_packages "${network_packages[@]}"
   install_packages "${utility_packages[@]}"
+
+  if confirm "Install virtualization tools?"; then
+    install_packages "${virtualization_packages[@]}"
+  fi
 
   if confirm "Install GUI applications?"; then
     install_packages "${gui_packages[@]}"
