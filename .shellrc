@@ -8,7 +8,6 @@ done
 unset file
 
 if command -v goenv &> /dev/null; then
-  export PATH="$GOENV_ROOT/shims:$PATH"
   eval "$(goenv init -)"
 fi
 
