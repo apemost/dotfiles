@@ -53,17 +53,11 @@ brew install starship
 > An extremely fast Python package and project manager, written in Rust
 
 ```bash
-# On macOS and Linux.
+# Homebrew
+brew install goenv
+
+# Manual installation
 curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-### pyenv
-
-> Simple Python version management
-
-```bash
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 ```
 
 ### goenv
@@ -71,6 +65,10 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-v
 > Like pyenv and rbenv, but for Go
 
 ```bash
+# Homebrew
+brew install goenv
+
+# Manual installation
 git clone https://github.com/go-nv/goenv.git ~/.goenv
 ```
 
@@ -89,6 +87,18 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 ```bash
 curl -s https://get.sdkman.io | bash
+```
+
+### fvm
+
+> Flutter Version Management: A simple CLI to manage Flutter SDK versions.
+
+```bash
+# Homebrew
+brew install fvm
+
+# Manual installation
+curl -fsSL https://fvm.app/install.sh | bash
 ```
 
 ## FAQ
