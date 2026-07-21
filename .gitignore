@@ -14,3 +14,7 @@ Thumbs.db
 
 # Editor/IDE
 .idea/
+
+# Environments
+.envrc
+.venv/
