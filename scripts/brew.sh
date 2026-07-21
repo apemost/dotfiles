@@ -63,6 +63,7 @@ utility_packages=(
   gawk
   grpcurl
   helm
+  hugo
   imagemagick
   jq
   kubernetes-cli
