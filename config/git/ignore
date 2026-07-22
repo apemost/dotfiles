@@ -2,4 +2,5 @@
 .local/
 
 # Claude
+**/.claude/.cc-writes/
 **/.claude/settings.local.json
