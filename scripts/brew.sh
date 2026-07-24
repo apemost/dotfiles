@@ -81,6 +81,7 @@ utility_packages=(
   the_silver_searcher
   tlrc
   tree
+  tree-sitter-cli
   unar
   yq
 )
