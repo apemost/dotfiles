@@ -4,17 +4,17 @@
 # Thumbnail cache files
 Thumbs.db
 
+# Local files
+.local/
+
 # dotenv environment variable files
 .env
 .env.*
 !.env.example
 
-# Local files
-.local/
-
-# Editor/IDE
-.idea/
-
 # Environments
 .envrc
 .venv/
+
+# Dependency directories
+node_modules/
