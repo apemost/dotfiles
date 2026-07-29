@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
+# Adapted from Mathias Bynens' `.macos` script, with project-specific changes:
+# https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -22,6 +23,13 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
+
+# Save screenshots to clipboard
+defaults write com.apple.screencapture target clipboard
 
 ###############################################################################
 # Finder                                                                      #
