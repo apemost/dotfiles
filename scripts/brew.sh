@@ -72,6 +72,7 @@ utility_packages=(
   mycli
   mysql-client
   playwright-cli
+  rclone
   redis
   restish
   ripgrep
