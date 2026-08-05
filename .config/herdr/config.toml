@@ -3,7 +3,7 @@
 
 # Show first-run notification setup on startup.
 # Missing also shows onboarding; set false after you've chosen.
-onboarding = true
+onboarding = false
 
 [theme]
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
@@ -60,7 +60,7 @@ name = "gruvbox"
 # Named punctuation such as minus, comma, ampersand, plus, and backtick is also accepted.
 # Most reliable direct bindings are ctrl+letter, function keys, and explicit modified chords.
 # alt+..., cmd/super, and punctuation-with-modifiers may depend on your terminal/tmux setup.
-# prefix = "ctrl+b"
+prefix = "ctrl+a"
 
 # Prefix-mode actions
 # help = "prefix+?"
@@ -139,10 +139,10 @@ split_vertical = "prefix+|"
 
 [ui]
 # Sidebar width (auto-scaled based on workspace names, this sets the default)
-# sidebar_width = 26
+sidebar_width = 18
 
 # Minimum sidebar width when expanded (columns)
-# sidebar_min_width = 18
+sidebar_min_width = 18
 
 # Maximum sidebar width when expanded (columns)
 # sidebar_max_width = 36
