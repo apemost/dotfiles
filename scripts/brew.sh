@@ -10,9 +10,7 @@ base_packages=(
   gnu-sed
   gnupg
   grep
-  herdr
   moreutils
-  neovim
   openssh
   screen
   tmux
@@ -31,6 +29,9 @@ development_packages=(
   git
   git-lfs
   goenv
+  herdr
+  lazygit
+  neovim
   pnpm
   prettier
   rustup
