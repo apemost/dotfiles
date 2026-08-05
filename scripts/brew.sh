@@ -10,6 +10,7 @@ base_packages=(
   gnu-sed
   gnupg
   grep
+  herdr
   moreutils
   neovim
   openssh
