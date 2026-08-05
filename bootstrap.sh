@@ -29,6 +29,12 @@ rsync -avh --no-perms \
   .zshrc \
   ~
 
+rsync -avhR --no-perms \
+  .config/starship.toml \
+  .config/herdr/config.toml \
+  .config/bat/config \
+  ~
+
 if [[ $SHELL =~ 'zsh$' ]]; then
   source ~/.zshrc
 fi
