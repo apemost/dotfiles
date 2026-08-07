@@ -256,8 +256,8 @@ agent_panel_sort = "spaces"
 # position = "bottom-right"
 
 [ui.toast.clipboard]
-# enabled = true
-# position = "bottom-center"
+enabled = false
+position = "bottom-center"
 
 # Play sounds when agents change state in background workspaces
 [ui.sound]
