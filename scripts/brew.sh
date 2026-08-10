@@ -7,6 +7,8 @@ base_packages=(
   binutils
   coreutils
   findutils
+  git
+  git-lfs
   gnu-sed
   gnupg
   grep
@@ -25,15 +27,15 @@ development_packages=(
   cmake
   devcontainer
   direnv
+  eslint_d
   fvm
-  git
-  git-lfs
   goenv
   herdr
   lazygit
   neovim
   pnpm
   prettier
+  prettierd
   rustup
   shellcheck
   stylua
