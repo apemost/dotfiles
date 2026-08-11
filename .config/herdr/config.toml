@@ -212,7 +212,7 @@ sidebar_min_width = 18
 # hide_tab_bar_when_single_tab = false
 
 # Desktop tab row placement: "top" or "bottom".
-# tab_bar_position = "top"
+tab_bar_position = "bottom"
 
 # Agent panel ordering: "spaces" (grouped by space) or "priority" (attention queue).
 # "workspaces" is accepted as an alias for "spaces".
