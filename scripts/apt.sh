@@ -2,22 +2,20 @@
 set -Eeuo pipefail
 
 base_packages=(
-  zsh
   binutils
   curl
-  dnsutils
-  iputils-ping
   neovim
-  network-manager
   rsync
   screen
   tmux
   vim
+  zsh
 )
 
 development_packages=(
   bubblewrap
   build-essential
+  clang-format
   cmake
   direnv
   g++
@@ -36,29 +34,34 @@ development_packages=(
 )
 
 network_packages=(
-  btop
+  apache2-utils
+  dnsutils
   ethtool
-  fatrace
-  htop
   iftop
-  iotop
   iperf3
+  iputils-ping
   mtr
   net-tools
   netcat-openbsd
+  network-manager
   nmap
-  pciutils
   socat
-  strace
   tshark
 )
 
+system_packages=(
+  btop
+  fatrace
+  htop
+  iotop
+  pciutils
+  strace
+  usbutils
+)
+
 utility_packages=(
-  apache2-utils
   autojump
   bat
-  clang-format
-  default-mysql-client
   expect
   ffmpeg
   fzf
@@ -67,11 +70,15 @@ utility_packages=(
   jq
   latexmk
   markdown
-  percona-toolkit
-  redis-tools
   tree
   unar
   xclip
+)
+
+database_packages=(
+  default-mysql-client
+  percona-toolkit
+  redis-tools
 )
 
 virtualization_packages=(
@@ -139,6 +146,8 @@ main() {
   install_packages "${base_packages[@]}"
   install_packages "${development_packages[@]}"
   install_packages "${network_packages[@]}"
+  install_packages "${system_packages[@]}"
+  install_packages "${database_packages[@]}"
   install_packages "${utility_packages[@]}"
 
   if confirm "Install virtualization tools?"; then
