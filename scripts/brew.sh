@@ -57,6 +57,7 @@ network_packages=(
 )
 
 utility_packages=(
+  agent-browser
   aria2
   autojump
   bat
