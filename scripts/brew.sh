@@ -23,6 +23,7 @@ base_packages=(
 )
 
 development_packages=(
+  actionlint
   clang-format
   cmake
   devcontainer
