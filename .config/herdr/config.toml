@@ -339,7 +339,7 @@ pane_history = false
 # macOS this selects the ASCII-capable keyboard layout; on Windows it toggles
 # a Korean IME between Hangul and English (other IME languages are left
 # unchanged). macOS and Windows only; best-effort. Default: false.
-# switch_ascii_input_source_in_prefix = false
+switch_ascii_input_source_in_prefix = true
 # Expose the focused pane's cursor to the outer terminal so macOS input
 # methods keep tracking the candidate window when TUIs paint their own
 # cursor (Claude Code, pi, codex). Trade-off: extra cursor visible for
