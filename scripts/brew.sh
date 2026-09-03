@@ -93,12 +93,11 @@ utility_packages=(
   yq
 )
 
-# macOS-only formulae (unavailable or unnecessary on Linux)
 macos_packages=(
+  mole
   reattach-to-user-namespace
 )
 
-# Linux-only formulae
 linux_packages=(
   nerdctl
 )
