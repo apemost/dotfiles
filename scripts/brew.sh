@@ -44,6 +44,7 @@ development_packages=(
 )
 
 network_packages=(
+  acme.sh
   btop
   htop
   mtr
