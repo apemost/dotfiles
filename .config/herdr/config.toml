@@ -136,6 +136,14 @@ navigate_workspace_down = ["down", "ctrl+n"]
 # width = "80%"
 # height = "80%"
 
+# Open an interactive shell in a popup.
+[[keys.command]]
+key = "prefix+:"
+type = "popup"
+command = 'exec "${SHELL:-bash}" -i'
+width = "80%"
+height = "80%"
+
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
 # [keys.indexed]
