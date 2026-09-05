@@ -1,4 +1,5 @@
 name: build
+
 on:
   push:
     branches:
@@ -8,17 +9,38 @@ on:
   pull_request:
     paths-ignore:
       - "**.md"
+
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     name: Build docker image
-    strategy:
-      matrix:
-        runs-on:
-          - ubuntu-latest
-      fail-fast: false
-    runs-on: ${{ matrix.runs-on }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Build docker image
-        run: docker build --compress --tag apemost/dotfiles:latest .
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+        with:
+          platforms: arm64
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+      - name: Log in to GitHub Container Registry
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push docker image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+          tags: ghcr.io/apemost/dotfiles:latest
+          labels: org.opencontainers.image.source=https://github.com/apemost/dotfiles

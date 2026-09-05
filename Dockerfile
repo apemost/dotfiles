@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:26.04
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       autojump \
@@ -6,7 +6,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       binutils \
       build-essential \
       cmake \
-      ctags \
       curl \
       gawk \
       git \
@@ -17,13 +16,12 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       make \
       markdown \
       python3-venv \
+      ripgrep \
       rsync \
       silversearcher-ag \
+      universal-ctags \
       vim \
       zsh && locale-gen 'en_US.UTF-8'
-
-RUN curl -sLO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-RUN dpkg -i ripgrep_13.0.0_amd64.deb && rm ripgrep_13.0.0_amd64.deb
 
 RUN adduser --disabled-password --gecos '' apemost
 RUN mkdir -p /home/apemost/projects/apemost

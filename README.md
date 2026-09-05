@@ -17,7 +17,7 @@ Use at your own risk!
 ## Trying with Docker
 
 ```bash
-docker run -it --rm apemost/dotfiles
+docker run -it --rm ghcr.io/apemost/dotfiles
 ```
 
 ## Requirements
