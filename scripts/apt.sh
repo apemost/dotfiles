@@ -102,6 +102,28 @@ font_packages=(
   fonts-droid-fallback
 )
 
+# Describe the interactive defaults and options for automated installations.
+usage() {
+  cat <<'EOF'
+Usage: apt.sh [options] [-- extra-package ...]
+
+Install the six standard package groups. By default, prompt for virtualization
+tools, GUI applications and fonts, then update, upgrade, install and autoremove.
+
+Options:
+  -y, --non-interactive       Automatically confirm APT operations and skip the
+                              three optional groups. Use default debconf answers
+                              and dpkg's default config-file action, keeping the
+                              old file when there is no default. Requires root
+                              or sudo access without a password prompt.
+      --install-only          Skip upgrade and autoremove.
+      --no-install-recommends Do not install recommended packages.
+  -h, --help                  Show this help and exit.
+
+Use -- to add explicit packages to the same installation.
+EOF
+}
+
 # Prompt for confirmation. Returns success (0) only when the user answers
 # y / Y / yes / YES (etc.); anything else (including empty / EOF) skips.
 confirm() {
@@ -110,59 +132,85 @@ confirm() {
   [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 }
 
-# Ensure sudo exists before normal apt operations.
-ensure_sudo() {
-  if command -v sudo >/dev/null 2>&1; then
-    return 0
+# Select package groups and install them with interactive or unattended options.
+main() {
+  local non_interactive=false install_only=false no_install_recommends=false
+  local DEBIAN_FRONTEND="${DEBIAN_FRONTEND:-noninteractive}"
+  local apt_command=(apt-get) install_command=(install)
+  local packages=(
+    "${base_packages[@]}"
+    "${development_packages[@]}"
+    "${network_packages[@]}"
+    "${system_packages[@]}"
+    "${database_packages[@]}"
+    "${utility_packages[@]}"
+  )
+
+  while (($# > 0)); do
+    case "$1" in
+      -y|--non-interactive) non_interactive=true ;;
+      --install-only) install_only=true ;;
+      --no-install-recommends) no_install_recommends=true ;;
+      -h|--help) usage; return 0 ;;
+      --)
+        shift
+        packages+=("$@")
+        break
+        ;;
+      *)
+        printf 'Unknown argument: %s\n' "$1" >&2
+        usage >&2
+        return 2
+        ;;
+    esac
+    shift
+  done
+
+  if "$non_interactive"; then
+    DEBIAN_FRONTEND=noninteractive
   fi
+  export DEBIAN_FRONTEND
 
   if [[ "$(id -u)" != "0" ]]; then
-    echo "Run this script as root or install sudo for the current user." >&2
-    return 1
+    if ! command -v sudo >/dev/null 2>&1; then
+      echo "Run this script as root or install sudo for the current user." >&2
+      return 1
+    fi
+    apt_command=(sudo)
+    if "$non_interactive"; then
+      apt_command+=(-n)
+    fi
+    apt_command+=("DEBIAN_FRONTEND=$DEBIAN_FRONTEND" apt-get)
   fi
 
-  DEBIAN_FRONTEND="${DEBIAN_FRONTEND:-noninteractive}" apt-get update
-  DEBIAN_FRONTEND="${DEBIAN_FRONTEND:-noninteractive}" apt-get install sudo
-}
-
-# Run apt-get through sudo.
-run_apt() {
-  sudo "DEBIAN_FRONTEND=${DEBIAN_FRONTEND:-noninteractive}" apt-get "$@"
-}
-
-# Install a package group in one apt-get invocation.
-install_packages() {
-  (($# > 0)) || return 0
-  run_apt install "$@"
-}
-
-# Install the standard Debian package set for this dotfiles environment.
-main() {
-  ensure_sudo
-
-  run_apt update
-  run_apt upgrade
-
-  install_packages "${base_packages[@]}"
-  install_packages "${development_packages[@]}"
-  install_packages "${network_packages[@]}"
-  install_packages "${system_packages[@]}"
-  install_packages "${database_packages[@]}"
-  install_packages "${utility_packages[@]}"
-
-  if confirm "Install virtualization tools?"; then
-    install_packages "${virtualization_packages[@]}"
+  if "$non_interactive"; then
+    apt_command+=(--assume-yes
+      -o Dpkg::Options::=--force-confdef
+      -o Dpkg::Options::=--force-confold)
+  else
+    if confirm "Install virtualization tools?"; then
+      packages+=("${virtualization_packages[@]}")
+    fi
+    if confirm "Install GUI applications?"; then
+      packages+=("${gui_packages[@]}")
+    fi
+    if confirm "Install fonts?"; then
+      packages+=("${font_packages[@]}")
+    fi
   fi
 
-  if confirm "Install GUI applications?"; then
-    install_packages "${gui_packages[@]}"
+  if "$no_install_recommends"; then
+    install_command+=(--no-install-recommends)
   fi
 
-  if confirm "Install fonts?"; then
-    install_packages "${font_packages[@]}"
+  "${apt_command[@]}" update
+  if ! "$install_only"; then
+    "${apt_command[@]}" upgrade
   fi
-
-  run_apt autoremove
+  "${apt_command[@]}" "${install_command[@]}" -- "${packages[@]}"
+  if ! "$install_only"; then
+    "${apt_command[@]}" autoremove
+  fi
 }
 
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
