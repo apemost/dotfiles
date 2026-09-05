@@ -50,6 +50,8 @@
 	autoCorrect = 0
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true
 [push]
 	# https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
 	default = simple
@@ -59,3 +61,6 @@
 	autoSetupRemote = true
 [tag]
 	gpgSign = true
+[include]
+	# Load local settings last so they can override shared defaults.
+	path = ~/.gitconfig.local
