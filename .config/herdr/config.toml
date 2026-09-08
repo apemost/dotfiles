@@ -28,6 +28,15 @@ name = "gruvbox"
 # red = "#ff6188"
 # green = "#a6e3a1"
 
+# Layer appearance-specific overrides on top when auto_switch is enabled.
+# [theme.custom.light]
+# panel_bg = "#eff1f5"
+# text = "#4c4f69"
+#
+# [theme.custom.dark]
+# panel_bg = "#1e1e2e"
+# text = "#cdd6f4"
+
 [terminal]
 # Executable used for new interactive panes.
 # Empty means $SHELL, then /bin/sh.
@@ -41,6 +50,9 @@ name = "gruvbox"
 # Use "follow" to inherit the source pane/workspace, "home" for $HOME,
 # "current" for Herdr's process directory, or a fixed path such as "~/Projects".
 # new_cwd = "follow"
+
+# Render pane images in Kitty graphics-compatible outer terminals.
+# kitty_graphics = true
 
 [update]
 # Update channel used by background version checks and `herdr update`.
@@ -218,7 +230,10 @@ sidebar_min_width = 18
 # prompt_new_workspace_name = false
 
 # Draw borders around split panes.
-# pane_borders = true
+# "auto" draws them only for split panes, "always" also frames a lone pane
+# (only while pane_outer_borders is enabled), "off" disables them.
+# Legacy booleans still parse: true = "auto", false = "off".
+# pane_borders = "auto"
 
 # Draw borders along the outside edge of the pane area.
 # Disable for tmux-style internal splitters without an outside frame.
@@ -263,18 +278,18 @@ agent_panel_sort = "spaces"
 # distinct static glyphs for blocked, working, done, idle, and unknown states.
 status_indicators = "dots"
 
-# Expanded agent rows. Built-ins are state_icon, state_text, workspace, tab, pane, agent,
-# terminal_title, and terminal_title_stripped.
+# Expanded agent rows. Built-ins are state_icon, state_text, machine, workspace, tab,
+# pane, agent, terminal_title, and terminal_title_stripped.
 # Custom values reported through pane metadata use a $name token.
 # A token occurrence may be styled with { token = "workspace", fg = "#89b4fa", bold = true, dim = false }.
 # Omitted style fields preserve the contextual default.
 # [ui.sidebar.agents]
 # Blank rows between agent entries. Set to 1 to restore the previous spacing.
 # row_gap = 0
-# rows = [["state_icon", "workspace", "tab"], ["agent"]]
+# rows = [["state_icon", "machine", "workspace", "tab"], ["agent"]]
 # Optional canonical agent IDs replace the default rows for matching agents.
 # [ui.sidebar.agents.rows_by_agent]
-# claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+# claude = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
 
 # Expanded space rows. Built-ins are state_icon, state_text, workspace, branch, and git_status.
 # Custom values reported through workspace metadata use a $name token, for example $jj_status.
@@ -336,9 +351,6 @@ position = "bottom-center"
 [experimental]
 # Allow launching herdr from inside a herdr-managed pane.
 # allow_nested = false
-# Experimental local Kitty graphics rendering for attached clients.
-# Requires a Kitty graphics-compatible outer terminal.
-# kitty_graphics = false
 # Save recent pane screen history across full server restarts.
 pane_history = false
 # While prefix mode is active, temporarily switch the host input source to
