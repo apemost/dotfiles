@@ -63,6 +63,7 @@ utility_packages=(
   aria2
   autojump
   bat
+  blackhole-2ch
   chafa
   ctags
   ctx7
@@ -77,6 +78,7 @@ utility_packages=(
   kubernetes-cli
   llama.cpp
   markdown
+  mpv
   mycli
   mysql-client
   playwright-cli
