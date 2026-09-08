@@ -63,6 +63,7 @@ utility_packages=(
   aria2
   autojump
   bat
+  chafa
   ctags
   ctx7
   ffmpeg
