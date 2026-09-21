@@ -82,6 +82,7 @@ utility_packages=(
   mycli
   mysql-client
   playwright-cli
+  qemu
   rclone
   redis
   restish

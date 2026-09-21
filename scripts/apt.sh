@@ -82,7 +82,7 @@ database_packages=(
 )
 
 virtualization_packages=(
-  qemu
+  qemu-utils
 )
 
 gui_packages=(
