@@ -29,6 +29,7 @@ development_packages=(
   ripgrep
   shellcheck
   silversearcher-ag
+  starship
   universal-ctags
   zip
 )
