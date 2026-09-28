@@ -71,6 +71,7 @@ if [ -r "$ZPLUG_HOME/init.zsh" ]; then
   zplug 'zsh-users/zsh-autosuggestions'
 
   if ! command -v starship > /dev/null; then
+    SPACESHIP_PROMPT_ADD_NEWLINE=false
     SPACESHIP_PROMPT_ORDER=(
       time           # Time stamps section
       user           # Username section
