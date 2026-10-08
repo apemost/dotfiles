@@ -18,6 +18,7 @@ rsync -avh --no-perms \
   .gdbinit \
   .gitconfig \
   .gitignore \
+  .goenvrc \
   .hushlogin \
   .inputrc \
   .myclirc \

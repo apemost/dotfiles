@@ -1,0 +1,1 @@
+export GOENV_DISABLE_GOROOT=1
