@@ -72,6 +72,7 @@ utility_packages=(
   latexmk
   markdown
   tree
+  tree-sitter-cli
   unar
   xclip
 )
