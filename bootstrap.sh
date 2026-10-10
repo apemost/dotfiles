@@ -23,6 +23,7 @@ rsync -avh --no-perms \
   .inputrc \
   .myclirc \
   .remarkrc \
+  .ripgreprc \
   .screenrc \
   .shellrc \
   .tmux.conf \

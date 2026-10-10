@@ -24,6 +24,9 @@ export BUN_INSTALL="$HOME/.bun"
 # Path to Cargo directory
 export CARGO_HOME="$HOME/.cargo"
 
+# Path to ripgrep configuration
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 # Path to look for executable files
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$BUN_INSTALL/bin:$CARGO_HOME/bin:$PATH"
 
