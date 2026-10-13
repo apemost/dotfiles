@@ -55,6 +55,7 @@ system_packages=(
   fatrace
   htop
   iotop
+  mtools
   pciutils
   strace
   usbutils
