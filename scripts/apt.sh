@@ -86,6 +86,10 @@ database_packages=(
 )
 
 virtualization_packages=(
+  ovmf
+  qemu-efi-aarch64
+  qemu-system-arm
+  qemu-system-x86
   qemu-utils
 )
 

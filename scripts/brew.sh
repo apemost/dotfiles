@@ -82,7 +82,6 @@ utility_packages=(
   mycli
   mysql-client
   playwright-cli
-  qemu
   rclone
   redis
   restish
@@ -96,6 +95,10 @@ utility_packages=(
   tree-sitter-cli
   unar
   yq
+)
+
+virtualization_packages=(
+  qemu
 )
 
 macos_packages=(
@@ -157,6 +160,10 @@ main() {
 
   if is_linux; then
     install_packages "${linux_packages[@]}"
+  fi
+
+  if confirm "Install virtualization tools?"; then
+    install_packages "${virtualization_packages[@]}"
   fi
 
   if is_macos && confirm "Install GUI applications?"; then
