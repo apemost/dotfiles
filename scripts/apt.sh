@@ -4,11 +4,12 @@ set -Eeuo pipefail
 base_packages=(
   binutils
   curl
-  neovim
   rsync
   screen
   tmux
   vim
+  wget
+  zip
   zsh
 )
 
@@ -24,6 +25,7 @@ development_packages=(
   git-lfs
   libpq-dev
   make
+  neovim
   python3-dev
   python3-venv
   ripgrep
@@ -31,7 +33,6 @@ development_packages=(
   silversearcher-ag
   starship
   universal-ctags
-  zip
 )
 
 network_packages=(
