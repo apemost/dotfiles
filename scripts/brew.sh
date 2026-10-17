@@ -25,7 +25,9 @@ base_packages=(
 development_packages=(
   actionlint
   clang-format
+  claude-code
   cmake
+  codex
   devcontainer
   direnv
   eslint_d
@@ -34,6 +36,7 @@ development_packages=(
   herdr
   lazygit
   neovim
+  opencode
   pnpm
   prettier
   prettierd
