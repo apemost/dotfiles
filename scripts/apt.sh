@@ -57,6 +57,7 @@ system_packages=(
   htop
   iotop
   mtools
+  nvtop
   pciutils
   strace
   usbutils
