@@ -7,14 +7,17 @@ for file in ~/.{path,exports,aliases}; do
 done
 unset file
 
-if command -v goenv &> /dev/null; then
-  eval "$(goenv init -)"
-fi
+# Prefer mise when available; otherwise initialize the language-specific managers.
+if ! command -v mise &> /dev/null; then
+  if command -v goenv &> /dev/null; then
+    eval "$(goenv init -)"
+  fi
 
-if ! command -v uv &> /dev/null && command -v pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-  if pyenv commands | grep virtualenv-init &> /dev/null; then
-    eval "$(pyenv virtualenv-init -)"
+  if ! command -v uv &> /dev/null && command -v pyenv &> /dev/null; then
+    eval "$(pyenv init -)"
+    if pyenv commands | grep virtualenv-init &> /dev/null; then
+      eval "$(pyenv virtualenv-init -)"
+    fi
   fi
 fi
 
@@ -26,7 +29,18 @@ fi
 
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+if ! command -v mise &> /dev/null; then
+  [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+fi
+
+# Select the running shell; $SHELL may still name the user's login shell.
+if command -v mise &> /dev/null; then
+  if [ -n "${ZSH_VERSION:-}" ]; then
+    eval "$(mise activate zsh)"
+  elif [ -n "${BASH_VERSION:-}" ]; then
+    eval "$(mise activate bash)"
+  fi
+fi
 
 # ~/.extra can be used for other settings you don’t want to commit
 [ -r "$HOME/.extra" ] && [ -f "$HOME/.extra" ] && source "$HOME/.extra"

@@ -19,7 +19,6 @@ DISABLE_MAGIC_FUNCTIONS='true'
 plugins=(
   colored-man-pages
   extract
-  nvm
   rsync
   urltools
 )
@@ -49,8 +48,11 @@ unset plugin additional_plugins
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-zstyle ':omz:plugins:nvm' autoload yes
-zstyle ':omz:plugins:nvm' silent-autoload yes
+if ! command -v mise &> /dev/null; then
+  plugins+=(nvm)
+  zstyle ':omz:plugins:nvm' autoload yes
+  zstyle ':omz:plugins:nvm' silent-autoload yes
+fi
 
 source $ZSH/oh-my-zsh.sh
 
