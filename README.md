@@ -57,6 +57,12 @@ and tasks. Install its official release binary on macOS or Linux:
 curl -fsSL https://mise.run | sh
 ```
 
+Enable idiomatic version files (e.g. `.nvmrc`, `.python-version`):
+
+```bash
+mise settings add idiomatic_version_file_enable_tools go,java,node,python,rust
+```
+
 ### uv
 
 > An extremely fast Python package and project manager, written in Rust

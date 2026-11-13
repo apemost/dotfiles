@@ -34,7 +34,6 @@ rsync -avhR --no-perms \
   .config/starship.toml \
   .config/herdr/config.toml \
   .config/bat/config \
-  .config/mise/config.toml \
   ~
 
 if [[ $SHELL =~ 'zsh$' ]]; then
