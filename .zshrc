@@ -48,7 +48,10 @@ unset plugin additional_plugins
 # Activate zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-if ! command -v mise &> /dev/null; then
+if command -v mise &> /dev/null; then
+  # Keep nvm commands available without overriding mise's Node selection.
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
+else
   plugins+=(nvm)
   zstyle ':omz:plugins:nvm' autoload yes
   zstyle ':omz:plugins:nvm' silent-autoload yes
