@@ -57,14 +57,6 @@ and tasks. Install its official release binary on macOS or Linux:
 curl -fsSL https://mise.run | sh
 ```
 
-uv may select a different Python from the one on `PATH`. With Python configured
-in mise, add the following to the same mise configuration to bind uv to it:
-
-```toml
-[env]
-UV_PYTHON = { value = "{{ tools.python.path }}", tools = true }
-```
-
 ### uv
 
 > An extremely fast Python package and project manager, written in Rust
