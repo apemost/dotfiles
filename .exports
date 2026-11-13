@@ -6,9 +6,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Path to zplug installation
 export ZPLUG_HOME="$HOME/.zplug"
 
-# Path to pyenv root
-export PYENV_ROOT="$HOME/.pyenv"
-
 # Path to goenv root
 export GOENV_ROOT="$HOME/.goenv"
 
@@ -28,7 +25,7 @@ export CARGO_HOME="$HOME/.cargo"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # Path to look for executable files
-export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOENV_ROOT/bin:$BUN_INSTALL/bin:$CARGO_HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$GOENV_ROOT/bin:$BUN_INSTALL/bin:$CARGO_HOME/bin:$PATH"
 
 # Set terminal type
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color &> /dev/null; then
@@ -78,6 +75,3 @@ export GPG_TTY=$(tty)
 
 # How often to auto-update (in days)
 export UPDATE_ZSH_DAYS=13
-
-# Disable pyenv-virtualenv prompt
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1

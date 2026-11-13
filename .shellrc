@@ -8,17 +8,10 @@ for file in ~/.{path,exports,aliases}; do
 done
 unset file
 
-# Prefer mise when available; otherwise initialize the language-specific managers.
+# Initialize goenv when mise is unavailable.
 if ! command -v mise &> /dev/null; then
   if command -v goenv &> /dev/null; then
     eval "$(goenv init -)"
-  fi
-
-  if ! command -v uv &> /dev/null && command -v pyenv &> /dev/null; then
-    eval "$(pyenv init -)"
-    if pyenv commands | grep virtualenv-init &> /dev/null; then
-      eval "$(pyenv virtualenv-init -)"
-    fi
   fi
 fi
 
