@@ -69,18 +69,6 @@ brew install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### goenv
-
-> Like pyenv and rbenv, but for Go
-
-```bash
-# Homebrew
-brew install goenv
-
-# Manual installation
-git clone https://github.com/go-nv/goenv.git ~/.goenv
-```
-
 ### nvm
 
 > Node Version Manager - Simple bash script to manage multiple active node.js versions

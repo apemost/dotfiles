@@ -6,9 +6,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Path to zplug installation
 export ZPLUG_HOME="$HOME/.zplug"
 
-# Path to goenv root
-export GOENV_ROOT="$HOME/.goenv"
-
 # Path to nvm directory
 export NVM_DIR="$HOME/.nvm"
 
@@ -25,7 +22,7 @@ export CARGO_HOME="$HOME/.cargo"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # Path to look for executable files
-export PATH="$HOME/bin:$HOME/.local/bin:$GOENV_ROOT/bin:$BUN_INSTALL/bin:$CARGO_HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$BUN_INSTALL/bin:$CARGO_HOME/bin:$PATH"
 
 # Set terminal type
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color &> /dev/null; then
