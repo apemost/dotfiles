@@ -9,9 +9,6 @@ export ZPLUG_HOME="$HOME/.zplug"
 # Path to nvm directory
 export NVM_DIR="$HOME/.nvm"
 
-# Path to sdkman directory
-export SDKMAN_DIR="$HOME/.sdkman"
-
 # Path to bun directory
 export BUN_INSTALL="$HOME/.bun"
 

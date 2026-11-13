@@ -78,14 +78,6 @@ mkdir -p ~/.nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```
 
-### SDKMAN!
-
-> The Software Development Kit Manager
-
-```bash
-curl -s https://get.sdkman.io | bash
-```
-
 ### fvm
 
 > Flutter Version Management: A simple CLI to manage Flutter SDK versions.

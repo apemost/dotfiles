@@ -16,10 +16,6 @@ fi
 
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-if ! command -v mise &> /dev/null; then
-  [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-fi
-
 # Select the running shell; $SHELL may still name the user's login shell.
 if command -v mise &> /dev/null; then
   if [ -n "${ZSH_VERSION:-}" ]; then
