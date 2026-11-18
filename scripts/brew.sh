@@ -69,6 +69,7 @@ utility_packages=(
   chafa
   ctags
   ctx7
+  fd
   ffmpeg
   fzf
   gawk
