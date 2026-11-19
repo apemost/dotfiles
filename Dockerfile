@@ -7,7 +7,6 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install the standard package groups without prompts or host maintenance.
 RUN --mount=type=bind,source=scripts/apt.sh,target=/tmp/apt.sh \
     bash /tmp/apt.sh --non-interactive --install-only --no-install-recommends \
-      -- ca-certificates locales \
     && locale-gen en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/*
 

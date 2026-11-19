@@ -3,8 +3,10 @@ set -Eeuo pipefail
 
 base_packages=(
   binutils
+  ca-certificates
   curl
   git
+  locales
   rsync
   screen
   tmux
@@ -116,12 +118,13 @@ usage() {
   cat <<'EOF'
 Usage: apt.sh [options] [-- extra-package ...]
 
-Install the six standard package groups. By default, prompt for virtualization
+By default, select the six standard package groups and prompt for virtualization
 tools, GUI applications and fonts, then update, upgrade, install and autoremove.
 
 Options:
-  -y, --non-interactive       Automatically confirm APT operations and skip the
-                              three optional groups. Use default debconf answers
+      --groups GROUPS         Select comma-separated groups and skip group prompts.
+  -y, --non-interactive       Automatically confirm APT operations and skip
+                              group prompts. Use default debconf answers
                               and dpkg's default config-file action, keeping the
                               old file when there is no default. Requires root
                               or sudo access without a password prompt.
@@ -129,7 +132,9 @@ Options:
       --no-install-recommends Do not install recommended packages.
   -h, --help                  Show this help and exit.
 
-Use -- to add explicit packages to the same installation.
+Available groups are base, development, network, system, database, utility,
+virtualization, gui and font. Use -- to add explicit packages to the same
+installation.
 EOF
 }
 
@@ -144,26 +149,47 @@ confirm() {
 # Select package groups and install them with interactive or unattended options.
 main() {
   local non_interactive=false install_only=false no_install_recommends=false
+  local select_groups=false group_list group
   local DEBIAN_FRONTEND="${DEBIAN_FRONTEND:-noninteractive}"
-  local apt_command=(apt-get) install_command=(install)
-  local packages=(
-    "${base_packages[@]}"
-    "${development_packages[@]}"
-    "${network_packages[@]}"
-    "${system_packages[@]}"
-    "${database_packages[@]}"
-    "${utility_packages[@]}"
-  )
+  local apt_command=(apt-get) install_command=(install) packages=()
 
   while (($# > 0)); do
     case "$1" in
+      --groups)
+        if [[ -z "${2:-}" || "$2" == -* ]]; then
+          printf '%s requires a comma-separated list of package groups.\n' "$1" >&2
+          return 2
+        fi
+        # Keep empty group names visible, including after a trailing comma.
+        group_list="$2,"
+        while [[ -n "$group_list" ]]; do
+          group=${group_list%%,*}
+          group_list=${group_list#*,}
+          case "$group" in
+            base) packages+=("${base_packages[@]}") ;;
+            development) packages+=("${development_packages[@]}") ;;
+            network) packages+=("${network_packages[@]}") ;;
+            system) packages+=("${system_packages[@]}") ;;
+            database) packages+=("${database_packages[@]}") ;;
+            utility) packages+=("${utility_packages[@]}") ;;
+            virtualization) packages+=("${virtualization_packages[@]}") ;;
+            gui) packages+=("${gui_packages[@]}") ;;
+            font) packages+=("${font_packages[@]}") ;;
+            *)
+              printf 'Unknown package group: %q\n' "$group" >&2
+              return 2
+              ;;
+          esac
+        done
+        select_groups=true
+        shift
+        ;;
       -y|--non-interactive) non_interactive=true ;;
       --install-only) install_only=true ;;
       --no-install-recommends) no_install_recommends=true ;;
       -h|--help) usage; return 0 ;;
       --)
         shift
-        packages+=("$@")
         break
         ;;
       *)
@@ -174,6 +200,18 @@ main() {
     esac
     shift
   done
+
+  if ! "$select_groups"; then
+    packages=(
+      "${base_packages[@]}"
+      "${development_packages[@]}"
+      "${network_packages[@]}"
+      "${system_packages[@]}"
+      "${database_packages[@]}"
+      "${utility_packages[@]}"
+    )
+  fi
+  packages+=("$@")
 
   if "$non_interactive"; then
     DEBIAN_FRONTEND=noninteractive
@@ -196,7 +234,7 @@ main() {
     apt_command+=(--assume-yes
       -o Dpkg::Options::=--force-confdef
       -o Dpkg::Options::=--force-confold)
-  else
+  elif ! "$select_groups"; then
     if confirm "Install virtualization tools?"; then
       packages+=("${virtualization_packages[@]}")
     fi
