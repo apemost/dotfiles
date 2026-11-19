@@ -4,6 +4,7 @@ set -Eeuo pipefail
 base_packages=(
   binutils
   curl
+  git
   rsync
   screen
   tmux
@@ -21,7 +22,6 @@ development_packages=(
   direnv
   g++
   gcc
-  git
   git-lfs
   libpq-dev
   make
