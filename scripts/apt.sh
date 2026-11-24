@@ -8,7 +8,6 @@ base_packages=(
   git
   locales
   make
-  python3-venv
   rsync
   screen
   tmux
@@ -30,6 +29,7 @@ development_packages=(
   libpq-dev
   neovim
   python3-dev
+  python3-venv
   ripgrep
   shellcheck
   silversearcher-ag
