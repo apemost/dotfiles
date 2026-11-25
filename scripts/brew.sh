@@ -32,6 +32,8 @@ development_packages=(
   direnv
   eslint_d
   fvm
+  gh
+  glab
   herdr
   lazygit
   neovim
