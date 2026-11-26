@@ -33,6 +33,7 @@ development_packages=(
   eslint_d
   fvm
   gh
+  git-lfs
   glab
   herdr
   lazygit

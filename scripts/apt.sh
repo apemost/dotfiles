@@ -25,7 +25,9 @@ development_packages=(
   direnv
   g++
   gcc
+  gh
   git-lfs
+  glab
   libpq-dev
   neovim
   python3-dev
